@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.319436">
+<testcase classname="Franciscan ERP" name="Group Wise Student Details" time="18.319436">
+<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin@987"..........................passed
+Then signin.................................................................passed
+Then home page is opened....................................................passed
+Then group wise student details page is opened..............................passed
+Then user select class "test1" on group wise student details page...........passed
+Then user select section "A" on group wise student details page.............passed
+Then user select group "I - II" on group wise student details page..........passed
+Then user click show on group wise student details page.....................passed
+]]></system-out>
+</testcase>
+</testsuite>
