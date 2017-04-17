@@ -255,24 +255,14 @@ public class FeeEntry {
     	dr.findElement(receiptclosebtn).click();
     	try {
     	if(dr.findElement(By.id("popup_message")).isEnabled())
+         {
+    		System.out.println(dr.findElement(By.id("popup_message")).getText());
     		dr.findElement(By.id("popup_ok")).click();
+    	 }
     	}catch(Exception e)
     	{
     		System.out.println("No Message Displayed");
     	}
-    	//if(dr.getPageSource().contains("Please enter amount more than zero!"))
-    		//dr.findElement(By.id("popup_ok")).click();
-    	
-    	/*try {
-    		Assert.assertTrue(dr.getPageSource().contains("Saved Successfully."));
-            Thread.sleep(500);
-            //dr.findElement(By.xpath("//a[@class='ui-dialog-titlebar-close ui-corner-all']")).click();
-    	}
-    	catch(Exception e)
-    	{
-    		System.out.println(e);
-    	}*/
-    	//dr.findElement(receiptclosebtn).click();
     	return receiptno;
     }
 //refresh page 
