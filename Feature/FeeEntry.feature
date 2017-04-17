@@ -1,4 +1,7 @@
-Feature: Franciscan ERP
+Feature: Fee Entry
+    As a user
+    I would like to do fee payment with different user stories
+    using different fields at different times
 
   @scenario1
   Scenario: Normal Fee Entry and Receipt Generation(full payment of installment)

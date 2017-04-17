@@ -4,10 +4,13 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
 
 public class CancelledFeesReceiptReport {
 WebDriver dr;
@@ -84,5 +87,10 @@ WebDriver dr;
    	dr.findElement(show).click();
    	Thread.sleep(2000);
    	u.verifyPage(dr,exp);
+   }
+   public void findStudent(String name)
+   {
+	   Utility u= new Utility();
+	   u.findStudentOnReport(dr, name);
    }
 }

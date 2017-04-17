@@ -66,7 +66,7 @@
                <forkCount>10</forkCount>
                 <reuseForks>true</reuseForks>
                 <includes>
-                <include>**/CertificatesRunner.class</include>
+                <include>**/FeeEntryRunner.class</include>
                 
                </includes>
              </configuration>

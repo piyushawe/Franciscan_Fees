@@ -1316,6 +1316,12 @@ public WebDriver dr;
 		cf.clickShow();
 	}
 	
+	@Then("^user enter name \"([^\"]*)\" and click find on cancelled fees receipt report page$")
+	public void user_enter_name_and_click_find_on_cancelled_fees_receipt_report_page(String arg1) throws Throwable {
+		CancelledFeesReceiptReport cf= new CancelledFeesReceiptReport(dr);
+		cf.findStudent(arg1);
+	}
+
 //amount without structure report
 	@Then("^amount without structure report is opened$")
 	public void amount_without_structure_report_is_opened() throws Throwable {

@@ -1,4 +1,6 @@
-Feature: Franciscan ERP
+Feature: Cancel fee receipt
+   As a user I would like to cancel/ bounce the fee receipt
+   So that I don't need to cancel myself
 
   @scenario1
   Scenario: To cancel fee receipt

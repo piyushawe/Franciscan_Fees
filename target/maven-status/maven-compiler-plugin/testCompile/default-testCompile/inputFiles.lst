@@ -21,6 +21,7 @@ D:\FranciscanERP\src\test\java\Runner\StudentFeeDetailsRunner.java
 D:\FranciscanERP\src\test\java\Runner\FeeChequeBounceReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\ManualFeeModificationRunner.java
 D:\FranciscanERP\src\test\java\Runner\TotalCollectionReportRunner.java
+D:\FranciscanERP\src\test\java\Runner\AssignOpeningBalanceRunner.java
 D:\FranciscanERP\src\test\java\Runner\RefundHeadAmountRunner.java
 D:\FranciscanERP\src\test\java\Runner\AnnualStudentLedger1Runner.java
 D:\FranciscanERP\src\test\java\Runner\FeeDefaulterInstallmentWiseRunner.java
@@ -41,6 +42,7 @@ D:\FranciscanERP\src\test\java\Runner\ReconcileReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\FeeEntrySettingOthersRunner.java
 D:\FranciscanERP\src\test\java\Runner\FeeHeadWiseCollectionClassRangeRunner.java
 D:\FranciscanERP\src\test\java\Runner\CertificatesRunner.java
+D:\FranciscanERP\src\test\java\Runner\AssignTransportToStudentsRunner.java
 D:\FranciscanERP\src\test\java\Runner\FeeEntryRunner.java
 D:\FranciscanERP\src\test\java\Runner\StaffWardListReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\TCFormRunner.java
@@ -51,6 +53,7 @@ D:\FranciscanERP\src\test\java\Runner\SMSReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\AnnualStudentLedger2Runner.java
 D:\FranciscanERP\src\test\java\Runner\CategoryWiseStudentReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\EstimatedCollectionReportRunner.java
+D:\FranciscanERP\src\test\java\Runner\LateFeeSettingRunner.java
 D:\FranciscanERP\src\test\java\Runner\StudentRegisterDateWiseReportRunner.java
 D:\FranciscanERP\src\test\java\Runner\ClassWiseStudentStrengthRunner.java
 D:\FranciscanERP\src\test\java\Runner\ClassWiseStudentDetailsRunner.java
