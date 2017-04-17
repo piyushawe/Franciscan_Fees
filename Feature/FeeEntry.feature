@@ -1675,7 +1675,7 @@ Feature: Franciscan ERP
     Then user verify receipt on fee entry form
 
   #assigned concession
-  @scenario69
+  @scenario70
   Scenario: To test assigned concession, partial payment is made, paid remaining amount and the second receipt is cancelled  
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
@@ -1708,7 +1708,7 @@ Feature: Franciscan ERP
     Then fee entry form is opened
     Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia2"
     
-  @scenario70
+  @scenario71
   Scenario: To test when some installments are taken, assign concession, fee paid and last two receipts are cancelled
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
@@ -1752,7 +1752,7 @@ Feature: Franciscan ERP
     Then fee entry form is opened
     Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
     
-  @scenario71
+  @scenario72
   Scenario: To test when partial payment is done on a fee head, assign concession on that fee head
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
@@ -1787,8 +1787,8 @@ Feature: Franciscan ERP
     Then click on show of fee entry form
     Then user verify fee details on fee entry form
     
-  @scenario72
-  Scenario: 
+  @scenario73
+  Scenario: To test partial late fee when manual late fee is imposed with discount, bounce the cheque, again manual late fee and cheque bounce fee is taken and receipt is cancelled, verify on fee entry 
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

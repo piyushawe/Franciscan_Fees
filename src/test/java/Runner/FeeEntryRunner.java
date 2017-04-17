@@ -6,12 +6,12 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"Feature/FeeEntry.feature"}
+		features= {"Feature/FeeEntry.feature","Feature/CancelledFeesReceiptReport.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
 	    ,plugin= {"pretty","html:target/cucumber_html_report"}	
 		//,tags={"@scenario1, @scenario2"}
-		,tags= {"@scenario72"}
+		,tags= {"@scenario60"}
 	)	
 public class FeeEntryRunner {
 
