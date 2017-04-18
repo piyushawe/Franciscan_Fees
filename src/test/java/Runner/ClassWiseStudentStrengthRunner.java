@@ -10,7 +10,9 @@ import cucumber.api.junit.Cucumber;
 		features= {"Feature/ClassWiseStudentStrength.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
-	    ,plugin= {"pretty","html:target/cucumber_html_report"}		
+	    ,plugin= {"pretty","html:target/cucumber_html_report",
+	    		  "json:target/cucumber.json",
+	    	      "junit:target/cucumber.xml"}		
 		,tags= {"@scenario2,@scenario1"}
 	)
 public class ClassWiseStudentStrengthRunner {

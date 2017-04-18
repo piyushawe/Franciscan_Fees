@@ -1,7 +1,9 @@
-Feature: Franciscan ERP
+Feature: Certificates
+    As a user I would like to verify cerficates
+    So that I don't have to verify myself
 
   @scenario1
-  Scenario: 
+  Scenario: To verify the selected certificate based on class, section and admission no.
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

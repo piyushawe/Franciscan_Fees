@@ -1,14 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.319436">
-<testcase classname="Franciscan ERP" name="Group Wise Student Details" time="18.319436">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="53.967032">
+<testcase classname="Franciscan ERP" name="Active Inactive Students Detail Report" time="30.223013">
 <system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
 When enter username"admin" and password"Admin@987"..........................passed
 Then signin.................................................................passed
 Then home page is opened....................................................passed
-Then group wise student details page is opened..............................passed
-Then user select class "test1" on group wise student details page...........passed
-Then user select section "A" on group wise student details page.............passed
-Then user select group "I - II" on group wise student details page..........passed
-Then user click show on group wise student details page.....................passed
+Then active inactive students detail report is opened.......................passed
+Then user select user "eCare Admin" on active inactive students detail report is opened.passed
+Then user select from date as month "October" year "2016" and day"1" on active inactive students detail report page.passed
+Then user select till date as month "November" year "2016" and day"30" on active inactive students detail report page.passed
+Then user click inactive on active inactive students detail report page.....passed
+Then user click show on active inactive students detail report page.........passed
+]]></system-out>
+</testcase>
+<testcase classname="Franciscan ERP" name="Advance Payment Report" time="23.744019">
+<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin@987"..........................passed
+Then signin.................................................................passed
+Then home page is opened....................................................passed
+Then advance payment report is opened.......................................passed
+Then user select installment"JANUARY - MARCH" on advance payment report.....passed
+Then user select class"1" on advance payment report.........................passed
+Then user select section"A" on advance payment report.......................passed
+Then user select fee type"SCHOOL FEE" on advance payment report.............passed
+Then user click on show on advance payment report...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

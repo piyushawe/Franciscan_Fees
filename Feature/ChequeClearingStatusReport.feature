@@ -1,7 +1,9 @@
-Feature: Franciscan ERP
+Feature: Cheque Clearing Status Report
+    As a user I would like to open cheque clearing status report
+    So that I don't have to do it myself 
 
   @scenario1
-  Scenario: Cheque Clearing Status Report
+  Scenario: To verify cheque clearing status report based on different filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -18,7 +20,7 @@ Feature: Franciscan ERP
     Then user click show on cheque clearing status report
 
   @scenario2
-  Scenario: Cheque Clearing Status Report
+  Scenario: To verify cheque clearing status report based on different filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

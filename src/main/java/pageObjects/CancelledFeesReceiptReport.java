@@ -45,8 +45,6 @@ WebDriver dr;
 	      new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	  Thread.sleep(500);
 	  	  WebElement myw=dr.findElement(By.className("datepick"));
-	      //  List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  		//for (WebElement row: rows){  
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
 	  			if (cell.getText().equals(dd)){  
@@ -54,7 +52,6 @@ WebDriver dr;
 	  			cell.click();
 	  			break; 
 	  		 }  
-	  	  //  }
 	    }Thread.sleep(500);
    }
 //to date   
@@ -67,8 +64,6 @@ WebDriver dr;
 	      new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	  Thread.sleep(500);
 	  	  WebElement myw=dr.findElement(By.className("datepick"));
-	     //   List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  		//for (WebElement row: rows){  
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
 	  			if (cell.getText().equals(dd)){  
@@ -76,7 +71,6 @@ WebDriver dr;
 	  			cell.click();
 	  			break; 
 	  		 }  
-	  	//    }
 	    }Thread.sleep(500);
    }
 //show   

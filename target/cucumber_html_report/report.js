@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Feature/FeeEntry.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("Feature/ActiveInactiveStudentsDetailReport.feature");
 formatter.feature({
   "line": 1,
   "name": "Franciscan ERP",
@@ -7,181 +7,71 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 17865760517,
+  "duration": 4089463001,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 1323,
-  "name": "To test when one head fee is left with partial late fee payment, paid remaining head fee and waive off late fee and then the receipts are cancelled(R2,R1)",
+  "line": 18,
+  "name": "Active Inactive Students Detail Report",
   "description": "",
-  "id": "franciscan-erp;to-test-when-one-head-fee-is-left-with-partial-late-fee-payment,-paid-remaining-head-fee-and-waive-off-late-fee-and-then-the-receipts-are-cancelled(r2,r1)",
+  "id": "franciscan-erp;active-inactive-students-detail-report",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
     {
-      "line": 1322,
-      "name": "@scenario60"
+      "line": 17,
+      "name": "@scenario2"
     }
   ]
 });
 formatter.step({
-  "line": 1324,
+  "line": 19,
   "name": "user enters url\"http://qaerp.franciscanecare.net\"",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 1325,
+  "line": 20,
   "name": "enter username\"admin\" and password\"Admin@987\"",
   "keyword": "When "
 });
 formatter.step({
-  "line": 1326,
+  "line": 21,
   "name": "signin",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1327,
+  "line": 22,
   "name": "home page is opened",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1328,
-  "name": "fee entry form is opened",
+  "line": 23,
+  "name": "active inactive students detail report is opened",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1329,
-  "name": "user searches a student on fee entry form by class\"1\" section\"A\" and student details\"sonia1\"",
+  "line": 24,
+  "name": "user select user \"eCare Admin\" on active inactive students detail report is opened",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1330,
-  "name": "user selects bank name\"Axsis Bank For Juniors\" on fee entry",
+  "line": 25,
+  "name": "user select from date as month \"October\" year \"2016\" and day\"1\" on active inactive students detail report page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1331,
-  "name": "select entry mode\"School\" on fee entry form",
+  "line": 26,
+  "name": "user select till date as month \"November\" year \"2016\" and day\"30\" on active inactive students detail report page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1332,
-  "name": "selects pay mode\"Cheque\" on fee entry form",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 1333,
-  "name": "click on show of fee entry form",
+  "line": 27,
+  "name": "user click inactive on active inactive students detail report page",
   "keyword": "Then "
 });
 formatter.step({
-  "line": 1334,
-  "name": "make head \"TUITION FEE\" amount as zero",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1335,
-  "name": "partial late fee is paid on fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1336,
-  "name": "click on save of fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1337,
-  "name": "user searches a student on fee entry form by class\"1\" section\"A\" and student details\"sonia1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1338,
-  "name": "user selects bank name\"Axsis Bank For Juniors\" on fee entry",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1339,
-  "name": "select entry mode\"School\" on fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1340,
-  "name": "selects pay mode\"Cheque\" on fee entry form",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 1341,
-  "name": "click on show of fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1342,
-  "name": "waive off late fine on fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1343,
-  "name": "click on save of fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1344,
-  "name": "go back to the default page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1345,
-  "name": "cancel the receipt of the fee",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1346,
-  "name": "go back to the default page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1347,
-  "name": "fee entry form is opened",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1348,
-  "name": "user searches a student on fee entry form by class\"1\" section\"A\" and student details\"sonia1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1349,
-  "name": "user verify late fine on fee entry form",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1350,
-  "name": "go back to the default page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1351,
-  "name": "cancel the receipt of the fee by class\"1\" section\"A\" and student details\"sonia1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1352,
-  "name": "go back to the default page",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1353,
-  "name": "fee entry form is opened",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1354,
-  "name": "user searches a student on fee entry form by class\"1\" section\"A\" and student details\"sonia1\"",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 1355,
-  "name": "user verify late fine on fee entry form",
+  "line": 28,
+  "name": "user click show on active inactive students detail report page",
   "keyword": "Then "
 });
 formatter.match({
@@ -194,7 +84,7 @@ formatter.match({
   "location": "MyTestSteps.user_enters_url(String)"
 });
 formatter.result({
-  "duration": 11671271312,
+  "duration": 2835254664,
   "status": "passed"
 });
 formatter.match({
@@ -211,308 +101,291 @@ formatter.match({
   "location": "MyTestSteps.enter_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 1395006667,
+  "duration": 172825951,
   "status": "passed"
 });
 formatter.match({
   "location": "MyTestSteps.signin()"
 });
 formatter.result({
-  "duration": 16974851522,
+  "duration": 2951752658,
   "status": "passed"
 });
 formatter.match({
   "location": "MyTestSteps.home_page_is_opened()"
 });
 formatter.result({
-  "duration": 3850631374,
+  "duration": 349514800,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyTestSteps.fee_entry_form_is_opened()"
+  "location": "MyTestSteps.active_inactive_students_detail_report_is_opened()"
 });
 formatter.result({
-  "duration": 5038942180,
+  "duration": 4611063898,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "1",
-      "offset": 51
-    },
-    {
-      "val": "A",
-      "offset": 62
-    },
-    {
-      "val": "sonia1",
-      "offset": 85
-    }
-  ],
-  "location": "MyTestSteps.user_searches_a_student_on_fee_entry_form_by_class_section_and_student_details(String,String,String)"
-});
-formatter.result({
-  "duration": 2483011824,
-  "error_message": "org.openqa.selenium.NoSuchWindowException: no such window: target window already closed\nfrom unknown error: web view not found\n  (Session info: chrome\u003d57.0.2987.133)\n  (Driver info: chromedriver\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform\u003dWindows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 1.13 seconds\nBuild info: version: \u00273.1.0\u0027, revision: \u0027b94c902\u0027, time: \u00272017-02-16 12:21:31 -0800\u0027\nSystem info: host: \u0027DELL-PC\u0027, ip: \u0027192.168.10.111\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir\u003dC:\\Users\\dell\\AppData\\Local\\Temp\\scoped_dir5320_11252}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d57.0.2987.133, platform\u003dXP, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dtrue, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: 37614dd97999909b75820906ae16d099\n*** Element info: {Using\u003did, value\u003dContentPlaceHolder1_ddlSection}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:417)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:218)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)\r\n\tat pageObjects.FeeEntry.searchStudent(FeeEntry.java:80)\r\n\tat step_Def.MyTestSteps.user_searches_a_student_on_fee_entry_form_by_class_section_and_student_details(MyTestSteps.java:325)\r\n\tat ✽.Then user searches a student on fee entry form by class\"1\" section\"A\" and student details\"sonia1\"(Feature/FeeEntry.feature:1329)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Axsis Bank For Juniors",
-      "offset": 23
-    }
-  ],
-  "location": "MyTestSteps.user_selects_bank_name_on_fee_entry(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "School",
+      "val": "eCare Admin",
       "offset": 18
     }
   ],
-  "location": "MyTestSteps.select_entry_mode_on_fee_entry_form(String)"
+  "location": "MyTestSteps.user_select_user_on_active_inactive_students_detail_report_is_opened(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 85454069,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "Cheque",
-      "offset": 17
-    }
-  ],
-  "location": "MyTestSteps.selects_pay_mode_on_fee_entry_form(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.click_on_show_of_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "TUITION FEE",
-      "offset": 11
-    }
-  ],
-  "location": "MyTestSteps.make_head_amount_as_zero(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.partial_late_fee_is_paid_on_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.click_on_save_of_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 51
+      "val": "October",
+      "offset": 32
     },
     {
-      "val": "A",
+      "val": "2016",
+      "offset": 47
+    },
+    {
+      "val": "1",
+      "offset": 61
+    }
+  ],
+  "location": "MyTestSteps.user_select_from_date_as_month_year_and_day_on_active_inactive_students_detail_report_page(String,String,String)"
+});
+formatter.result({
+  "duration": 4720808495,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "November",
+      "offset": 32
+    },
+    {
+      "val": "2016",
+      "offset": 48
+    },
+    {
+      "val": "30",
       "offset": 62
-    },
-    {
-      "val": "sonia1",
-      "offset": 85
     }
   ],
-  "location": "MyTestSteps.user_searches_a_student_on_fee_entry_form_by_class_section_and_student_details(String,String,String)"
+  "location": "MyTestSteps.user_select_till_date_as_month_year_and_day_on_active_inactive_students_detail_report_page(String,String,String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 5113962024,
+  "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "Axsis Bank For Juniors",
-      "offset": 23
-    }
-  ],
-  "location": "MyTestSteps.user_selects_bank_name_on_fee_entry(String)"
+  "location": "MyTestSteps.user_click_inactive_on_active_inactive_students_detail_report_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 135681978,
+  "status": "passed"
 });
 formatter.match({
-  "arguments": [
-    {
-      "val": "School",
-      "offset": 18
-    }
-  ],
-  "location": "MyTestSteps.select_entry_mode_on_fee_entry_form(String)"
+  "location": "MyTestSteps.user_click_show_on_active_inactive_students_detail_report_page()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "Cheque",
-      "offset": 17
-    }
-  ],
-  "location": "MyTestSteps.selects_pay_mode_on_fee_entry_form(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.click_on_show_of_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.waive_off_late_fine_on_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.click_on_save_of_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.go_back_to_the_default_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.cancel_the_receipt_of_the_fee()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.go_back_to_the_default_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.fee_entry_form_is_opened()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 51
-    },
-    {
-      "val": "A",
-      "offset": 62
-    },
-    {
-      "val": "sonia1",
-      "offset": 85
-    }
-  ],
-  "location": "MyTestSteps.user_searches_a_student_on_fee_entry_form_by_class_section_and_student_details(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.user_verify_late_fine_on_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.go_back_to_the_default_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 39
-    },
-    {
-      "val": "A",
-      "offset": 50
-    },
-    {
-      "val": "sonia1",
-      "offset": 73
-    }
-  ],
-  "location": "MyTestSteps.cancel_the_receipt_of_the_fee_by_class_section_and_student_details(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.go_back_to_the_default_page()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.fee_entry_form_is_opened()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "1",
-      "offset": 51
-    },
-    {
-      "val": "A",
-      "offset": 62
-    },
-    {
-      "val": "sonia1",
-      "offset": 85
-    }
-  ],
-  "location": "MyTestSteps.user_searches_a_student_on_fee_entry_form_by_class_section_and_student_details(String,String,String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "MyTestSteps.user_verify_late_fine_on_fee_entry_form()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 5157203701,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 29911,
+  "duration": 27565,
+  "status": "passed"
+});
+formatter.uri("Feature/AdvancePaymentReport.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Franciscan ERP",
+  "description": "",
+  "id": "franciscan-erp",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 4201588148,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "Advance Payment Report",
+  "description": "",
+  "id": "franciscan-erp;advance-payment-report",
+  "type": "scenario",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 18,
+      "name": "@scenario2"
+    }
+  ]
+});
+formatter.step({
+  "line": 20,
+  "name": "user enters url\"http://qaerp.franciscanecare.net\"",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 21,
+  "name": "enter username\"admin\" and password\"Admin@987\"",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 22,
+  "name": "signin",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 23,
+  "name": "home page is opened",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 24,
+  "name": "advance payment report is opened",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "user select installment\"JANUARY - MARCH\" on advance payment report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 26,
+  "name": "user select class\"1\" on advance payment report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
+  "name": "user select section\"A\" on advance payment report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 28,
+  "name": "user select fee type\"SCHOOL FEE\" on advance payment report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 29,
+  "name": "user click on show on advance payment report",
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://qaerp.franciscanecare.net",
+      "offset": 16
+    }
+  ],
+  "location": "MyTestSteps.user_enters_url(String)"
+});
+formatter.result({
+  "duration": 7956940133,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "admin",
+      "offset": 15
+    },
+    {
+      "val": "Admin@987",
+      "offset": 35
+    }
+  ],
+  "location": "MyTestSteps.enter_username_and_password(String,String)"
+});
+formatter.result({
+  "duration": 135683152,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.signin()"
+});
+formatter.result({
+  "duration": 2159983649,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.home_page_is_opened()"
+});
+formatter.result({
+  "duration": 619307559,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.advance_payment_report_is_opened()"
+});
+formatter.result({
+  "duration": 5415632690,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "JANUARY - MARCH",
+      "offset": 24
+    }
+  ],
+  "location": "MyTestSteps.user_select_installment_on_advance_payment_report(String)"
+});
+formatter.result({
+  "duration": 88244868,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 18
+    }
+  ],
+  "location": "MyTestSteps.user_select_class_on_advance_payment_report(String)"
+});
+formatter.result({
+  "duration": 236652145,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "A",
+      "offset": 20
+    }
+  ],
+  "location": "MyTestSteps.user_select_section_on_advance_payment_report(String)"
+});
+formatter.result({
+  "duration": 95119373,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "SCHOOL FEE",
+      "offset": 21
+    }
+  ],
+  "location": "MyTestSteps.user_select_fee_type_on_advance_payment_report(String)"
+});
+formatter.result({
+  "duration": 83639479,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.user_click_on_show_on_advance_payment_report()"
+});
+formatter.result({
+  "duration": 2751203471,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 24632,
   "status": "passed"
 });
 });

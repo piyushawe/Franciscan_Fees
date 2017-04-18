@@ -1,7 +1,10 @@
-Feature: Franciscan ERP
+Feature: Active Inactive Students Detail Report
+   As a user 
+   I would like to open active inactive students detail report
+   So that I don't have to open myself
 
   @scenario1
-  Scenario: Active Inactive Students Detail Report
+  Scenario: To test active inactive students detail report based on the filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -15,7 +18,7 @@ Feature: Franciscan ERP
     Then user click show on active inactive students detail report page
 
   @scenario2
-  Scenario: Active Inactive Students Detail Report
+  Scenario: To test active inactive students detail report based on the filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

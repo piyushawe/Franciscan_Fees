@@ -8,7 +8,9 @@ import cucumber.api.junit.Cucumber;
 		features= {"Feature/CancelFeeReceipt.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
-	    ,plugin= {"pretty","html:target/cucumber_html_report"}		
+	    ,plugin= {"pretty","html:target/cucumber_html_report",
+	    		  "json:target/cucumber.json",
+	    	      "junit:target/cucumber.xml"}		
 		,tags= {"@scenario2"}
 	)	
 

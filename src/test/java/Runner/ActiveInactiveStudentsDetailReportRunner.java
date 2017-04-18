@@ -10,7 +10,9 @@ import cucumber.api.junit.Cucumber;
 		features= {"Feature/ActiveInactiveStudentsDetailReport.feature","Feature/AdvancePaymentReport.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
-	    ,plugin= {"pretty","html:target/cucumber_html_report"}		
+	    ,plugin= {"pretty","html:target/cucumber_html_report",
+	    		  "json:target/cucumber.json",
+	    	      "junit:target/cucumber.xml"}		
 		,tags= {"@scenario2"}
 	)
 public class ActiveInactiveStudentsDetailReportRunner {

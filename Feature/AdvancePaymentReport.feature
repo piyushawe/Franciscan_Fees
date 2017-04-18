@@ -1,7 +1,9 @@
-Feature: Franciscan ERP
+Feature: Advance Payment Report
+     As a user I would like to open advance payment report
+     So that I don't have to open myself
 
   @scenario1
-  Scenario: Advance Payment Report
+  Scenario: To test advance payment report based on different filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -16,7 +18,7 @@ Feature: Franciscan ERP
     Then user click on show on advance payment report
 
   @scenario2
-  Scenario: Advance Payment Report
+  Scenario: To test advance payment report based on different filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -29,7 +31,7 @@ Feature: Franciscan ERP
     Then user click on show on advance payment report
 
   @scenario3
-  Scenario: Advance Payment Report
+  Scenario: To test advance payment report based on different filters
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
