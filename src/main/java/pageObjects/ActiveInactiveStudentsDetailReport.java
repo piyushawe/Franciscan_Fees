@@ -1,9 +1,13 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.bcel.generic.GETSTATIC;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +15,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ActiveInactiveStudentsDetailReport {
 WebDriver dr;
+String r= "ActiveInactiveStudentsDetailReport";
+
     By cls= By.id("ContentPlaceHolder1_ddlClass");
     By section= By.id("ContentPlaceHolder1_ddlSection");
     By user= By.id("ContentPlaceHolder1_ddlUser");
@@ -38,20 +44,38 @@ WebDriver dr;
       }
 //select class     
      public void selectClass(String c)
-     {
+     {   
     	 Select cs= new Select(dr.findElement(cls));
-    	 cs.selectByVisibleText(c);
+    	 try {
+    	   cs.selectByVisibleText(c);
+    	 }
+    	 catch(NoSuchElementException e)
+    	 {
+    		 cs.selectByIndex(16);
+    	 }
      }
 //select section     
      public void selectSection(String s)
      {
     	 Select sec= new Select(dr.findElement(section));
-    	 sec.selectByVisibleText(s);
+    	 try {
+    	   sec.selectByVisibleText(s);
+    	 }
+    	 catch(NoSuchElementException e)
+    	 {
+    		sec.selectByIndex(1);
+    	 }
      }
 //select user     
      public void selectUser(String u)
      {
-    	 new Select(dr.findElement(user)).selectByVisibleText(u);
+    	 try {
+    	   new Select(dr.findElement(user)).selectByVisibleText(u);
+    	 }
+    	 catch(NoSuchElementException e)
+    	 {
+    		new Select(dr.findElement(user)).selectByIndex(0);
+    	 }
      }
 //select from date     
      public void selectFromDate(String mm, String yy, String dd) throws InterruptedException
@@ -82,13 +106,13 @@ WebDriver dr;
          new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
    	     Thread.sleep(1000);
    	     WebElement myw=dr.findElement(By.className("datepick"));
-			 List<WebElement> cells=myw.findElements(By.tagName("td"));
-			  for(WebElement cell: cells) {
-				if (cell.getText().equals(dd)){  
-					System.out.println("cell value"+cell.getText());
-					cell.click();		
-				break; 
-			 }  
+		 List<WebElement> cells=myw.findElements(By.tagName("td"));
+		  for(WebElement cell: cells) {
+			if (cell.getText().equals(dd)){  
+				System.out.println("cell value"+cell.getText());
+				cell.click();		
+			break; 
+		 }  
      }Thread.sleep(1000);
      }
 //click active     
@@ -101,12 +125,14 @@ WebDriver dr;
      {
     	 dr.findElement(inactive).click();
      }
+     
 //click show     
-     public void clickShow() throws InterruptedException
-     {   String exp= "STUDENT STATUS REPORT";
+     public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
+     {   
     	 Utility u= new Utility(); 
     	 dr.findElement(show).click();
     	 Thread.sleep(5000);
-    	 u.verifyPage(dr,exp);
+    	 u.captureScreenshot(dr,schl,r,sc);
+    	 u.downloadPDF(dr);
      }
 }

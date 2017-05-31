@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class MonthWiseCollectionReport {
 	WebDriver dr;
+	String r= "MonthWiseCollectionReport";
+	
 	   //By entrymode= By.id("ContentPlaceHolder1_lstentrymode");
 	   By school= By.id("ContentPlaceHolder1_ddlSchool");
 	   By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
@@ -52,11 +57,23 @@ public class MonthWiseCollectionReport {
 	   }
 	   public void selectSchool(String sch)
 	   {
-		   new Select(dr.findElement(school)).selectByVisibleText(sch);
+		   try {
+		    new Select(dr.findElement(school)).selectByVisibleText(sch);
+		   }
+		   catch(NoSuchElementException e)
+		   {
+			   new Select(dr.findElement(school)).selectByIndex(1);
+		   }
 	   }
 	   public void selectFeeType(String ftype)
 	   {
-		   new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+		   try {
+		     new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+		   }
+		   catch(NoSuchElementException e)
+			{
+			   new Select(dr.findElement(feetype)).selectByIndex(1);
+			}
 	   }
 	   public void selectMonth(String mth)
 	   {
@@ -72,11 +89,23 @@ public class MonthWiseCollectionReport {
 	   }
 	   public void selectClass(String c)
 	   {
-		   new Select(dr.findElement(cls)).selectByVisibleText(c);
+		   try {
+		     new Select(dr.findElement(cls)).selectByVisibleText(c);
+		   }
+		   catch(NoSuchElementException e)
+		   {
+			   new Select(dr.findElement(cls)).selectByIndex(1);
+		   }
 	   }
 	   public void selectInstallment(String inst)
 	   {
-		   new Select(dr.findElement(installment)).selectByVisibleText(inst);
+		   try {
+		      new Select(dr.findElement(installment)).selectByVisibleText(inst);
+		   }
+		   catch(NoSuchElementException e)
+		   {
+			   new Select(dr.findElement(installment)).selectByIndex(1);
+		   }
 	   }
 	   public void selectFeeHead(String f)
 	   {
@@ -96,14 +125,20 @@ public class MonthWiseCollectionReport {
 	   }
 	   public void selectUser(String u)
 	   {
-		   new Select(dr.findElement(user)).selectByVisibleText(u);
+		   try {
+		      new Select(dr.findElement(user)).selectByVisibleText(u);
+		   }
+		   catch(NoSuchElementException e)
+		   {
+			   new Select(dr.findElement(user)).selectByIndex(1);
+		   }
 	   }
-	   public void clickShow() throws InterruptedException
-	   {
-		     String exp= "MONTH WISE COLLECTION ";
-			 Utility u= new Utility(); 
-		     dr.findElement(show).click();
-		     Thread.sleep(2000);
-			 u.verifyPage(dr,exp);
-	   }
+	   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+	   {                                                                                                 
+	      Utility u= new Utility();                                                                    
+	      dr.findElement(show).click();                                                                
+	      Thread.sleep(9000);                                                                          
+	      u.captureScreenshot(dr,schl,r,sc);                                                           
+	      u.downloadPDF(dr);                                                                           
+	   } 
 }

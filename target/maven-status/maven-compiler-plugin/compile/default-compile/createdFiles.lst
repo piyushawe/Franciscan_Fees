@@ -33,6 +33,7 @@ pageObjects\TransportDetail.class
 pageObjects\TransportReportClassWise$1.class
 pageObjects\TotalCollectionReport.class
 pageObjects\SetStudentStatus.class
+pageObjects\StudentDetails.class
 pageObjects\TransportReportClassWise.class
 pageObjects\AssignedTransportReport.class
 pageObjects\OnlinePaymentStatusReport.class

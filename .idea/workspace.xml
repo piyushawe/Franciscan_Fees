@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0356cfeb-2c6f-40df-90c1-dfb8551fb839" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AdvancePaymentReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AmountWithoutStructureReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger1.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger2.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger3.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedgerReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/AssignedTransportReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/BadDebtsReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/CancelledFeesReceiptReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/CategoryGenderWiseStudentStrength.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/CategoryWiseStudentReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ChequeClearingStatusReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ClassSectionTransferReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseMarkList.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseSiblingReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentDetails.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentStrength.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollection.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionAccountWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateClassWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateFeeGroupWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DateWiseAdmissionReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DayWiseTotalCollection.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/DefaulterListFeeTypeWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/EstimatedCollectionReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/EstimatedTransportDetails.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeChequeBounceReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeCollectionWithEntryTimeConcession.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterInstallmentWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterList.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportConsolidated.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportWithReceiving.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeeHeadWiseCollectionClassRange.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeesConcession.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeesConcessionInstallHeadWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeesDefaulterSlip.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/FeesStudentLedger.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/GenderReligionWiseStudentReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/GroupWiseStudentDetails.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/MonthWiseCollectionReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/MonthlyConsolidatedReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/OnlinePaymentStatusReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/OpeningDuesReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/PaidTransport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/PrintTransportIDCard.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseDailyCollection.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseFeeTypeCollection.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ReconcileInstallmentClassWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ReconcileReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/RefundAmount.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/ReligionGenderWiseStudentStrength.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/RouteWiseStudentStrength.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/SMSReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/SelfTransportReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StaffWardListReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentHealthEntryReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentHouseWiseReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentLedgerClassWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentRegisterDateWiseReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentStrengthRatioWiseReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentWiseCollectionReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/StudentWiseReceiptReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/SurnameWiseStudentDetails.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/TCReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/TotalCollectionReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/TransportDetail.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/TransportReportClassWise.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/TransportStudentStrengthReport.feature" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ReportsFeature/YearlyCollectionReport.feature" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ActiveInactiveStudentsDetailReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AdvancePaymentReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AmountWithoutStructureReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AnnualStudentLedger1.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AnnualStudentLedger2.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AnnualStudentLedger3.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AnnualStudentLedgerReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/AssignedTransportReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/BadDebtsReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/CancelledFeesReceiptReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/CategoryGenderWiseStudentStrength.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/CategoryWiseStudentReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ChequeClearingStatusReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ClassSectionTransferReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ClassWiseMarkList.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ClassWiseSiblingReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ClassWiseStudentDetails.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ClassWiseStudentStrength.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DailyFeeCollection.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DailyFeeCollectionAccountWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DailyFeeCollectionDateClassWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DailyFeeCollectionDateFeeGroupWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DailyFeeCollectionDateWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DateWiseAdmissionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DayWiseTotalCollection.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/DefaulterListFeeTypeWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/EstimatedCollectionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/EstimatedTransportDetails.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeChequeBounceReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeCollectionWithEntryTimeConcession.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeDefaulterInstallmentWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeDefaulterList.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeDefaulterReportConsolidated.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeDefaulterReportWithReceiving.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeeHeadWiseCollectionClassRange.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeesConcession.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeesConcessionInstallHeadWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeesDefaulterSlip.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/FeesStudentLedger.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/GenderReligionWiseStudentReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/GroupWiseStudentDetails.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/MonthWiseCollectionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/MonthlyConsolidatedReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/OnlinePaymentStatusReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/OpeningDuesReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/PaidTransport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/PrintTransportIDCard.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ReceiptWiseDailyCollection.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ReceiptWiseFeeTypeCollection.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ReconcileInstallmentClassWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ReconcileReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/RefundAmount.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/ReligionGenderWiseStudentStrength.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/RouteWiseStudentStrength.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/SMSReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/SelfTransportReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StaffWardListReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentHealthEntryReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentHouseWiseReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentLedgerClassWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentRegisterDateWiseReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentStrengthRatioWiseReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentWiseCollectionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/StudentWiseReceiptReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/SurnameWiseStudentDetails.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/TCReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/TotalCollectionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/TransportDetail.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/TransportReportClassWise.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/TransportStudentStrengthReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Feature/YearlyCollectionReport.feature" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Runner.CertificatesRunner.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Runner.CertificatesRunner.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ActiveInactiveStudentsDetailReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ActiveInactiveStudentsDetailReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AdvancePaymentReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AdvancePaymentReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AmountWithoutStructureReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AmountWithoutStructureReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger1.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger2.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger3.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedger3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedgerReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AnnualStudentLedgerReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AssignConcession.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AssignConcession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AssignConcessionToStudent.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AssignConcessionToStudent.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AssignOpeningBalance.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AssignOpeningBalance.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AssignTransportToStudents.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AssignTransportToStudents.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/AssignedTransportReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/AssignedTransportReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/BadDebtsReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/BadDebtsReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/CancelFeeReceipt.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CancelFeeReceipt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/CancelledFeesReceiptReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CancelledFeesReceiptReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/CategoryGenderWiseStudentStrength.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CategoryGenderWiseStudentStrength.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/CategoryWiseStudentReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/CategoryWiseStudentReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/Certificates.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Certificates.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ChangeAcademic.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ChangeAcademic.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ChequeClearingStatusReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ChequeClearingStatusReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ClassSectionTransferReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ClassSectionTransferReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseMarkList.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseMarkList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseSiblingReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseSiblingReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseStudentDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseStudentDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseStudentStrength.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ClassWiseStudentStrength.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollection.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionAccountWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionAccountWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateClassWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateClassWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateFeeGroupWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateFeeGroupWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DailyFeeCollectionDateWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DateWiseAdmissionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DateWiseAdmissionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DayWiseTotalCollection.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DayWiseTotalCollection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DefaulterListFeeTypeWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DefaulterListFeeTypeWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/DeleteFeeReceipt.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/DeleteFeeReceipt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/EstimatedCollectionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/EstimatedCollectionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/EstimatedTransportDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/EstimatedTransportDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeChequeBounceReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeChequeBounceReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeChequeClearing.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeChequeClearing.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeCollectionWithEntryTimeConcession.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeCollectionWithEntryTimeConcession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterInstallmentWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterInstallmentWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterList.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterReportConsolidated.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterReportConsolidated.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterReportWithReceiving.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeDefaulterReportWithReceiving.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeEntry.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeEntry.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeEntrySettingOthers.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeEntrySettingOthers.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeeHeadWiseCollectionClassRange.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeeHeadWiseCollectionClassRange.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeesConcession.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeesConcession.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeesConcessionInstallHeadWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeesConcessionInstallHeadWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeesDefaulterSlip.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeesDefaulterSlip.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/FeesStudentLedger.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/FeesStudentLedger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/GenderReligionWiseStudentReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/GenderReligionWiseStudentReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/GenerateBillBookDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/GenerateBillBookDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/GenerateTC.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/GenerateTC.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/GroupWiseStudentDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/GroupWiseStudentDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/LateFeeSetting.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/LateFeeSetting.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ManualFeeModification.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ManualFeeModification.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ModifyFeeReceipt.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ModifyFeeReceipt.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/MonthWiseCollectionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MonthWiseCollectionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/MonthlyConsolidatedReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/MonthlyConsolidatedReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/OnlinePaymentStatusReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/OnlinePaymentStatusReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/OpeningDuesReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/OpeningDuesReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/PaidTransport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PaidTransport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/PayAmountWithoutStructure.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PayAmountWithoutStructure.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/PrintFeeReceiptAndCertificate.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PrintFeeReceiptAndCertificate.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/PrintTransportIDCard.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/PrintTransportIDCard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptCertificateSetting.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptCertificateSetting.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptWiseDailyCollection.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptWiseDailyCollection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptWiseFeeTypeCollection.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReceiptWiseFeeTypeCollection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReconcileInstallmentClassWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReconcileInstallmentClassWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReconcileReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReconcileReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/RefundAmount.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/RefundAmount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/RefundHeadAmount.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/RefundHeadAmount.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/ReligionGenderWiseStudentStrength.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/ReligionGenderWiseStudentStrength.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/RouteWiseStudentStrength.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/RouteWiseStudentStrength.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/SMSReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SMSReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/SelfTransportReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SelfTransportReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/SetDueLimit.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SetDueLimit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/SetStudentStatus.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SetStudentStatus.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StaffWardListReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StaffWardListReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentFeeDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentFeeDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentHealthEntryReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentHealthEntryReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentHouseWiseReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentHouseWiseReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentLedgerClassWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentLedgerClassWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentRegisterDateWiseReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentRegisterDateWiseReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentRegistration.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentRegistration.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentStrengthRatioWiseReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentStrengthRatioWiseReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentWiseCollectionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentWiseCollectionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/StudentWiseReceiptReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/StudentWiseReceiptReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/SurnameWiseStudentDetails.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/SurnameWiseStudentDetails.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TCForm.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TCForm.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TCReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TCReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TotalCollectionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TotalCollectionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransportDetail.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TransportDetail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransportReportClassWise$1.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TransportReportClassWise$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransportReportClassWise.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TransportReportClassWise.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/TransportStudentStrengthReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/TransportStudentStrengthReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/Utility.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/Utility.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pageObjects/YearlyCollectionReport.class" afterPath="$PROJECT_DIR$/target/classes/pageObjects/YearlyCollectionReport.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/webservices/WebServicesHit.class" afterPath="$PROJECT_DIR$/target/classes/webservices/WebServicesHit.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ActiveInactiveStudentsDetailReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ActiveInactiveStudentsDetailReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AdvancePaymentReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AdvancePaymentReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AmountWithoutStructureReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AmountWithoutStructureReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger1Runner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger1Runner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger2Runner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger2Runner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger3Runner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedger3Runner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedgerReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AnnualStudentLedgerReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AssignConcessionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AssignConcessionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AssignConcessionToStudentRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AssignConcessionToStudentRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AssignOpeningBalanceRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AssignOpeningBalanceRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AssignTransportToStudentsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AssignTransportToStudentsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/AssignedTransportReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/AssignedTransportReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/BadDebtsReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/BadDebtsReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/CancelFeeReceiptRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/CancelFeeReceiptRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/CancelledFeesReceiptReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/CancelledFeesReceiptReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/CategoryGenderWiseStudentStrengthRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/CategoryGenderWiseStudentStrengthRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/CategoryWiseStudentReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/CategoryWiseStudentReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/CertificatesRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/CertificatesRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ChequeClearingStatusReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ChequeClearingStatusReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ClassSectionTransferReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ClassSectionTransferReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseMarkListRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseMarkListRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseSiblingReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseSiblingReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseStudentDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseStudentDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseStudentStrengthRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ClassWiseStudentStrengthRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionAccountWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionAccountWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateClassWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateClassWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateFeeGroupWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateFeeGroupWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionDateWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DailyFeeCollectionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DateWiseAdmissionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DateWiseAdmissionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DayWiseTotalCollectionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DayWiseTotalCollectionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DefaulterListFeeTypeWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DefaulterListFeeTypeWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/DeleteFeeReceiptRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/DeleteFeeReceiptRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/EstimatedCollectionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/EstimatedCollectionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/EstimatedTransportDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/EstimatedTransportDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeChequeBounceReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeChequeBounceReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeChequeClearingRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeChequeClearingRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeCollectionWithEntryTimeConcessionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeCollectionWithEntryTimeConcessionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterInstallmentWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterInstallmentWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterListRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterListRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterReportConsolidatedRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterReportConsolidatedRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterReportWithReceivingRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeDefaulterReportWithReceivingRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeEntryRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeEntryRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeEntrySettingOthersRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeEntrySettingOthersRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeeHeadWiseCollectionClassRangeRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeeHeadWiseCollectionClassRangeRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeesConcessionInstallHeadWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeesConcessionInstallHeadWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeesConcessionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeesConcessionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeesDefaulterSlipRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeesDefaulterSlipRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/FeesStudentLedgerRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/FeesStudentLedgerRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/GenderReligionWiseStudentReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/GenderReligionWiseStudentReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/GenerateBillBookDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/GenerateBillBookDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/GenerateTCRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/GenerateTCRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/GroupWiseStudentDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/GroupWiseStudentDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/LateFeeSettingRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/LateFeeSettingRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/LoginRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/LoginRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ManualFeeModificationRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ManualFeeModificationRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ModifyFeeReceiptRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ModifyFeeReceiptRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/MonthWiseCollectionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/MonthWiseCollectionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/MonthlyConsolidatedReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/MonthlyConsolidatedReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/OnlinePaymentStatusReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/OnlinePaymentStatusReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/OpeningDuesReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/OpeningDuesReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/PaidTransportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/PaidTransportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/PayAmountWithoutStructureRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/PayAmountWithoutStructureRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/PrintFeeReceiptAndCertificateRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/PrintFeeReceiptAndCertificateRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/PrintTransportIDCardRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/PrintTransportIDCardRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptCertificateSettingRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptCertificateSettingRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptWiseDailyCollectionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptWiseDailyCollectionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptWiseFeeTypeCollectionRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReceiptWiseFeeTypeCollectionRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReconcileInstallmentClassWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReconcileInstallmentClassWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReconcileReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReconcileReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/RefundAmountRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/RefundAmountRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/RefundHeadAmountRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/RefundHeadAmountRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/ReligionGenderWiseStudentStrengthRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/ReligionGenderWiseStudentStrengthRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/RouteWiseStudentStrengthRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/RouteWiseStudentStrengthRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/SMSReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/SMSReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/SelfTransportReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/SelfTransportReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/SetDueLimitRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/SetDueLimitRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StaffWardListReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StaffWardListReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentFeeDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentFeeDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentHealthEntryReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentHealthEntryReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentHouseWiseReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentHouseWiseReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentLedgerClassWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentLedgerClassWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentRegisterDateWiseReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentRegisterDateWiseReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentStrengthRatioWiseReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentStrengthRatioWiseReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentWiseCollectionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentWiseCollectionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/StudentWiseReceiptReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/StudentWiseReceiptReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/SurnameWiseStudentDetailsRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/SurnameWiseStudentDetailsRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TCFormRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TCFormRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TCReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TCReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TotalCollectionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TotalCollectionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TransportDetailRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TransportDetailRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TransportReportClassWiseRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TransportReportClassWiseRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/TransportStudentStrengthReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/TransportStudentStrengthReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/Runner/YearlyCollectionReportRunner.class" afterPath="$PROJECT_DIR$/target/test-classes/Runner/YearlyCollectionReportRunner.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/step_Def/MyTestSteps.class" afterPath="$PROJECT_DIR$/target/test-classes/step_Def/MyTestSteps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/AssignConcession.feature" afterPath="$PROJECT_DIR$/Feature/AssignConcession.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/AssignConcessionToStudent.feature" afterPath="$PROJECT_DIR$/Feature/AssignConcessionToStudent.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/AssignOpeningBalance.feature" afterPath="$PROJECT_DIR$/Feature/AssignOpeningBalance.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/AssignTransportToStudents.feature" afterPath="$PROJECT_DIR$/Feature/AssignTransportToStudents.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/CancelFeeReceipt.feature" afterPath="$PROJECT_DIR$/Feature/CancelFeeReceipt.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/Certificates.feature" afterPath="$PROJECT_DIR$/Feature/Certificates.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/DeleteFeeReceipt.feature" afterPath="$PROJECT_DIR$/Feature/DeleteFeeReceipt.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/FeeChequeClearing.feature" afterPath="$PROJECT_DIR$/Feature/FeeChequeClearing.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/FeeEntry.feature" afterPath="$PROJECT_DIR$/Feature/FeeEntry.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/LateFeeSetting.feature" afterPath="$PROJECT_DIR$/Feature/LateFeeSetting.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/Login.feature" afterPath="$PROJECT_DIR$/Feature/Login.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/ModifyFeeReceipt.feature" afterPath="$PROJECT_DIR$/Feature/ModifyFeeReceipt.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Feature/TCForm.feature" afterPath="$PROJECT_DIR$/Feature/TCForm.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ActiveInactiveStudentsDetailReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ActiveInactiveStudentsDetailReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AdvancePaymentReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AdvancePaymentReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AmountWithoutStructureReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AmountWithoutStructureReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger1.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger1.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger2.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger2.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger3.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedger3.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedgerReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AnnualStudentLedgerReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AssignTransportToStudents.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AssignTransportToStudents.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/AssignedTransportReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/AssignedTransportReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/BadDebtsReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/BadDebtsReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CancelledFeesReceiptReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CancelledFeesReceiptReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CategoryGenderWiseStudentStrength.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CategoryGenderWiseStudentStrength.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/CategoryWiseStudentReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/CategoryWiseStudentReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Certificates.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Certificates.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ChequeClearingStatusReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ChequeClearingStatusReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ClassSectionTransferReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ClassSectionTransferReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseMarkList.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseMarkList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseSiblingReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseSiblingReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseStudentDetails.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseStudentDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseStudentStrength.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ClassWiseStudentStrength.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollection.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionAccountWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionAccountWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateClassWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateClassWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateFeeGroupWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateFeeGroupWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DailyFeeCollectionDateWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DateWiseAdmissionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DateWiseAdmissionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DayWiseTotalCollection.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DayWiseTotalCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/DefaulterListFeeTypeWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/DefaulterListFeeTypeWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/EstimatedCollectionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/EstimatedCollectionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/EstimatedTransportDetails.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/EstimatedTransportDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeChequeBounceReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeChequeBounceReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeCollectionWithEntryTimeConcession.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeCollectionWithEntryTimeConcession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterInstallmentWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterInstallmentWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterList.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterReportConsolidated.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterReportConsolidated.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterReportWithReceiving.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeDefaulterReportWithReceiving.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeEntry.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeEntry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeEntrySettingOthers.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeEntrySettingOthers.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeeHeadWiseCollectionClassRange.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeeHeadWiseCollectionClassRange.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeesConcession.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeesConcession.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeesConcessionInstallHeadWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeesConcessionInstallHeadWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeesDefaulterSlip.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeesDefaulterSlip.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/FeesStudentLedger.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/FeesStudentLedger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/GenderReligionWiseStudentReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/GenderReligionWiseStudentReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/GroupWiseStudentDetails.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/GroupWiseStudentDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/LateFeeSetting.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/LateFeeSetting.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MonthWiseCollectionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MonthWiseCollectionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/MonthlyConsolidatedReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/MonthlyConsolidatedReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/OnlinePaymentStatusReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/OnlinePaymentStatusReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/OpeningDuesReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/OpeningDuesReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PaidTransport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PaidTransport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/PrintTransportIDCard.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/PrintTransportIDCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ReceiptWiseDailyCollection.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ReceiptWiseDailyCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ReceiptWiseFeeTypeCollection.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ReceiptWiseFeeTypeCollection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ReconcileInstallmentClassWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ReconcileInstallmentClassWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ReconcileReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ReconcileReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/RefundAmount.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/RefundAmount.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/ReligionGenderWiseStudentStrength.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/ReligionGenderWiseStudentStrength.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/RouteWiseStudentStrength.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/RouteWiseStudentStrength.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SMSReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SMSReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SelfTransportReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SelfTransportReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StaffWardListReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StaffWardListReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentHealthEntryReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentHealthEntryReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentHouseWiseReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentHouseWiseReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentLedgerClassWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentLedgerClassWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentRegisterDateWiseReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentRegisterDateWiseReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentStrengthRatioWiseReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentStrengthRatioWiseReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentWiseCollectionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentWiseCollectionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/StudentWiseReceiptReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/StudentWiseReceiptReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/SurnameWiseStudentDetails.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/SurnameWiseStudentDetails.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/TCReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/TCReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/TotalCollectionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/TotalCollectionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/TransportDetail.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/TransportDetail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/TransportReportClassWise.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/TransportReportClassWise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/TransportStudentStrengthReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/TransportStudentStrengthReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Utility.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/YearlyCollectionReport.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/YearlyCollectionReport.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ActiveInactiveStudentsDetailReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ActiveInactiveStudentsDetailReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AdvancePaymentReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AdvancePaymentReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AmountWithoutStructureReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AmountWithoutStructureReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger1Runner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger1Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger2Runner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger2Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger3Runner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedger3Runner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedgerReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AnnualStudentLedgerReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/AssignedTransportReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/AssignedTransportReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/BadDebtsReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/BadDebtsReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/CancelledFeesReceiptReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/CancelledFeesReceiptReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/CategoryGenderWiseStudentStrengthRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/CategoryGenderWiseStudentStrengthRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/CategoryWiseStudentReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/CategoryWiseStudentReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/CertificatesRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/CertificatesRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ChequeClearingStatusReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ChequeClearingStatusReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ClassSectionTransferReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ClassSectionTransferReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseMarkListRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseMarkListRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseSiblingReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseSiblingReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseStudentDetailsRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseStudentDetailsRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseStudentStrengthRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ClassWiseStudentStrengthRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionAccountWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionAccountWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateClassWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateClassWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateFeeGroupWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateFeeGroupWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionDateWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DailyFeeCollectionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DateWiseAdmissionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DateWiseAdmissionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DayWiseTotalCollectionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DayWiseTotalCollectionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/DefaulterListFeeTypeWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/DefaulterListFeeTypeWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/EstimatedCollectionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/EstimatedCollectionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/EstimatedTransportDetailsRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/EstimatedTransportDetailsRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeChequeBounceReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeChequeBounceReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeCollectionWithEntryTimeConcessionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeCollectionWithEntryTimeConcessionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterInstallmentWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterInstallmentWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterListRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterListRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterReportConsolidatedRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterReportConsolidatedRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterReportWithReceivingRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeDefaulterReportWithReceivingRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeEntryRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeEntryRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeeHeadWiseCollectionClassRangeRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeeHeadWiseCollectionClassRangeRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeesConcessionInstallHeadWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeesConcessionInstallHeadWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeesConcessionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeesConcessionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeesDefaulterSlipRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeesDefaulterSlipRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/FeesStudentLedgerRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/FeesStudentLedgerRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/GenderReligionWiseStudentReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/GenderReligionWiseStudentReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/GroupWiseStudentDetailsRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/GroupWiseStudentDetailsRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/MonthWiseCollectionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/MonthWiseCollectionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/MonthlyConsolidatedReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/MonthlyConsolidatedReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/OnlinePaymentStatusReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/OnlinePaymentStatusReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/OpeningDuesReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/OpeningDuesReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/PaidTransportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/PaidTransportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/PrintTransportIDCardRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/PrintTransportIDCardRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ReceiptWiseDailyCollectionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ReceiptWiseDailyCollectionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ReceiptWiseFeeTypeCollectionRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ReceiptWiseFeeTypeCollectionRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ReconcileInstallmentClassWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ReconcileInstallmentClassWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ReconcileReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ReconcileReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/RefundAmountRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/RefundAmountRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/ReligionGenderWiseStudentStrengthRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/ReligionGenderWiseStudentStrengthRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/RouteWiseStudentStrengthRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/RouteWiseStudentStrengthRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/SMSReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/SMSReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/SelfTransportReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/SelfTransportReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StaffWardListReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StaffWardListReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentHealthEntryReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentHealthEntryReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentHouseWiseReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentHouseWiseReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentLedgerClassWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentLedgerClassWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentRegisterDateWiseReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentRegisterDateWiseReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentStrengthRatioWiseReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentStrengthRatioWiseReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentWiseCollectionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentWiseCollectionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/StudentWiseReceiptReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/StudentWiseReceiptReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/SurnameWiseStudentDetailsRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/SurnameWiseStudentDetailsRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/TCReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/TCReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/TotalCollectionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/TotalCollectionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/TransportDetailRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/TransportDetailRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/TransportReportClassWiseRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/TransportReportClassWiseRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/TransportStudentStrengthReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/TransportStudentStrengthReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Runner/YearlyCollectionReportRunner.java" afterPath="$PROJECT_DIR$/src/test/java/Runner/YearlyCollectionReportRunner.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/step_Def/MyTestSteps.java" afterPath="$PROJECT_DIR$/src/test/java/step_Def/MyTestSteps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/Franciscan/FranciscanERP/pom.properties" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/Franciscan/FranciscanERP/pom.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/maven/Franciscan/FranciscanERP/pom.xml" afterPath="$PROJECT_DIR$/target/classes/META-INF/maven/Franciscan/FranciscanERP/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber.json" afterPath="$PROJECT_DIR$/target/cucumber.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber.xml" afterPath="$PROJECT_DIR$/target/cucumber.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber_html_report/report.js" afterPath="$PROJECT_DIR$/target/cucumber_html_report/report.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/classes/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ActiveInactiveStudentsDetailReport.feature" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".project" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.project">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".classpath" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.classpath">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AssignConcession.feature" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Feature/AssignConcession.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="FranciscanERP">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+        <subPane subId="Default">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="FranciscanERP">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="FranciscanERP">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Feature">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FranciscanERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FranciscanERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FranciscanERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FranciscanERP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SCRATCH_FILE_ID" value="0" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="FranciscanERP" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0356cfeb-2c6f-40df-90c1-dfb8551fb839" name="Default" comment="" />
+      <created>1496141230603</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1496141230603</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feature/AssignConcession.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="59" lean-forward="true" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Runner/ActiveInactiveStudentsDetailReportRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="37" column="13" lean-forward="true" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Feature/AssignConcession.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="59" lean-forward="false" selection-start-line="6" selection-start-column="59" selection-end-line="6" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="41" lean-forward="false" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FranciscanERP</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

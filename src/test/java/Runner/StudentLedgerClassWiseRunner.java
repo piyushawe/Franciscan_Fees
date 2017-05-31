@@ -7,13 +7,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"Feature/StudentLedgerClassWise.feature"}
+		features= {"ReportsFeature/StudentLedgerClassWise.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
 	    ,plugin= {"pretty","html:target/cucumber_html_report",
 	    		  "json:target/cucumber.json",
 	    	      "junit:target/cucumber.xml"}		
-		,tags= {"@scenario2"}
+		//,tags= {"@scenario2"}
 	)
 public class StudentLedgerClassWiseRunner {
 

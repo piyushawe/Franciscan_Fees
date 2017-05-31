@@ -1,9 +1,12 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,15 +14,14 @@ import org.openqa.selenium.support.ui.Select;
 
 public class YearlyCollectionReport {
 WebDriver dr;
-  //By entrymode= By.id("ContentPlaceHolder1_lstentrymode");
+String r= "YearlyCollectionReport";
+
   By session= By.id("ContentPlaceHolder1_ddlAcadYear");
   By cls= By.id("ContentPlaceHolder1_ddlStanard");
   By section= By.id("ContentPlaceHolder1_ddlSection");
   By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
   By head= By.id("ContentPlaceHolder1_ddlFeeHeadToshown");
   By school= By.id("ContentPlaceHolder1_ddlSchool");
-  //By paymode= By.id("ContentPlaceHolder1_lstPayMode");
-  //By bankname= By.id("ContentPlaceHolder1_DDlDepBank");
   By user= By.id("ContentPlaceHolder1_ddlUser");
   By filterwithchqclearingdate=By.id("ContentPlaceHolder1_chkclearingdate");
   By show= By.xpath("//*[@id=\"ContentPlaceHolder1_btnShow\"]/input");
@@ -53,22 +55,46 @@ WebDriver dr;
   public void selectSession(String s)
   {
 	  Select sess= new Select (dr.findElement(session));
-	  sess.selectByVisibleText(s);
+	  try {
+	    sess.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	     new Select(dr.findElement(session)).selectByIndex(4);
+	  }
   }
   public void selectClass(String s)
   {
 	  Select c= new Select(dr.findElement(cls));
-	  c.selectByVisibleText(s);
+	  try {
+	    c.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	       c.selectByIndex(1);
+	  }
   }
   public void selectSection(String s)
   {
 	  Select sec= new Select(dr.findElement(section));
-	  sec.selectByVisibleText(s);
+	  try {
+	    sec.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	     new Select(dr.findElement(section)).selectByIndex(1);
+	  }
   }
   public void selectFeeType(String s)
   {
 	  Select ftype= new Select(dr.findElement(feetype));
-	  ftype.selectByVisibleText(s);
+	  try {
+	    ftype.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	     ftype.selectByIndex(1);
+	  }
   }
   public void selectHead(String s)
   {
@@ -78,7 +104,13 @@ WebDriver dr;
   public void selectSchool(String s)
   {
 	  Select sch= new Select(dr.findElement(school));
-      sch.selectByVisibleText(s);			  
+	  try {
+        sch.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	    sch.selectByIndex(1);
+	  }
   }
   public void selectPayMode(String p1, String p2)
   {
@@ -105,18 +137,24 @@ WebDriver dr;
   public void selectUser(String s)
   {
 	  Select usr= new Select(dr.findElement(user));
-	  usr.selectByVisibleText(s);
+	  try {
+	    usr.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+	     usr.selectByIndex(1);
+	  }
   }
   public void checkFilterWithChqClearingDate()
   {
 	  dr.findElement(filterwithchqclearingdate).click();
   }
-  public void clickShow() throws InterruptedException
-  {
-	  String exp= "YEARLY COLLECTION REPORT";
-      Utility u= new Utility(); 
-      dr.findElement(show).click();
-      Thread.sleep(2000);
-      u.verifyPage(dr,exp);
-  }
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+  {                                                                                                 
+	 Utility u= new Utility();                                                                    
+	 dr.findElement(show).click();                                                                
+	 Thread.sleep(5000);                                                                          
+	 u.captureScreenshot(dr,schl,r,sc);                                                           
+	 u.downloadPDF(dr);                                                                           
+  } 
 }

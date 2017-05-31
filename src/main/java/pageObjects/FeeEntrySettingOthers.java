@@ -21,7 +21,7 @@ public class FeeEntrySettingOthers {
  	     dr.findElement(By.linkText("Fee Entry Setting Others")).click();
  	     dr.switchTo().frame(dr.findElement(By.id("Fee Entry Setting Others")));
      }
-     public void clickAllowUserToSelectBankInFeeEntry()
+     public void clickAllowUserToSelectBankIn()
      {
     	 
      }

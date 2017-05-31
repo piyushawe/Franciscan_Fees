@@ -7,13 +7,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"Feature/ReligionGenderWiseStudentStrength.feature"}
+		features= {"ReportsFeature/ReligionGenderWiseStudentStrength.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
 	    ,plugin= {"pretty","html:target/cucumber_html_report",
 	    		  "json:target/cucumber.json",
 	    	      "junit:target/cucumber.xml"}		
-		,tags= {"@scenario3"}
+		,tags= {"@scenario4"}
 	)
 public class ReligionGenderWiseStudentStrengthRunner {
 

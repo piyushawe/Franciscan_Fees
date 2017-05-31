@@ -1,6 +1,8 @@
 package step_Def;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 //import org.junit.After;
 //import org.junit.Before;
@@ -9,6 +11,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -67,6 +71,7 @@ import pageObjects.GenderReligionWiseStudentReport;
 import pageObjects.GenerateBillBookDetails;
 import pageObjects.GenerateTC;
 import pageObjects.GroupWiseStudentDetails;
+import pageObjects.LateFeeSetting;
 import pageObjects.ManualFeeModification;
 import pageObjects.ModifyFeeReceipt;
 import pageObjects.MonthWiseCollectionReport;
@@ -91,6 +96,7 @@ import pageObjects.SelfTransportReport;
 import pageObjects.SetDueLimit;
 import pageObjects.SetStudentStatus;
 import pageObjects.StaffWardListReport;
+import pageObjects.StudentDetails;
 import pageObjects.StudentFeeDetails;
 import pageObjects.StudentHealthEntryReport;
 import pageObjects.StudentHouseWiseReport;
@@ -107,6 +113,7 @@ import pageObjects.TotalCollectionReport;
 import pageObjects.TransportDetail;
 import pageObjects.TransportReportClassWise;
 import pageObjects.TransportStudentStrengthReport;
+import pageObjects.Utility;
 import pageObjects.YearlyCollectionReport;
 
 public class MyTestSteps {
@@ -118,21 +125,28 @@ public WebDriver dr;
 	String chequeno;
 	String installment;
 	String paidamount;
-   @Before
-	public void launchBrowser()
-	{
+	Collection<String> scenario;
+	String schoolname;
+	
+    @Before
+    public void launchBrowser(Scenario s)
+    {
         System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 	   //System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
 		dr= new ChromeDriver();
 		dr.manage().window().maximize();
-	}
+		scenario= s.getSourceTagNames();
+    }
 
 	@After
-	public void closeBrowser() throws InterruptedException
+	public void closeBrowser() throws InterruptedException, IOException
 	{  
-		//dr.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
-		//Thread.sleep(10000);
-		//dr.quit();
+		dr.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
+		Thread.sleep(2000);
+		//Utility u= new Utility();
+		//u.captureScreenshot(dr, scenariotag);
+		//u.downloadPDF(dr);
+		dr.quit();
 	} 
    
    @Then("^go back to the default page$")
@@ -141,6 +155,11 @@ public WebDriver dr;
       Thread.sleep(1000);
    }
 
+   @Then("^passes school name \"([^\"]*)\"$")
+   public void passes_school_name(String arg1) throws Throwable {
+       schoolname= arg1;
+   }
+   
 //login	
    @Given("^user enters url\"([^\"]*)\"$")
    public void user_enters_url(String arg1) throws Throwable {	
@@ -149,21 +168,21 @@ public WebDriver dr;
 
 	@When("^enter username\"([^\"]*)\" and password\"([^\"]*)\"$")
 	public void enter_username_and_password(String arg1, String arg2) throws Throwable {
-			dr.findElement(By.id("txtUserName")).sendKeys(arg1);
-			dr.findElement(By.id("txtPassword")).sendKeys(arg2);
-			}
+		dr.findElement(By.id("txtUserName")).sendKeys(arg1);
+		dr.findElement(By.id("txtPassword")).sendKeys(arg2);
+	}
 
 	@Then("^signin$")
 	public void signin() throws Throwable {
-			dr.findElement(By.id("btnLogin")).click();  
-			dr.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		dr.findElement(By.id("btnLogin")).click();  
+		dr.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			}
 	
 //fee home page is opened
 	@Then("^home page is opened$")
 	public void home_page_is_opened() throws Throwable {
-		    dr.findElement(By.xpath("//img[@src='images/big/Fee-Manager.png']")).click();
-			dr.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+		dr.findElement(By.xpath("//img[@src='images/big/Fee-Manager.png']")).click();
+		dr.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 	}
 
 	@Then("^open fee home page$")
@@ -346,31 +365,31 @@ public WebDriver dr;
 	
 	@Then("^impose manual late fine\"([^\"]*)\"$")
 	public void impose_manual_late_fine(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.manualLateFine(arg1);
 	}
 
 	@Then("^give discount of rs\"([^\"]*)\"$")
 	public void give_discount_of_rs(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.enterDiscountAmount(arg1);
 	}
 
 	@Then("^click adjust advance on fee entry form$")
 	public void click_adjust_advance_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.adjustAdvance();
 	}
 
 	@Then("^pay advance amount of rs\"([^\"]*)\"$")
 	public void pay_advance_amount_of_rs(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
          f2.totalPaidAmount(arg1);
 	}
 	
 	@Then("^user find total amount to be paid from fee entry page$")
 	public void user_find_total_amount_to_be_paid_from_fee_entry_page() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		paidamount=f2.findTotalPaidAmount();
 	}
     
@@ -474,7 +493,7 @@ public WebDriver dr;
 
 	@Then("^click on save of fee entry form$")
 	public void click_on_save_of_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		receiptno=f2.saveFee();
 		if(flag==false)
 		{
@@ -485,44 +504,44 @@ public WebDriver dr;
 	
 	@Then("^verify cheque bounce fine on fee entry form$")
 	public void verify_cheque_bounce_fine_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyChequeBounceFine();
 	}
 	
 	@Then("^verify advance amount \"([^\"]*)\" on fee entry page$")
 	public void verify_advance_amount_on_fee_entry_page(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyAdvanceAmount(arg1);
 	}
 	
 	@Then("^impose manual cheque bounce fine of rs \"([^\"]*)\"$")
 	public void impose_manual_cheque_bounce_fine_of_rs(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.chequeBounceFineWaiveOff(arg1);
 	}
 
 	@Then("^verify advance on fee entry page$")
 	public void verify_advance_on_fee_entry_page() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
-		f2.verifyAdvanceOnFeeEntry();
+		FeeEntry f2= new FeeEntry(dr); 
+		f2.verifyAdvanceOn();
 	}
 
 	@Then("^partial late fee is paid on fee entry form$")
 	public void partial_late_fee_is_paid_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.payPartialLateFee();
 	}
 
 	@Then("^verify advance on fee receipt$")
 	public void verify_advance_on_fee_receipt() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyReceipt(receiptno);
 		f2.verifyAdvanceOnReceipt();
 	}
 	
 	@Then("^pay amount less than to be paid amount on fee entry page$")
 	public void pay_amount_less_than_to_be_paid_amount_on_fee_entry_page() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.paidLessAmount();
 	}
 	
@@ -599,7 +618,7 @@ public WebDriver dr;
 	
 	@Then("^user gets selected installment on fee entry form$")
 	public void user_gets_selected_installment_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		installment= f2.getInstallment();
 	}
 
@@ -612,13 +631,13 @@ public WebDriver dr;
 
 	@Then("^user select installment on fee entry form$")
 	public void user_select_installment_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.selectInstallment(installment);
 	}
 
 	@Then("^user select installments \"([^\"]*)\" on fee entry form$")
 	public void user_select_installments_on_fee_entry_form(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.selectMultipleInstallments(arg1);
 	}
 	
@@ -631,37 +650,37 @@ public WebDriver dr;
 
 	@Then("^verify fine waive off on multiple installments$")
 	public void verify_fine_waive_off_on_multiple_installments() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyFineWaiveOff();
 	}
 	
 	@Then("^verify late fee on multiple installments$")
 	public void verify_late_fee_on_multiple_installments() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyFineWaiveOff();
 	}
 
 	@Then("^waive off late fine on fee entry form$")
 	public void waive_off_late_fine_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.waiveOffFine();
 	}
 
 	@Then("^verify cheque bounce fine on multiple installments$")
 	public void verify_cheque_bounce_fine_on_multiple_installments() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyChequeBounceFineOnMultipleInstallments();
 	}
 	
 	@Then("^user verify receipt on fee entry form$")
 	public void user_verify_receipt_on_fee_entry_form() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.verifyReceipt(receiptno);
 	}
 	
 	@Then("^user clicks on show installment button of fee entry$")
 	public void user_clicks_on_show_installment_button_of_fee_entry() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.clickShowInstallment(receiptno);
 		//f2.clickShowInstallment("9943");
 	}
@@ -692,7 +711,7 @@ public WebDriver dr;
 	
 	@Then("^pay fee by pay schedule \"([^\"]*)\" on fee entry page$")
 	public void pay_fee_by_pay_schedule_on_fee_entry_page(String arg1) throws Throwable {
-		FeeEntry f2= new FeeEntry(dr); 
+		FeeEntry f2= new FeeEntry(dr);  
 		f2.payByPaySchedule(arg1);
 	}
 	
@@ -720,7 +739,7 @@ public WebDriver dr;
 	
 	@Then("^user clicks on reuse receipt$")
 	public void user_clicks_on_reuse_receipt() throws Throwable {
-		FeeEntry f2= new FeeEntry(dr);
+		FeeEntry f2= new FeeEntry(dr); 
 		f2.reuseReceipt(receiptno);
 		//f2.reuseReceipt("10007");
 	}
@@ -793,7 +812,7 @@ public WebDriver dr;
 	@Then("^clicks on show button of daily fee collection$")
 	public void clicks_on_show_button_of_daily_fee_collection() throws Throwable {
 		DailyFeeCollection f= new DailyFeeCollection(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 	
 	@Then("^select school\"([^\"]*)\" on daily fee collection$")
@@ -882,7 +901,7 @@ public WebDriver dr;
 	@Then("^user click on show on cheque bounce report$")
 	public void user_click_on_show_on_cheque_bounce_report() throws Throwable {
 		FeeChequeBounceReport f=new FeeChequeBounceReport(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 
 //fee defaulter list
@@ -925,7 +944,7 @@ public WebDriver dr;
 	@Then("^click on show on fee defaulter list$")
 	public void click_on_show_on_fee_defaulter_list() throws Throwable {
 		FeeDefaulterList list= new FeeDefaulterList(dr);
-		list.clickShow();
+		list.clickShow(schoolname, scenario);
 	}
 
 	@Then("^select school\"([^\"]*)\" on fee defaulter list$")
@@ -969,16 +988,19 @@ public WebDriver dr;
 		FeeDefaulterList list= new FeeDefaulterList(dr); 
 		list.selectWithHead();
 	}
+	
 	@Then("^filter with cheque clearing date$")
 	public void filter_with_cheque_clearing_date() throws Throwable {
 		FeeDefaulterList list= new FeeDefaulterList(dr);
 		list.selectFilterWithChequeClearingDate();
 	}
+	
 	@Then("^search text\"([^\"]*)\" on fee defaulter list$")
 	public void search_text_on_fee_defaulter_list(String arg1) throws Throwable {
 		FeeDefaulterList list= new FeeDefaulterList(dr);
 		list.findtext(arg1);
 	}
+	
 //total collection report
 	@Then("^total collection report is opened$")
 	public void total_collection_report_is_opened() throws Throwable {
@@ -1025,7 +1047,7 @@ public WebDriver dr;
 	@Then("^user click on show on total collection report$")
 	public void user_click_on_show_on_total_collection_report() throws Throwable {
 		TotalCollectionReport r=new TotalCollectionReport(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 	
 //advance payment report
@@ -1074,7 +1096,7 @@ public WebDriver dr;
 	@Then("^user click on show on advance payment report$")
 	public void user_click_on_show_on_advance_payment_report() throws Throwable {
 		AdvancePaymentReport ad=new AdvancePaymentReport(dr);
-		ad.clickShow();
+		ad.clickShow(schoolname,scenario);
 	}
 
 //defaulter list fee type wise
@@ -1105,7 +1127,7 @@ public WebDriver dr;
 	@Then("^user click on show on defaulter list fee type wise report$")
 	public void user_click_on_show_on_defaulter_list_fee_type_wise_report() throws Throwable {
 		DefaulterListFeeTypeWise lst= new DefaulterListFeeTypeWise(dr);
-		lst.clickShow();
+		lst.clickShow(schoolname, scenario);
 	}
 	@Then("^user select fee type\"([^\"]*)\" on defaulter list fee type wise report$")
 	public void user_select_fee_type_on_defaulter_list_fee_type_wise_report(String arg1) throws Throwable {
@@ -1288,7 +1310,7 @@ public WebDriver dr;
 	@Then("^user click show on cheque clearing status report$")
 	public void user_click_show_on_cheque_clearing_status_report() throws Throwable {
 		ChequeClearingStatusReport ch= new ChequeClearingStatusReport(dr);
-		ch.clickShow();
+		ch.clickShow(schoolname, scenario);
 	}
 
 //cancelled fees receipt report
@@ -1313,7 +1335,7 @@ public WebDriver dr;
 	@Then("^user clicks on show$")
 	public void user_clicks_on_show() throws Throwable {
 		CancelledFeesReceiptReport cf= new CancelledFeesReceiptReport(dr);
-		cf.clickShow();
+		cf.clickShow(schoolname, scenario);
 	}
 	
 	@Then("^user enter name \"([^\"]*)\" and click find on cancelled fees receipt report page$")
@@ -1374,7 +1396,7 @@ public WebDriver dr;
 	@Then("^user click show on amount without structure report$")
 	public void user_click_show_on_amount_without_structure_report() throws Throwable {
 		AmountWithoutStructureReport r= new AmountWithoutStructureReport(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 
@@ -1442,7 +1464,7 @@ public WebDriver dr;
 	@Then("^user click on show on yearly collection report$")
 	public void user_click_on_show_on_yearly_collection_report() throws Throwable {
 		YearlyCollectionReport yr= new YearlyCollectionReport(dr);
-		yr.clickShow();
+		yr.clickShow(schoolname, scenario);
 	}
 	
 //daily fee collection date class wise
@@ -1485,7 +1507,7 @@ public WebDriver dr;
 	@Then("^user click on show on daily fee collection date class wise report$")
 	public void user_click_on_show_on_daily_fee_collection_date_class_wise_report() throws Throwable {
 		DailyFeeCollectionDateClassWise d= new DailyFeeCollectionDateClassWise(dr);
-		d.clickShow();
+		d.clickShow(schoolname, scenario);
 	}
 
 //student wise collection report
@@ -1522,7 +1544,7 @@ public WebDriver dr;
 	@Then("^user click on show on student wise collection report$")
 	public void user_click_on_show_on_student_wise_collection_report() throws Throwable {
 		StudentWiseCollectionReport s= new StudentWiseCollectionReport(dr);
-		s.clickShow();
+		s.clickShow(schoolname, scenario);
 	}
 
 //class wise student details
@@ -1559,7 +1581,7 @@ public WebDriver dr;
 	@Then("^user click on show on class wise student details$")
 	public void user_click_on_show_on_class_wise_student_details() throws Throwable {
 		ClassWiseStudentDetails sd= new ClassWiseStudentDetails(dr);
-		sd.clickShow();
+		sd.clickShow(schoolname, scenario);
 	}
 
 //class section transfer report
@@ -1596,7 +1618,7 @@ public WebDriver dr;
 	@Then("^user click on show on class section transfer report$")
 	public void user_click_on_show_on_class_section_transfer_report() throws Throwable {
 		ClassSectionTransferReport cst= new ClassSectionTransferReport(dr);
-		cst.clickShow();
+		cst.clickShow(schoolname, scenario);
 	}
 
 //class wise sibling report
@@ -1621,7 +1643,7 @@ public WebDriver dr;
 	@Then("^user click on show on class wise sibling report$")
 	public void user_click_on_show_on_class_wise_sibling_report() throws Throwable {
 		ClassWiseSiblingReport sbr= new ClassWiseSiblingReport(dr); 
-		sbr.clickShow();
+		sbr.clickShow(schoolname, scenario);
 	}
 	
 //refund amount
@@ -1652,7 +1674,7 @@ public WebDriver dr;
 	@Then("^user click on show on refund amount page$")
 	public void user_click_on_show_on_refund_amount_page() throws Throwable {
 		RefundAmount r= new RefundAmount(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 //sms report
@@ -1683,7 +1705,7 @@ public WebDriver dr;
 	@Then("^user click on show on sms report$")
 	public void user_click_on_show_on_sms_report() throws Throwable {
 		SMSReport sr= new SMSReport(dr);
-		sr.clickShow();
+		sr.clickShow(schoolname, scenario);
 	}
 
 //opening dues report
@@ -1732,7 +1754,7 @@ public WebDriver dr;
 	@Then("^user click on show on opening dues report$")
 	public void user_click_on_show_on_opening_dues_report() throws Throwable {
 		OpeningDuesReport od= new OpeningDuesReport(dr);
-		od.clickShow();
+		od.clickShow(schoolname, scenario);
 	}
 	
 //category wise student report
@@ -1769,7 +1791,7 @@ public WebDriver dr;
 	@Then("^user click on show on category wise student report page$")
 	public void user_click_on_show_on_category_wise_student_report_page() throws Throwable {
 		CategoryWiseStudentReport r= new CategoryWiseStudentReport(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 //gender religion wise student report
@@ -1806,7 +1828,7 @@ public WebDriver dr;
 	@Then("^user click show on gender religion wise student report page$")
 	public void user_click_show_on_gender_religion_wise_student_report_page() throws Throwable {
 		GenderReligionWiseStudentReport gr= new GenderReligionWiseStudentReport(dr);
-		gr.clickShow();
+		gr.clickShow(schoolname, scenario);
 	}
 
 //date wise admission report
@@ -1843,7 +1865,7 @@ public WebDriver dr;
 	@Then("^user click show on admission report page$")
 	public void user_click_show_on_admission_report_page() throws Throwable {
 		DateWiseAdmissionReport d= new DateWiseAdmissionReport(dr);
-		d.clickShow();
+		d.clickShow(schoolname, scenario);
 	}
 
 //staff ward list report
@@ -1874,7 +1896,7 @@ public WebDriver dr;
 	@Then("^user click show on staff ward list report$")
 	public void user_click_show_on_staff_ward_list_report() throws Throwable {
 		StaffWardListReport sw= new StaffWardListReport(dr);
-		sw.clickShow();
+		sw.clickShow(schoolname, scenario);
 	}
 
 //student register date wise report
@@ -1911,7 +1933,7 @@ public WebDriver dr;
 	@Then("^user click show on student register date wise report$")
 	public void user_click_show_on_student_register_date_wise_report() throws Throwable {
 		StudentRegisterDateWiseReport rd= new StudentRegisterDateWiseReport(dr);
-		rd.clickShow();
+		rd.clickShow(schoolname, scenario);
 	}
 
 //assigned transport report
@@ -1954,7 +1976,7 @@ public WebDriver dr;
 	@Then("^user click show on assigned transport report page$")
 	public void user_click_show_on_assigned_transport_report_page() throws Throwable {
 		AssignedTransportReport tr= new AssignedTransportReport(dr);
-		tr.clickShow();
+		tr.clickShow(schoolname, scenario);
 	}
 
 //transport detail
@@ -2009,7 +2031,7 @@ public WebDriver dr;
 	@Then("^user click show on transport detail report page$")
 	public void user_click_show_on_transport_detail_report_page() throws Throwable {
 		TransportDetail t= new TransportDetail(dr);
-		t.clickShow();
+		t.clickShow(schoolname, scenario);
 	}
 
 //self transport report
@@ -2046,7 +2068,7 @@ public WebDriver dr;
 	@Then("^user click show on self transport report$")
 	public void user_click_show_on_self_transport_report() throws Throwable {
 		SelfTransportReport st= new SelfTransportReport(dr);
-		st.clickShow();
+		st.clickShow(schoolname, scenario);
 	}
 
 	@Then("^user click inactive on self transport report$")
@@ -2107,7 +2129,7 @@ public WebDriver dr;
 	@Then("^user click show on student house wise report page$")
 	public void user_click_show_on_student_house_wise_report_page() throws Throwable {
 		StudentHouseWiseReport sh= new StudentHouseWiseReport(dr);
-		sh.clickShow();
+		sh.clickShow(schoolname, scenario);
 	}
 	
 	@Then("^user select range\"([^\"]*)\" on student house wise report page$")
@@ -2150,7 +2172,7 @@ public WebDriver dr;
 	@Then("^user click show on class wise student strength page$")
 	public void user_click_show_on_class_wise_student_strength_page() throws Throwable {
 		ClassWiseStudentStrength str= new ClassWiseStudentStrength(dr);
-		str.clickShow();
+		str.clickShow(schoolname, scenario);
 	}
 	
 	@Then("^user select date wise on class wise student strength page$")
@@ -2211,7 +2233,7 @@ public WebDriver dr;
 	@Then("^user click show on category gender wise student strength report$")
 	public void user_click_show_on_category_gender_wise_student_strength_report() throws Throwable {
 		CategoryGenderWiseStudentStrength cgw= new CategoryGenderWiseStudentStrength(dr);
-		cgw.clickShow();
+		cgw.clickShow(schoolname, scenario);
 	}
 
 	@Then("^user click gender wise on category gender wise student strength report$")
@@ -2260,7 +2282,7 @@ public WebDriver dr;
 	@Then("^user click show on religion gender wise student strength report$")
 	public void user_click_show_on_religion_gender_wise_student_strength_report() throws Throwable {
 		ReligionGenderWiseStudentStrength rgw= new ReligionGenderWiseStudentStrength(dr);
-		rgw.clickShow();
+		rgw.clickShow(schoolname, scenario);
 	}
 
 	@Then("^user click gender wise on religion gender wise student strength report$")
@@ -2315,7 +2337,7 @@ public WebDriver dr;
 	@Then("^user click show on transport student strength report$")
 	public void user_click_show_on_transport_student_strength_report() throws Throwable {
 		TransportStudentStrengthReport ts= new TransportStudentStrengthReport(dr);
-		ts.clickShow();
+		ts.clickShow(schoolname, scenario);
 	}
 
 //active inactive student details report
@@ -2371,7 +2393,7 @@ public WebDriver dr;
 	@Then("^user click show on active inactive students detail report page$")
 	public void user_click_show_on_active_inactive_students_detail_report_page() throws Throwable {
 		ActiveInactiveStudentsDetailReport ai= new ActiveInactiveStudentsDetailReport(dr);
-		ai.clickShow();
+		ai.clickShow(schoolname,scenario);
 	}
 
 //student strength wise ratio report
@@ -2408,7 +2430,7 @@ public WebDriver dr;
 	@Then("^user click show on student strength ratio wise report$")
 	public void user_click_show_on_student_strength_ratio_wise_report() throws Throwable {
 		StudentStrengthRatioWiseReport sr= new StudentStrengthRatioWiseReport(dr);
-		sr.clickShow();
+		sr.clickShow(schoolname, scenario);
 	}
 
 //print transport ID card
@@ -2445,7 +2467,7 @@ public WebDriver dr;
 	@Then("^user click show on print transport ID card page$")
 	public void user_click_show_on_print_transport_ID_card_page() throws Throwable {
 		PrintTransportIDCard pt= new PrintTransportIDCard(dr);
-		pt.clickShow();
+		pt.clickShow(schoolname, scenario);
 	}
 
 //annual student ledger1
@@ -2482,7 +2504,7 @@ public WebDriver dr;
 	@Then("^user click show on annual student ledger(\\d+) page$")
 	public void user_click_show_on_annual_student_ledger_page(int arg1) throws Throwable {
 		AnnualStudentLedger1 a= new AnnualStudentLedger1(dr);
-		a.clickShow();
+		a.clickShow(schoolname, scenario);
 	}
 
 //annual student ledger2
@@ -2519,7 +2541,7 @@ public WebDriver dr;
 	@Then("^user click show on annual student ledger two page$")
 	public void user_click_show_on_annual_student_ledger_two_page() throws Throwable {
 		AnnualStudentLedger2 a= new AnnualStudentLedger2(dr);
-		a.clickShow();
+		a.clickShow(schoolname, scenario);
 	}
 
 //annual student ledger3
@@ -2550,7 +2572,7 @@ public WebDriver dr;
 	@Then("^user click show on annual student ledger three page$")
 	public void user_click_show_on_annual_student_ledger_three_page() throws Throwable {
 		AnnualStudentLedger3 a= new AnnualStudentLedger3(dr);
-		a.clickShow();
+		a.clickShow(schoolname, scenario);
 	}
 
 //fees student ledger
@@ -2566,6 +2588,12 @@ public WebDriver dr;
 		fs.selectClass(arg1);
 	}
 
+	@Then("^user select section \"([^\"]*)\" on fees student ledger page$")
+	public void user_select_section_on_fees_student_ledger_page(String arg1) throws Throwable {
+		FeesStudentLedger fs= new FeesStudentLedger(dr);
+		fs.selectSection(arg1);
+	}
+	
 	@Then("^user enter student \"([^\"]*)\" to search on fees student ledger page$")
 	public void user_enter_student_to_search_on_fees_student_ledger_page(String arg1) throws Throwable {
 		FeesStudentLedger fs= new FeesStudentLedger(dr);
@@ -2599,7 +2627,7 @@ public WebDriver dr;
 	@Then("^user click show on fees student ledger page$")
 	public void user_click_show_on_fees_student_ledger_page() throws Throwable {
 		FeesStudentLedger fs= new FeesStudentLedger(dr);
-		fs.clickShow();
+		fs.clickShow(schoolname, scenario);
 	}
 
 //student ledger class wise
@@ -2639,8 +2667,8 @@ public WebDriver dr;
 		sl.selectFeeType(arg1);
 	}
 
-	@Then("^user select only full fear paid fees on student ledger class wise page$")
-	public void user_select_only_full_fear_paid_fees_on_student_ledger_class_wise_page() throws Throwable {
+	@Then("^user select only full year paid fees on student ledger class wise page$")
+	public void user_select_only_full_year_paid_fees_on_student_ledger_class_wise_page() throws Throwable {
 		StudentLedgerClassWise sl= new StudentLedgerClassWise(dr);
 		sl.clickOnlyFullYearPaidFees();
 	}
@@ -2648,7 +2676,7 @@ public WebDriver dr;
 	@Then("^user click show on student ledger class wise page$")
 	public void user_click_show_on_student_ledger_class_wise_page() throws Throwable {
 		StudentLedgerClassWise sl= new StudentLedgerClassWise(dr);
-		sl.clickShow();
+		sl.clickShow(schoolname, scenario);
 	}
 
 	@Then("^user select installment \"([^\"]*)\" on student ledger class wise page$")
@@ -2691,7 +2719,7 @@ public WebDriver dr;
 	@Then("^user click show on annual student ledger report page$")
 	public void user_click_show_on_annual_student_ledger_report_page() throws Throwable {
 		AnnualStudentLedgerReport a= new AnnualStudentLedgerReport(dr);
-		a.clickShow();
+		a.clickShow(schoolname, scenario);
 	}
 
 //fee defaulter report with receiving
@@ -2758,7 +2786,7 @@ public WebDriver dr;
 	@Then("^user click show on fee defaulter report with receiving page$")
 	public void user_click_show_on_fee_defaulter_report_with_receiving_page() throws Throwable {
 		FeeDefaulterReportWithReceiving fd= new FeeDefaulterReportWithReceiving(dr);
-		fd.clickShow();
+		fd.clickShow(schoolname, scenario);
 	}
 
 //fee defaulter installment wise
@@ -2837,7 +2865,7 @@ public WebDriver dr;
 	@Then("^user click show on fee defaulter installment wise page$")
 	public void user_click_show_on_fee_defaulter_installment_wise_page() throws Throwable {
 		FeeDefaulterInstallmentWise fd= new FeeDefaulterInstallmentWise(dr);
-		fd.clickShow();
+		fd.clickShow(schoolname, scenario);
 	}
 
 //fee defaulter report consolidated 
@@ -2904,7 +2932,7 @@ public WebDriver dr;
 	@Then("^user click show on fee defaulter report consolidated page$")
 	public void user_click_show_on_fee_defaulter_report_consolidated_page() throws Throwable {
 		FeeDefaulterReportConsolidated fd= new FeeDefaulterReportConsolidated(dr);
-		fd.clickShow();
+		fd.clickShow(schoolname, scenario);
 	}
 
 //reconcile report
@@ -2959,7 +2987,7 @@ public WebDriver dr;
 	@Then("^user click show on reconcile report page$")
 	public void user_click_show_on_reconcile_report_page() throws Throwable {
 		ReconcileReport r= new ReconcileReport(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 //reconcile installment class wise
@@ -2990,7 +3018,7 @@ public WebDriver dr;
 	@Then("^user click show on reconcile installment class wise page$")
 	public void user_click_show_on_reconcile_installment_class_wise_page() throws Throwable {
 		ReconcileInstallmentClassWise r= new ReconcileInstallmentClassWise(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 //bad debts report
@@ -3021,7 +3049,7 @@ public WebDriver dr;
 	@Then("^user click show on bad debts report page$")
 	public void user_click_show_on_bad_debts_report_page() throws Throwable {
 		BadDebtsReport bd= new BadDebtsReport(dr);
-		bd.clickShow();
+		bd.clickShow(schoolname, scenario);
 	}
 
 //student health entry report
@@ -3040,7 +3068,7 @@ public WebDriver dr;
 	@Then("^user click show on student health entry report page$")
 	public void user_click_show_on_student_health_entry_report_page() throws Throwable {
 		StudentHealthEntryReport h= new StudentHealthEntryReport(dr);
-		h.clickShow();
+		h.clickShow(schoolname, scenario);
 	}
 
 //Student Wise Receipt Report
@@ -3089,7 +3117,7 @@ public WebDriver dr;
 	@Then("^user click show on student wise receipt report page$")
 	public void user_click_show_on_student_wise_receipt_report_page() throws Throwable {
 		StudentWiseReceiptReport s= new StudentWiseReceiptReport(dr);
-		s.clickShow();
+		s.clickShow(schoolname, scenario);
 	}
 
 //transport report class wise
@@ -3144,7 +3172,7 @@ public WebDriver dr;
 	@Then("^user click show on transport report class wise page$")
 	public void user_click_show_on_transport_report_class_wise_page() throws Throwable {
 		TransportReportClassWise r= new TransportReportClassWise(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 	@Then("^transport report bus stop wise page is opened$")
@@ -3193,7 +3221,7 @@ public WebDriver dr;
 	@Then("^user click show on estimated transport details page$")
 	public void user_click_show_on_estimated_transport_details_page() throws Throwable {
 		EstimatedTransportDetails e= new EstimatedTransportDetails(dr);
-		e.clickShow();
+		e.clickShow(schoolname, scenario);
 	}
 
 //fees concession
@@ -3278,7 +3306,7 @@ public WebDriver dr;
 	@Then("^user click show on fees concession page$")
 	public void user_click_show_on_fees_concession_page() throws Throwable {
 		FeesConcession fc= new FeesConcession(dr);
-		fc.clickShow();
+		fc.clickShow(schoolname, scenario);
 	}
 
 //route wise student strength
@@ -3312,10 +3340,22 @@ public WebDriver dr;
 		rs.selectInstallment(arg1);
 	}
 
+	@Then("^user click student wise on route wise student strength page$")
+	public void user_click_student_wise_on_route_wise_student_strength_page() throws Throwable {
+		RouteWiseStudentStrength rs= new RouteWiseStudentStrength(dr);
+		rs.clickStudentwise();
+	}
+	
+	@Then("^user click route wise summary on route wise student strength page$")
+	public void user_click_route_wise_summary_on_route_wise_student_strength_page() throws Throwable {
+		RouteWiseStudentStrength rs= new RouteWiseStudentStrength(dr);
+		rs.clickRouteWiseSummary();
+	}
+	
 	@Then("^user click show on route wise student strength page$")
 	public void user_click_show_on_route_wise_student_strength_page() throws Throwable {
 		RouteWiseStudentStrength rs= new RouteWiseStudentStrength(dr);
-		rs.clickShow();
+		rs.clickShow(schoolname, scenario);
 	}
 
 //fees concession install headWise
@@ -3400,7 +3440,7 @@ public WebDriver dr;
 	@Then("^user click show on fees concession install headWise page$")
 	public void user_click_show_on_fees_concession_install_headWise_page() throws Throwable {
 		FeesConcessionInstallHeadWise fc= new FeesConcessionInstallHeadWise(dr);
-		fc.clickShow();
+		fc.clickShow(schoolname, scenario);
 	}
 
 //fee collection with entry time concession
@@ -3473,7 +3513,7 @@ public WebDriver dr;
 	@Then("^user click show on fee collection with entry time concession report$")
 	public void user_click_show_on_fee_collection_with_entry_time_concession_report() throws Throwable {
 		FeeCollectionWithEntryTimeConcession fc= new FeeCollectionWithEntryTimeConcession(dr);
-		fc.clickShow();
+		fc.clickShow(schoolname, scenario);
 	}
 
 //month wise collection report
@@ -3528,7 +3568,7 @@ public WebDriver dr;
 	@Then("^user click show on month wise collection report$")
 	public void user_click_show_on_month_wise_collection_report() throws Throwable {
 		MonthWiseCollectionReport m= new MonthWiseCollectionReport(dr);
-		m.clickShow();
+		m.clickShow(schoolname, scenario);
 	}
 
 //daily fee collection account wise
@@ -3637,7 +3677,7 @@ public WebDriver dr;
 	@Then("^user click show on daily fee collection account wise report$")
 	public void user_click_show_on_daily_fee_collection_account_wise_report() throws Throwable {
 		DailyFeeCollectionAccountWise f= new DailyFeeCollectionAccountWise(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 
 //daily fee collection date wise
@@ -3704,7 +3744,7 @@ public WebDriver dr;
 	@Then("^user click show on daily fee collection date wise report$")
 	public void user_click_show_on_daily_fee_collection_date_wise_report() throws Throwable {
 		DailyFeeCollectionDateWise f= new DailyFeeCollectionDateWise(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 
 //daily fee collection date fee group wise
@@ -3783,7 +3823,7 @@ public WebDriver dr;
 	@Then("^user click show on daily fee collection date fee group wise report$")
 	public void user_click_show_on_daily_fee_collection_date_fee_group_wise_report() throws Throwable {
 		DailyFeeCollectionDateFeeGroupWise f= new DailyFeeCollectionDateFeeGroupWise(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 
 //fee head wise collection class range
@@ -3844,7 +3884,7 @@ public WebDriver dr;
 	@Then("^user click show on fee head wise collection class range report$")
 	public void user_click_show_on_fee_head_wise_collection_class_range_report() throws Throwable {
 		FeeHeadWiseCollectionClassRange f= new FeeHeadWiseCollectionClassRange(dr);
-		f.clickShow();
+		f.clickShow(schoolname, scenario);
 	}
 
 //estimated collection report
@@ -3899,7 +3939,7 @@ public WebDriver dr;
 	@Then("^user click show on estimated collection report$")
 	public void user_click_show_on_estimated_collection_report() throws Throwable {
 		EstimatedCollectionReport ec= new EstimatedCollectionReport(dr);
-		ec.clickShow();
+		ec.clickShow(schoolname, scenario);
 	}
 
 //receipt wise fee type collection
@@ -3963,10 +4003,28 @@ public WebDriver dr;
 		r.clickStudentWiseOnly();
 	}
 
+	@Then("^click student type as \"([^\"]*)\" on receipt wise fee type collection report$")
+	public void click_student_type_as_on_receipt_wise_fee_type_collection_report(String arg1) throws Throwable {
+		ReceiptWiseFeeTypeCollection r= new ReceiptWiseFeeTypeCollection(dr);
+		r.clickStudentType(arg1);
+	}
+	
+	@Then("^select head wise on receipt wise fee type collection report$")
+	public void select_head_wise_on_receipt_wise_fee_type_collection_report() throws Throwable {
+		ReceiptWiseFeeTypeCollection r= new ReceiptWiseFeeTypeCollection(dr);
+		r.clickHeadWise();
+	}
+	
+	@Then("^select date wise on receipt wise fee type collection report$")
+	public void select_date_wise_on_receipt_wise_fee_type_collection_report() throws Throwable {
+		ReceiptWiseFeeTypeCollection r= new ReceiptWiseFeeTypeCollection(dr);
+		r.clickDatewise();
+	}
+	
 	@Then("^user click show on receipt wise fee type collection report$")
 	public void user_click_show_on_receipt_wise_fee_type_collection_report() throws Throwable {
 		ReceiptWiseFeeTypeCollection r= new ReceiptWiseFeeTypeCollection(dr);
-		r.clickShow();
+		r.clickShow(schoolname, scenario);
 	}
 
 //day wise total collection
@@ -4039,7 +4097,7 @@ public WebDriver dr;
 	@Then("^user click show on day wise total collection report$")
 	public void user_click_show_on_day_wise_total_collection_report() throws Throwable {
 		DayWiseTotalCollection c= new DayWiseTotalCollection(dr);
-		c.clickShow();
+		c.clickShow(schoolname, scenario);
 	}
 
 //receipt wise daily collection
@@ -4130,7 +4188,7 @@ public WebDriver dr;
 	@Then("^user click show on receipt wise daily collection report$")
 	public void user_click_show_on_receipt_wise_daily_collection_report() throws Throwable {
 		ReceiptWiseDailyCollection rc=new ReceiptWiseDailyCollection(dr);
-		rc.clickShow();
+		rc.clickShow(schoolname, scenario);
 	}
 
 //monthly consolidated report
@@ -4226,7 +4284,7 @@ public WebDriver dr;
 	@Then("^user click show on monthly consolidated report$")
 	public void user_click_show_on_monthly_consolidated_report() throws Throwable {
 		MonthlyConsolidatedReport m= new MonthlyConsolidatedReport(dr);
-		m.clickShow();
+		m.clickShow(schoolname, scenario);
 	}
 
 //paid transport
@@ -4293,7 +4351,7 @@ public WebDriver dr;
 	@Then("^user click show on paid transport report$")
 	public void user_click_show_on_paid_transport_report() throws Throwable {
 		PaidTransport p= new PaidTransport(dr);
-		p.clickShow();
+		p.clickShow(schoolname, scenario);
 	}
 
 //surname wise student details
@@ -4324,7 +4382,7 @@ public WebDriver dr;
 	@Then("^user click show on surname wise student details report$")
 	public void user_click_show_on_surname_wise_student_details_report() throws Throwable {
 		SurnameWiseStudentDetails ss= new SurnameWiseStudentDetails(dr);
-		ss.clickShow();
+		ss.clickShow(schoolname, scenario);
 	}
 
 //class wise mark list
@@ -4346,10 +4404,16 @@ public WebDriver dr;
 		m.selectSection(arg1);
 	}
 
+	@Then("^user click surname wise on class wise mark list$")
+	public void user_click_surname_wise_on_class_wise_mark_list() throws Throwable {
+		ClassWiseMarkList m= new ClassWiseMarkList(dr);
+		m.clickSurnameWise();
+	}
+	
 	@Then("^user click show on class wise mark list$")
 	public void user_click_show_on_class_wise_mark_list() throws Throwable {
 		ClassWiseMarkList m= new ClassWiseMarkList(dr);
-		m.clickShow();
+		m.clickShow(schoolname, scenario);
 	}
 
 //group wise student details
@@ -4380,7 +4444,7 @@ public WebDriver dr;
 	@Then("^user click show on group wise student details page$")
 	public void user_click_show_on_group_wise_student_details_page() throws Throwable {
 		GroupWiseStudentDetails gp= new GroupWiseStudentDetails(dr);
-		gp.clickShow();
+		gp.clickShow(schoolname, scenario);
 	}
 
 //online payment status report
@@ -4405,7 +4469,7 @@ public WebDriver dr;
 	@Then("^clicks show button on online payment status report$")
 	public void clicks_show_button_on_online_payment_status_report() throws Throwable {
 		OnlinePaymentStatusReport op= new OnlinePaymentStatusReport(dr);
-		op.clickShow();
+		op.clickShow(schoolname, scenario);
 	}
 
 //print fee receipt and certificate
@@ -4486,7 +4550,7 @@ public WebDriver dr;
 	@Then("^user click show on tc report page$")
 	public void user_click_show_on_tc_report_page() throws Throwable {
 		TCReport tr= new TCReport(dr);
-		tr.clickShow();
+		tr.clickShow(schoolname, scenario);
 	}
 
 //certificates
@@ -4639,7 +4703,7 @@ public WebDriver dr;
 	@Then("^user click show on fees defaulter slip page$")
 	public void user_click_show_on_fees_defaulter_slip_page() throws Throwable {
 		FeesDefaulterSlip dslip= new FeesDefaulterSlip(dr);
-		dslip.clickShow();
+		dslip.clickShow(schoolname, scenario);
 	}
 
 //generate tc
@@ -5167,6 +5231,12 @@ public WebDriver dr;
 		tr.assignTransport(arg1, arg2, arg3, arg4, arg5);
 	}
 
+	@Then("^user click update on assign transport to students page$")
+	public void user_click_update_on_assign_transport_to_students_page() throws Throwable {
+		AssignTransportToStudents tr= new AssignTransportToStudents(dr);
+		tr.clickUpdate();
+	}
+
 //assign opening balance
 	@Then("^assign opening balance page is opened$")
 	public void assign_opening_balance_page_is_opened() throws Throwable {
@@ -5204,5 +5274,36 @@ public WebDriver dr;
 		op.clickSave();
 	}
 
+//late fee setting
+	@Then("^late fee setting page is opened$")
+	public void late_fee_setting_page_is_opened() throws Throwable {
+		LateFeeSetting l= new LateFeeSetting(dr);
+		l.openLateFeeSetting();
+	}
+
+	@Then("^user select late fee type \"([^\"]*)\" on late fee setting page$")
+	public void user_select_late_fee_type_on_late_fee_setting_page(String arg1) throws Throwable {
+		LateFeeSetting l= new LateFeeSetting(dr);
+		l.selectLateFeeType(arg1);
+	}
+	
+//student details
+	@Then("^student details report page is opened$")
+	public void student_details_report_page_is_opened() throws Throwable {
+		StudentDetails s= new StudentDetails(dr);
+		s.openStudentDetails();
+	}
+
+	@Then("^click group by class on student details page$")
+	public void click_group_by_class_on_student_details_page() throws Throwable {
+		StudentDetails s= new StudentDetails(dr);
+		s.clickGroupByClass();
+	}
+	
+	@Then("^click on show on student details report page$")
+	public void click_on_show_on_student_details_report_page() throws Throwable {
+		StudentDetails s= new StudentDetails(dr);
+		s.clickShow(schoolname, scenario);
+	}
 
 }

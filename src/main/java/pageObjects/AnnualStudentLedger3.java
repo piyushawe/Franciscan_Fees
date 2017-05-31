@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AnnualStudentLedger3 {
 	WebDriver dr;
+	String r="AnnualStudentLedger3";
+	
 	//By installment= By.id("ContentPlaceHolder1_lstInstallment");
 	By cls= By.id("ContentPlaceHolder1_ddlStanard");
     By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -49,21 +54,33 @@ public class AnnualStudentLedger3 {
 //select class    
     public void selectClass(String c)
     {
-       new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	try {
+          new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	}
+    	catch(NoSuchElementException e)
+        {
+          new Select(dr.findElement(cls)).selectByIndex(1);
+        }
     }
 //select section
     public void selectSection(String sec)
     {
-    	 new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	try {
+    	   new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	}
+    	catch(NoSuchElementException e)
+        {
+          new Select(dr.findElement(section)).selectByIndex(1);
+        }
     }
 //show    
-    public void clickShow() throws InterruptedException
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
     {
-    	String exp="STUDENT LEDGER YEARLY";
-    	Utility u= new Utility(); 
-    	dr.findElement(show).click();
-    	Thread.sleep(2000);
-    	u.verifyPage(dr,exp);
+  	 Utility u= new Utility(); 
+   	 dr.findElement(show).click();
+   	 Thread.sleep(5000);
+   	 u.captureScreenshot(dr,schl,r,sc);
+   	 u.downloadPDF(dr);
     }
 }
 	

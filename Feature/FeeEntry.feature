@@ -4,76 +4,92 @@ Feature: Fee Entry
     using different fields at different times
 
   @scenario1
-  Scenario: Normal Fee Entry and Receipt Generation(full payment of installment)
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: Normal Fee Entry and Receipt Generation(full payment of installment)
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    And user selects installment"APRIL" on fee entry form
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cash" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    And user selects installment"<installment>" on fee entry form
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name          | bank name              | installment | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | aditya ranjan | Axsis Bank For Juniors | APRIL       | school     | Cash     |
+
   @scenario2
-  Scenario: Show Installment
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: Show Installment
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
     Then user clicks on show installment button of fee entry
 
+    Examples: 
+      | url                              | uname | password  | class | section | name          |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | aditya ranjan |
+
   @scenario3
-  Scenario: To verify fee entry on daily fee collection report
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To verify fee entry on daily fee collection report
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cash" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then daily fee collection report is opened
-    Then selects class"1-A" on daily fee collection
+    Then selects class"<class-sec>" on daily fee collection
     Then clicks on show button of daily fee collection
 
+    Examples: 
+      | url                              | uname | password  | class | section | name          | bank name              | entry mode | pay mode | class-sec |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | aditya ranjan | Axsis Bank For Juniors | school     | Cash     | 1-A       |
+
   @scenario4
-  Scenario: To test fee receipt with manual late fine, discount and advance amount
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test fee receipt with manual late fine, discount and advance amount
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then impose manual late fine"200"
     Then give discount of rs"100"
     Then click on show of fee entry form
     Then pay advance amount of rs"1000"
     Then click on save of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cash     |
+
   @scenario5
-  Scenario: To cancel the fee receipt and verify on cancelled fees receipt report
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To cancel the fee receipt and verify on cancelled fees receipt report
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
@@ -82,17 +98,21 @@ Feature: Fee Entry
     Then user opens cancelled fees receipt report page
     Then user clicks on show
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario6
-  Scenario: To bounce the fee cheque and verify on fees cheque bounce report
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To bounce the fee cheque and verify on fees cheque bounce report
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
@@ -101,17 +121,21 @@ Feature: Fee Entry
     Then cheque bounce report is opened
     Then user click on show on cheque bounce report
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario7
-  Scenario: To pay fee by cheque, clear the cheque and verify on cheque clearing status report
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To pay fee by cheque, clear the cheque and verify on cheque clearing status report
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
@@ -120,67 +144,79 @@ Feature: Fee Entry
     Then user click save on fee cheque clearing page
     Then go back to the default page
     Then cheque clearing status report is opened
-    Then user select class"1-A" on cheque clearing status report
+    Then user select class"<class-sec>" on cheque clearing status report
     Then user click show on cheque clearing status report
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode | class-sec |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   | 1-A       |
+
   @scenario8
-  Scenario: To pay fee by cheque, bounce the cheque and test cheque bounce fine
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To pay fee by cheque, bounce the cheque and test cheque bounce fine
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then bounce the cheque of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then verify cheque bounce fine on fee entry form
     Then impose manual cheque bounce fine of rs "250"
     Then verify cheque bounce fine on fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario9
-  Scenario: To pay advance amount and verify on advance payment report
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To pay advance amount and verify on advance payment report
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then user gets selected installment on fee entry form
     Then pay advance amount of rs"1000"
     Then click on save of fee entry form
     Then go back to the default page
     Then user opens advance payment report
-    Then user select class"1" on advance payment report
-    Then user select section"A" on advance payment report
+    Then user select class"<class>" on advance payment report
+    Then user select section"<section>" on advance payment report
     Then user click on show on advance payment report
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario10
-  Scenario: To test the impact of cancelling the fee receipt on fee entry form
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test the impact of cancelling the fee receipt on fee entry form
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then user gets selected installment on fee entry form
     Then click on save of fee entry form
@@ -188,23 +224,27 @@ Feature: Fee Entry
     Then cancel the receipt of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario11
-  Scenario: To test the impact of cancelling the fee receipt on modify fee receipt form
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test the impact of cancelling the fee receipt on modify fee receipt form
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then user gets selected installment on fee entry form
     Then click on save of fee entry form
@@ -212,32 +252,40 @@ Feature: Fee Entry
     Then cancel the receipt of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then user select installment on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then verify modify fee receipt
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario12
-  Scenario: To test fine waive off on multiple installments on fee entry form
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test fine waive off on multiple installments on fee entry form
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"aditya ranjan"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then user select installments "2" on fee entry form
     Then click on show of fee entry form
     Then verify late fee on multiple installments
     Then waive off late fine on fee entry form
     Then verify fine waive off on multiple installments
+
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
 
   @scenario13
   Scenario: To test the impact of cancelling on fee receipt and certificate
@@ -274,27 +322,31 @@ Feature: Fee Entry
     Then verify fee certificate of "sonia5" of class"test1" section"A" on print fee receipt and cerificate
 
   @scenario14
-  Scenario: To test receipt reuse when cheque is bounced
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test receipt reuse when cheque is bounced
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"1" section"A" and student details"suryansh vinayak"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then bounce the cheque of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia5"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then user clicks on reuse receipt
+
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |     1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
 
   @scenario15
   Scenario: To test receipt reuse when cheque is bounced
@@ -306,44 +358,48 @@ Feature: Fee Entry
     Then user searches a student on fee entry form by class"1" section"A" and student details"suryansh vinayak"
     Then user selects bank name"Axsis Bank For Juniors" on fee entry
     Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    And selects pay mode"Cash" on fee entry form
     Then user clicks on reuse receipt
 
   @scenario16
-  Scenario: To adjust the advance amount paid previously in next installment
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To adjust the advance amount paid previously in next installment
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then pay advance amount of rs"1000"
     Then click on save of fee entry form
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click adjust advance on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario17
-  Scenario: To test the impact of receipt cancellation when late fine was waived off
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To test the impact of receipt cancellation when late fine was waived off
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then waive off late fine on fee entry form
     Then click on save of fee entry form
@@ -351,33 +407,37 @@ Feature: Fee Entry
     Then cancel the receipt of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario18
-  Scenario: To impose cheque bounce and late fee manually, cancel the receipt and test the impact on fee entry
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To impose cheque bounce and late fee manually, cancel the receipt and test the impact on fee entry
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then bounce the cheque of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then impose manual late fine"200"
     Then impose manual cheque bounce fine of rs "250"
     Then click on show of fee entry form
@@ -386,33 +446,37 @@ Feature: Fee Entry
     Then cancel the receipt of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
 
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
+
   @scenario19
-  Scenario: To impose cheque bounce and late fee manually, delete the receipt and test the impact on fee entry
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To impose cheque bounce and late fee manually, delete the receipt and test the impact on fee entry
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
     Then click on save of fee entry form
     Then go back to the default page
     Then bounce the cheque of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then impose manual late fine"200"
     Then impose manual cheque bounce fine of rs "250"
     Then click on show of fee entry form
@@ -421,11 +485,15 @@ Feature: Fee Entry
     Then delete the receipt of the fee
     Then go back to the default page
     Then fee entry form is opened
-    Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    Then user selects bank name"Axsis Bank For Juniors" on fee entry
-    Then select entry mode"school" on fee entry form
-    And selects pay mode"Cheque" on fee entry form
+    Then user searches a student on fee entry form by class"<class>" section"<section>" and student details"<name>"
+    Then user selects bank name"<bank name>" on fee entry
+    Then select entry mode"<entry mode>" on fee entry form
+    And selects pay mode"<pay mode>" on fee entry form
     Then click on show of fee entry form
+
+    Examples: 
+      | url                              | uname | password  | class | section | name   | bank name              | entry mode | pay mode |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 | test1 | A       | sonia1 | Axsis Bank For Juniors | school     | Cheque   |
 
   @scenario20
   Scenario: To test enable waive off with cheque bounce, cancel the receipt and impact on fee entry
@@ -1645,7 +1713,7 @@ Feature: Fee Entry
     Then fee entry form is opened
     Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
     Then verify cheque bounce fine on fee entry form
-    
+
   #runtime concession
   @scenario69
   Scenario: To test runtime concession on fee entry, bounce the cheque and verify concession on fee entry
@@ -1679,7 +1747,7 @@ Feature: Fee Entry
 
   #assigned concession
   @scenario70
-  Scenario: To test assigned concession, partial payment is made, paid remaining amount and the second receipt is cancelled  
+  Scenario: To test assigned concession, partial payment is made, paid remaining amount and the second receipt is cancelled
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -1710,7 +1778,7 @@ Feature: Fee Entry
     Then go back to the default page
     Then fee entry form is opened
     Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia2"
-    
+
   @scenario71
   Scenario: To test when some installments are taken, assign concession, fee paid and last two receipts are cancelled
     Given user enters url"http://qaerp.franciscanecare.net"
@@ -1754,7 +1822,7 @@ Feature: Fee Entry
     Then go back to the default page
     Then fee entry form is opened
     Then user searches a student on fee entry form by class"test1" section"A" and student details"sonia1"
-    
+
   @scenario72
   Scenario: To test when partial payment is done on a fee head, assign concession on that fee head
     Given user enters url"http://qaerp.franciscanecare.net"
@@ -1789,9 +1857,9 @@ Feature: Fee Entry
     And user selects installment"APRIL" on fee entry form
     Then click on show of fee entry form
     Then user verify fee details on fee entry form
-    
+
   @scenario73
-  Scenario: To test partial late fee when manual late fee is imposed with discount, bounce the cheque, again manual late fee and cheque bounce fee is taken and receipt is cancelled, verify on fee entry 
+  Scenario: To test partial late fee when manual late fee is imposed with discount, bounce the cheque, again manual late fee and cheque bounce fee is taken and receipt is cancelled, verify on fee entry
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -1835,3 +1903,6 @@ Feature: Fee Entry
     And user selects installment"JULY - AUGUST" on fee entry form
     Then click on show of fee entry form
     Then user verify fee details on fee entry form
+
+    @scenario74
+    Scenario: 

@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class PaidTransport {
   WebDriver dr;
+  String r= "PaidTransport";
+  
   By school= By.id("ContentPlaceHolder1_ddlSchool");
   //By cls= By.id("ContentPlaceHolder1_lstClass");
   By route= By.id("ContentPlaceHolder1_ddlRoute");
@@ -40,7 +45,13 @@ public class PaidTransport {
   }
   public void selectSchool(String sch)
   {
-  	new Select(dr.findElement(school)).selectByVisibleText(sch);
+	try {  
+  	  new Select(dr.findElement(school)).selectByVisibleText(sch);
+	}
+	catch(NoSuchElementException e)
+	{
+	   new Select(dr.findElement(school)).selectByIndex(1);
+	}
   }
   public void selectClass(String c)
   {
@@ -56,11 +67,23 @@ public class PaidTransport {
   }
   public void selectRoute(String r)
   {
-  	new Select(dr.findElement(route)).selectByVisibleText(r);
+	try {  
+  	  new Select(dr.findElement(route)).selectByVisibleText(r);
+	}
+	catch(NoSuchElementException e)
+	{
+	   new Select(dr.findElement(route)).selectByIndex(1);
+	}
   }
   public void selectVehicle(String v)
   {
-  	new Select(dr.findElement(vehicle)).selectByVisibleText(v);
+	try {  
+  	   new Select(dr.findElement(vehicle)).selectByVisibleText(v);
+	}
+	catch(NoSuchElementException e)
+	{
+	   new Select(dr.findElement(vehicle)).selectByIndex(1);
+	}
   }
   public void selectPayMode(String pmode1, String pmode2)
   {
@@ -130,14 +153,20 @@ public class PaidTransport {
   }
   public void selectUser(String u)
   {
- 	new Select(dr.findElement(user)).selectByVisibleText(u);
+	 try {  
+ 	   new Select(dr.findElement(user)).selectByVisibleText(u);
+	 }
+	 catch(NoSuchElementException e)
+	 {
+	   new Select(dr.findElement(user)).selectByIndex(1);
+	 }
   }
-  public void clickShow() throws InterruptedException
-  {
-	 String exp= "PAID TRANSPORT REPORT";
-	 Utility u= new Utility(); 
-     dr.findElement(show).click();
-     Thread.sleep(2000);
-	 u.verifyPage(dr,exp); dr.findElement(show).click();
-  }
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+  {                                                                                                 
+     Utility u= new Utility();                                                                    
+     dr.findElement(show).click();                                                                
+     Thread.sleep(7000);                                                                          
+     u.captureScreenshot(dr,schl,r,sc);                                                           
+     u.downloadPDF(dr);                                                                           
+  } 
 }

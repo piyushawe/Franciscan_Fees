@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -12,6 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TransportReportClassWise {
 WebDriver dr;
+String r= "TransportReportClassWise";
+
     By classwise= By.id("ContentPlaceHolder1_rbtnClass");
     By busstopwise= By.id("ContentPlaceHolder1_rbtnStop");
     By installment= By.id("ContentPlaceHolder1_ddlInstallment");
@@ -58,7 +63,13 @@ WebDriver dr;
     	        }
     	    });
     	    //To select the first option
-    	    new Select(dr.findElement(installment)).selectByVisibleText(inst);
+    	    try {
+    	     new Select(dr.findElement(installment)).selectByVisibleText(inst);
+    	    }
+    	    catch(NoSuchElementException e)
+    		{
+    	       new Select(dr.findElement(installment)).selectByIndex(1);
+    	    }
     	}catch(Throwable e){
     	    System.out.println("Error found: "+e.getMessage());
     	}
@@ -69,15 +80,26 @@ WebDriver dr;
     }
     public void selectRoute(String r)
     {
-    	new Select(dr.findElement(route)).selectByVisibleText(r);
+    	try {
+    	  new Select(dr.findElement(route)).selectByVisibleText(r);
+    	}
+    	catch(NoSuchElementException e)
+		{
+	       new Select(dr.findElement(route)).selectByIndex(1);
+	    }
     }
     public void selectBusStop(String s)
     {
-    	new Select(dr.findElement(busstop)).selectByVisibleText(s);
+    	try {
+     	  new Select(dr.findElement(busstop)).selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+		{
+	       new Select(dr.findElement(busstop)).selectByIndex(1);
+	    }
     }
     public void selectClass(String c)
     {
-      // new Select(dr.findElement(cls)).selectByVisibleText(c);
     	dr.findElement(By.xpath("//button[@class='ui-multiselect ui-widget ui-state-default ui-corner-all']")).click();
     	dr.findElement(By.xpath("//a[@class='ui-multiselect-none']")).click();
     	WebElement select= dr.findElement(By.cssSelector("body > div.ui-multiselect-menu.ui-widget.ui-widget-content.ui-corner-all > ul"));
@@ -88,12 +110,12 @@ WebDriver dr;
     	}
     	dr.findElement(By.xpath("//a[@class='ui-multiselect-close']")).click();
     }
-    public void clickShow() throws InterruptedException
-    {
-    	String exp= "TRANSPORT REPORT CLASS WISE";
-      	Utility u= new Utility(); 
-        dr.findElement(show).click();
-        Thread.sleep(2000);
-        u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+	{                                                                                                 
+	   Utility u= new Utility();                                                                    
+	   dr.findElement(show).click();                                                                
+	   Thread.sleep(7000);                                                                          
+	   u.captureScreenshot(dr,schl,r,sc);                                                           
+	   u.downloadPDF(dr);                                                                           
+	} 
 }

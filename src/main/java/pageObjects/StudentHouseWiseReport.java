@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class StudentHouseWiseReport {
 WebDriver dr;
+String r= "StudentHouseWiseReport";
+
   By cls= By.id("ContentPlaceHolder1_ddlClass");
   By sectionwise= By.id("ContentPlaceHolder1_CheckBox1");
   By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -21,10 +26,10 @@ WebDriver dr;
   By age= By.id("ContentPlaceHolder1_ddlFromAge");
   By show= By.xpath("//*[@id=\"ContentPlaceHolder1_SingleButton2\"]/input");
 
-public StudentHouseWiseReport(WebDriver drv)
-{
-	  this.dr=drv;
-}
+ public StudentHouseWiseReport(WebDriver drv)
+ {
+	this.dr=drv;
+ }
  public void openStudentHouseWiseReport()
  {
       WebElement menu;
@@ -39,7 +44,13 @@ public StudentHouseWiseReport(WebDriver drv)
  public void selectClass(String c)
  {
 	 Select cs= new Select(dr.findElement(cls));
-	 cs.selectByVisibleText(c);
+	 try {
+	    cs.selectByVisibleText(c);
+	 }
+	 catch(NoSuchElementException e)
+	 {
+		 cs.selectByIndex(1);
+	 }
  }
  public void clickSectionWise() throws InterruptedException
  {
@@ -49,12 +60,24 @@ public StudentHouseWiseReport(WebDriver drv)
  public void selectSection(String s)
  {
 	 Select sec= new Select(dr.findElement(section));
-	 sec.selectByVisibleText(s);
+	 try {
+	    sec.selectByVisibleText(s);
+	 }
+	 catch(NoSuchElementException e)
+	 {
+	   sec.selectByIndex(1);
+	 }
  }
  public void selectHouse(String h)
  {
 	 Select hs= new Select(dr.findElement(house));
-	 hs.selectByVisibleText(h);
+	 try {
+	    hs.selectByVisibleText(h);
+	 }
+	 catch(NoSuchElementException e)
+	 {
+		 hs.selectByIndex(1);
+	 }
  }
  public void clickAll()
  {
@@ -78,12 +101,12 @@ public StudentHouseWiseReport(WebDriver drv)
 	 Select ag= new Select(dr.findElement(age));
 	 ag.selectByVisibleText(a);
  }
- public void clickShow() throws InterruptedException
- {
-	 String exp= "STUDENT HOUSE WISE REPORT";
-	 Utility u= new Utility(); 
-     dr.findElement(show).click();
-     Thread.sleep(2000);
-	 u.verifyPage(dr,exp);
- }
+ public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+ {                                                                                                 
+    Utility u= new Utility();                                                                    
+	dr.findElement(show).click();                                                                
+	Thread.sleep(5000);                                                                          
+	u.captureScreenshot(dr,schl,r,sc);                                                           
+	u.downloadPDF(dr);                                                                           
+ } 
 }

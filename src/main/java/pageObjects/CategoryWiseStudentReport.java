@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CategoryWiseStudentReport {
 WebDriver dr;
+String r="CategoryWiseStudentReport";
+
   By category= By.id("ContentPlaceHolder1_ddlCategory");
   By cls= By.id("ContentPlaceHolder1_ddlClass");
   By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -37,34 +42,58 @@ WebDriver dr;
 	public void selectCategory(String c)
 	{
 		Select cg= new Select(dr.findElement(category));
-		cg.selectByVisibleText(c);
+		try {
+		  cg.selectByVisibleText(c);
+		}
+		catch(NoSuchElementException e)
+		{
+		   cg.selectByIndex(1);
+		}
 	}
 //class	
 	public void selectClass(String c)
 	{
 		Select cl= new Select(dr.findElement(cls));
-		cl.selectByVisibleText(c);
+		try {
+		   cl.selectByVisibleText(c);
+		}
+		catch(NoSuchElementException e)
+		{
+		   cl.selectByIndex(1);
+		}
 	}
 //section
 	public void selectSection(String s) throws InterruptedException
 	{   
 		Thread.sleep(1000);
 		Select sec= new Select(dr.findElement(section));
-		sec.selectByVisibleText(s);
+		try {
+		  sec.selectByVisibleText(s);
+		}
+		catch(NoSuchElementException e)
+		   {
+			   sec.selectByIndex(1);
+		   }
 	}
 //father profession	
 	public void selectFatherProfession(String p)
 	{
 		Select pf= new Select(dr.findElement(fatherprofession));
-		pf.selectByVisibleText(p);
+		try {
+		  pf.selectByVisibleText(p);
+		}
+		catch(NoSuchElementException e)
+		{
+		   pf.selectByIndex(1);
+		}
 	}
 //show	
-	public void clickShow() throws InterruptedException
+	public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
 	{
-		String exp="CATEGORY WISE STUDENT REPORT";
-	   	Utility u= new Utility(); 
-	   	dr.findElement(show).click();
-	   	Thread.sleep(2000);
-	   	u.verifyPage(dr,exp);
+	 	 Utility u= new Utility(); 
+	  	 dr.findElement(show).click();
+	  	 Thread.sleep(5000);
+	  	 u.captureScreenshot(dr,schl,r,sc);
+	  	 u.downloadPDF(dr);
 	}
 }

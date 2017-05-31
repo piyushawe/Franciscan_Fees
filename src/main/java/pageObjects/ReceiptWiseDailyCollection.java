@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ReceiptWiseDailyCollection {
 	 WebDriver dr;
+	 String r= "ReceiptWiseDailyCollection";
+	 
 	 By school= By.id("ContentPlaceHolder1_ddlSchool");
 	 //By cls= By.id("ContentPlaceHolder1_lstClass");
 	 By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
@@ -31,19 +36,23 @@ public class ReceiptWiseDailyCollection {
 	  public void openReceiptWiseDailyCollection() throws InterruptedException
 	  {
 		  WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Transaction-Report.png']"));
-			 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-			 Thread.sleep(6000);
-			 Actions builder= new Actions(dr);
-			 builder.moveToElement(menu).build().perform();
-			 WebElement submenu= dr.findElement(By.linkText("Collection"));
-			 builder.moveToElement(submenu).build().perform();
-			 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	
-			 dr.findElement(By.linkText("Receipt wise Daily Collection")).click();
-			 dr.switchTo().frame(dr.findElement(By.id("Receipt wise Daily Collection")));
+		  Thread.sleep(6000);
+		  Actions builder= new Actions(dr);
+		  builder.moveToElement(menu).build().perform();
+		  WebElement submenu= dr.findElement(By.linkText("Collection"));
+		  builder.moveToElement(submenu).build().perform();
+		  dr.findElement(By.linkText("Receipt wise Daily Collection")).click();
+		  dr.switchTo().frame(dr.findElement(By.id("Receipt wise Daily Collection")));
 	  }
 	  public void selectSchool(String sch)
 	  {
-	  	new Select(dr.findElement(school)).selectByVisibleText(sch);
+		try {
+	  	   new Select(dr.findElement(school)).selectByVisibleText(sch);
+		}
+		catch(NoSuchElementException e)
+		{
+			   new Select(dr.findElement(school)).selectByIndex(1);
+		}
 	  }
 	  public void selectClass(String c)
 	  {
@@ -59,7 +68,13 @@ public class ReceiptWiseDailyCollection {
 	  }
 	  public void selectFeeType(String ftype)
 	  {
-	  	new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+		try {  
+	  	   new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+		}
+		catch(NoSuchElementException e)
+		{
+			   new Select(dr.findElement(feetype)).selectByIndex(1);
+		}
 	  }
 	  public void selectPayMode(String pmode)
 	  {
@@ -92,16 +107,13 @@ public class ReceiptWiseDailyCollection {
 	      Thread.sleep(200);
 	      new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	  Thread.sleep(200);
-	  	  WebElement myw=dr.findElement(By.className("datepick"));
-	        //List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  		//for (WebElement row: rows){  
+	  	  WebElement myw=dr.findElement(By.className("datepick"));  
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
 	  			if (cell.getText().equals(dd)){  
 	  			cell.click();
 	  			break; 
 	  		 }  
-	  	  //  }
 	    }Thread.sleep(200);
 	  }
 	  public void selectDateTo(String mm, String yy, String dd) throws InterruptedException
@@ -113,20 +125,23 @@ public class ReceiptWiseDailyCollection {
 	      new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	  Thread.sleep(200);
 	  	  WebElement myw=dr.findElement(By.className("datepick"));
-	       //List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  		//for (WebElement row: rows){  
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
 	  			if (cell.getText().equals(dd)){  
 	  			cell.click();
 	  			break; 
 	  		 }  
-	  	   // }
 	    }Thread.sleep(200);
 	  }
 	  public void selectUser(String u)
 	  {
-	 	new Select(dr.findElement(user)).selectByVisibleText(u);
+		try {  
+	 	   new Select(dr.findElement(user)).selectByVisibleText(u);
+		}
+		catch(NoSuchElementException e)
+		{
+			   new Select(dr.findElement(user)).selectByIndex(1);
+		}
 	  }
 	  public void selectOrderBy(String or)
 	  {
@@ -156,12 +171,12 @@ public class ReceiptWiseDailyCollection {
 	  {
 	 	 dr.findElement(amalgamatedreport).click();
 	  }
-	  public void clickShow() throws InterruptedException
-	  {
-		     String exp= "RECEIPT WISE DAILY COLLECTION";
-			 Utility u= new Utility(); 
-		     dr.findElement(show).click();
-		     Thread.sleep(2000);
-			 u.verifyPage(dr,exp); 
-	  }
+	  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+	  {                                                                                                 
+	      Utility u= new Utility();                                                                    
+	      dr.findElement(show).click();                                                                
+	      Thread.sleep(5000);                                                                          
+	      u.captureScreenshot(dr,schl,r,sc);                                                           
+	      u.downloadPDF(dr);                                                                           
+	  } 
 }

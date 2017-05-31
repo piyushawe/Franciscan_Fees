@@ -1,6 +1,10 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SelfTransportReport {
 WebDriver dr;
+String r= "SelfTransportReport";
+
     By transport= By.id("ContentPlaceHolder1_ddltransport");
     By cls= By.id("ContentPlaceHolder1_ddlClass");
     By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -29,6 +35,7 @@ WebDriver dr;
     	 builder.moveToElement(menu).build().perform();
 	     WebElement submenu= dr.findElement(By.linkText("Transport Report"));
 	     builder.moveToElement(submenu).build().perform();
+	     System.out.println(dr.findElement(By.linkText("Self Transport Report")).getAttribute("display"));
 	     //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	     dr.findElement(By.linkText("Self Transport Report")).click();
 	     dr.switchTo().frame(dr.findElement(By.id("Self Transport Report")));
@@ -36,18 +43,36 @@ WebDriver dr;
     public void selectTransport(String t)
     {
     	Select tr= new Select(dr.findElement(transport));
-    	tr.selectByVisibleText(t);
+    	try {
+    	   tr.selectByVisibleText(t);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   tr.selectByIndex(1);
+ 	    }
     }
     public void selectClass(String c) throws InterruptedException
     {
     	Select cs= new Select(dr.findElement(cls));
-    	cs.selectByVisibleText(c);
+    	try {
+    	  cs.selectByVisibleText(c);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   cs.selectByIndex(1);
+ 	    }
     	Thread.sleep(3000);
     }
     public void selectSection(String s)
     {
     	Select sec= new Select(dr.findElement(section));
-    	sec.selectByVisibleText(s);
+    	try {
+    	  sec.selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   sec.selectByIndex(1);
+ 	    }
     }
     public void clickAll()
     {
@@ -61,12 +86,12 @@ WebDriver dr;
     {
     	dr.findElement(inactive).click();
     }
-    public void clickShow() throws InterruptedException
-    {
-    	String exp= "TRANSPORT REPORT";
-		 Utility u= new Utility(); 
-	     dr.findElement(show).click();
-	     Thread.sleep(2000);
-		 u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+    {                                                                                                 
+       Utility u= new Utility();                                                                    
+       dr.findElement(show).click();                                                                
+       Thread.sleep(5000);                                                                          
+       u.captureScreenshot(dr,schl,r,sc);                                                           
+       u.downloadPDF(dr);                                                                           
+    } 
 }

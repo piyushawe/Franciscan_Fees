@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DailyFeeCollectionDateWise {
 WebDriver dr;
+String r= "DailyFeeCollectionDateWise";
+
     //By entrymode= By.id("ContentPlaceHolder1_lstentrymode");
       By fromdate= By.id("ContentPlaceHolder1_txtDateFrom_TextBox");
       By todate= By.id("ContentPlaceHolder1_txtdateTo_TextBox");
@@ -62,18 +67,13 @@ WebDriver dr;
           Thread.sleep(500);
           new Select(dr.findElement(By.xpath("//*[@id=\"datepick-div\"]/div[3]/div/select[2]"))).selectByVisibleText(yy);
      	  Thread.sleep(500);
-     	  WebElement myw=dr.findElement(By.xpath("//*[@id=\"datepick-div\"]/div[3]/table"));
-         // List<WebElement> rows= myw.findElements(By.xpath("//*[@id=\"datepick-div\"]/div[3]/table/tbody/tr[1]"));
-		 // for (WebElement row: rows){  
+     	  WebElement myw=dr.findElement(By.xpath("//*[@id=\"datepick-div\"]/div[3]/table"));      
 			 List<WebElement> cells=myw.findElements(By.tagName("td"));
 			  for(WebElement cell: cells) {
-				if (cell.getText().equals(dd)){  
-					//System.out.println("cell value"+cell.getText());
+				if (cell.getText().equals(dd)){  	
 					cell.click();
-				//cell.findElement(By.linkText(dd)).click();
 				break; 
 			 }  
-	   // }
       }Thread.sleep(500);
       }
       public void selectToDate(String mm, String yy, String dd) throws InterruptedException
@@ -85,27 +85,22 @@ WebDriver dr;
           new Select(dr.findElement(By.xpath("//*[@id=\"datepick-div\"]/div[3]/div/select[2]"))).selectByVisibleText(yy);
     	  Thread.sleep(500);
     	  WebElement myw=dr.findElement(By.xpath("//*[@id=\"datepick-div\"]/div[3]/table"));
-        //  List<WebElement> rows= myw.findElements(By.xpath("//*[@id=\"datepick-div\"]/div[3]/table/tbody/tr[1]"));
-		//  for (WebElement row: rows){  
 			 List<WebElement> cells=myw.findElements(By.tagName("td"));
 			  for(WebElement cell: cells) {
 				if (cell.getText().equals(dd)){  
-					//System.out.println("cell value"+cell.getText());
 					cell.click();
-				//cell.findElement(By.linkText(dd)).click();
 				break; 
 			 }  
-	 //   }
       }Thread.sleep(500);
       }
       public void selectClass(String c)
-      {  // dr.findElement(By.className("csslabel")).click();
+      {  
     	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[4]/div/div/button")).click();
      	  dr.findElement(By.xpath("/html/body/div[6]/div/ul/li[2]/a")).click();
             WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(9) > ul"));	
      	  	List<WebElement> options = select.findElements(By.tagName("span"));
      	  	for(WebElement option:options) {
-     	  		//System.out.println(option.getText());
+     	  		
      	  		if(c.equals(option.getText()))
      	  			option.click();
      	  	}
@@ -113,15 +108,26 @@ WebDriver dr;
       }
       public void selectSchool(String sch)
       {
-    	  new Select(dr.findElement(school)).selectByVisibleText(sch);
+    	  try {
+    	     new Select(dr.findElement(school)).selectByVisibleText(sch);
+    	  }
+    	  catch(NoSuchElementException e)
+    	  {
+     		 new Select(dr.findElement(school)).selectByIndex(1);
+    	  }
       }
       public void selectFeeType(String ftype)
       {
-    	  new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	  try {
+    	     new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	  }
+    	  catch(NoSuchElementException e)
+    	  {
+     		 new Select(dr.findElement(feetype)).selectByIndex(1);
+    	  }
       }
       public void selectPayMode(String pmode1, String pmode2)
       {
-    	 //new Select(dr.findElement(paymode)).selectByVisibleText(pmode);
     	  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(7) > div > button")).click();
     	  dr.findElement(By.cssSelector("body > div:nth-child(8) > div > ul > li:nth-child(2) > a")).click();
     	  WebElement select= dr.findElement(By.xpath("/html/body/div[5]/ul"));
@@ -133,16 +139,14 @@ WebDriver dr;
       }
       public void selectBankName(String bname)
       {
-    	//new Select(dr.findElement(bankname)).selectByVisibleText(bname);
     	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[8]/div/button")).click();
-    	  dr.findElement(By.xpath("/html/body/div[8]/div/ul/li[2]/a")).click();
-    	  WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(11) > ul"));	
+    	  dr.findElement(By.xpath("/html/body/div[9]/div/ul/li[2]/a")).click();
+    	  WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(12) > ul"));	
    	      List<WebElement> options = select.findElements(By.tagName("span"));
-   	    	for(WebElement option:options) 
-   	  		//System.out.println(option.getText());
+   	    	for(WebElement option:options)
    	  		if(bname.equals(option.getText()))
    	  		   option.click();
-    	    dr.findElement(By.cssSelector("body > div:nth-child(11) > div > ul > li.ui-multiselect-close")).click();
+    	    dr.findElement(By.cssSelector("body > div:nth-child(12) > div > ul > li.ui-multiselect-close")).click();
       }
       public void selectHead(String h)
       {
@@ -154,14 +158,20 @@ WebDriver dr;
       }
       public void selectUser(String u)
       {
-    	  new Select(dr.findElement(user)).selectByVisibleText(u);
+    	  try {
+    	    new Select(dr.findElement(user)).selectByVisibleText(u);
+    	  }
+    	  catch(NoSuchElementException e)
+    	  {
+     		 new Select(dr.findElement(user)).selectByIndex(1);
+    	  }
       }
-      public void clickShow() throws InterruptedException
-      {  
-    	 String exp= "DAILY FEE COLLECTION DATE WISE";
-    	 Utility u= new Utility(); 
-    	 dr.findElement(show).click();
-    	 Thread.sleep(2000);
-    	 u.verifyPage(dr,exp);
-      }
+      public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+      {                                                                                                 
+         Utility u= new Utility();                                                                    
+         dr.findElement(show).click();                                                                
+         Thread.sleep(5000);                                                                          
+         u.captureScreenshot(dr,schl,r,sc);                                                           
+         u.downloadPDF(dr);                                                                           
+      } 
 }

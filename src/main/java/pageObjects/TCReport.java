@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,6 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TCReport {
   WebDriver dr;
+  String r= "TCReport";
+  
     By fromdate= By.id("ContentPlaceHolder1_txtfromDate_TextBox");
     By todate= By.id("ContentPlaceHolder1_txttoDate_TextBox");
     By tctype= By.id("ContentPlaceHolder1_ddltc");
@@ -71,12 +75,12 @@ public class TCReport {
     {
     	new Select(dr.findElement(orderby)).selectByVisibleText(order);
     }
-    public void clickShow() throws InterruptedException
-    {
-    	String exp= "STUDENT TC REPORT";
-    	Utility u= new Utility(); 
-    	dr.findElement(show).click();
-    	Thread.sleep(2000);
-   	    u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+	{                                                                                                 
+	   Utility u= new Utility();                                                                    
+	   dr.findElement(show).click();                                                                
+	   Thread.sleep(7000);                                                                          
+	   u.captureScreenshot(dr,schl,r,sc);                                                           
+	   u.downloadPDF(dr);                                                                           
+	} 
 }

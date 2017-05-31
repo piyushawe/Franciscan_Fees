@@ -1,17 +1,20 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FeeDefaulterList {
   WebDriver dr;
+  String r= "FeeDefaulterList";
+  
   By school= By.id("ContentPlaceHolder1_ddlSchool");
   By classwise=By.id("ContentPlaceHolder1_RbtnClass_0");
   By classrange=By.id("ContentPlaceHolder1_RbtnClass_1");
@@ -56,7 +59,13 @@ public class FeeDefaulterList {
     public void selectSchool(String s)
     {
     	Select sch= new Select(dr.findElement(school));
-    	sch.selectByVisibleText(s);
+    	try {
+    	  sch.selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(school)).selectByIndex(1);
+ 	    }
     }
     public void selectClasswise()
     {
@@ -65,12 +74,24 @@ public class FeeDefaulterList {
     public void selectClass(String s)
     {
     	Select c= new Select(dr.findElement(cls));
-    	c.selectByVisibleText(s);
+    	try {
+    	  c.selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   c.selectByIndex(1);
+ 	    }
     }
     public void selectSection(String s)
     {
     	Select sec=new Select(dr.findElement(section));
-    	sec.selectByVisibleText(s);
+    	try {
+    	  sec.selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(section)).selectByIndex(1);
+ 	    }
     }
     public void clickClassRange()
     {
@@ -90,7 +111,13 @@ public class FeeDefaulterList {
     public void selectfeeType(String s)
     {
     	Select ftype= new Select(dr.findElement(feetype));
-    	ftype.selectByVisibleText(s);
+    	try {
+    	  ftype.selectByVisibleText(s);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   ftype.selectByIndex(1);
+ 	    }
     }
     public void selectInstallment(String inst) 
     {
@@ -126,8 +153,7 @@ public class FeeDefaulterList {
 	  			if (cell.getText().equals(dd)){  
 	  			cell.click();
 	  			break; 
-	  		 }  
-	  	  
+	  		 }  	  	  
 	    }Thread.sleep(1000);
     }
     public void selectTillDate(String mm, String yy, String dd) throws InterruptedException
@@ -142,7 +168,6 @@ public class FeeDefaulterList {
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
 	  			if (cell.getText().equals(dd)){  
-	  			//System.out.println("cell value"+cell.getText());
 	  			cell.click();
 	  			break; 
 	  		 }  
@@ -178,13 +203,12 @@ public class FeeDefaulterList {
     {
     	dr.findElement(daterange).click();
     }
-    public void clickShow() throws InterruptedException 
-    {
-    	String exp= "FEES DEFAULTER LIST";
-    	 Utility u= new Utility(); 
-    	 dr.findElement(show).click();
-    	 Thread.sleep(5000);
-    	//dr.findElement(By.id("ctl00_ContentPlaceHolder1_ReportViewer1_ctl09")).isDisplayed();
-    	 u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+    {                                                                                                 
+       Utility u= new Utility();                                                                    
+       dr.findElement(show).click();                                                                
+       Thread.sleep(15000);                                                                          
+       u.captureScreenshot(dr,schl,r,sc);                                                           
+       u.downloadPDF(dr);                                                                           
+    } 
 }

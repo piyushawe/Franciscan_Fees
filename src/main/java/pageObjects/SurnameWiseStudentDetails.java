@@ -1,9 +1,12 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +14,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SurnameWiseStudentDetails {
     WebDriver dr;
+    String r="SurnameWiseStudentDetails";
+    
     By cls= By.id("ContentPlaceHolder1_ddlclass");
     By section= By.name("ctl00$ContentPlaceHolder1$ddlsection");
     //By student= By.id("ContentPlaceHolder1_lstStudent");
@@ -34,12 +39,24 @@ public class SurnameWiseStudentDetails {
     }
     public void selectClass(String c)throws InterruptedException
     {
-    	new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	try {
+    	  new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	}
+    	catch(NoSuchElementException e)
+   	    {
+    		new Select(dr.findElement(cls)).selectByIndex(1);
+   	    }
     	Thread.sleep(10000);
     }
     public void selectSection(String sec) 
     {
-       	new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	try {
+       	  new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	}
+    	catch(NoSuchElementException e)
+   	    {
+    		new Select(dr.findElement(section)).selectByIndex(1);
+   	    }
     }
     public void selectStudentDetails(String adm, String c)
     {
@@ -53,12 +70,12 @@ public class SurnameWiseStudentDetails {
       			option.click();
       	dr.findElement(By.xpath("//a[@class='ui-multiselect-close']")).click();
     }
-    public void clickShow() throws InterruptedException
-    {
-  	    String exp="SURNAME WISE STUDENT DETAILS";
-        Utility u= new Utility(); 
-        dr.findElement(show).click();
-        Thread.sleep(5000);
-        u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+	{                                                                                                 
+	   Utility u= new Utility();                                                                    
+	   dr.findElement(show).click();                                                                
+	   Thread.sleep(5000);                                                                          
+	   u.captureScreenshot(dr,schl,r,sc);                                                           
+	   u.downloadPDF(dr);                                                                           
+	} 
 }

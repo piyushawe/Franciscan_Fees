@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ReconcileReport {
 	WebDriver dr;
+	String r= "ReconcileReport";
+	
 	By school= By.id("ContentPlaceHolder1_ddlSchool");
 	//By cls= By.id("//*[@id=\"MainLeftPanel\"]/div/div/div[2]/div/button");
 	By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
@@ -36,7 +41,13 @@ public class ReconcileReport {
     }
     public void selectSchool(String sch)
     {
-    	new Select(dr.findElement(school)).selectByVisibleText(sch);
+    	try {
+    	  new Select(dr.findElement(school)).selectByVisibleText(sch);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(school)).selectByIndex(1);
+ 	    }
     }
     public void selectClass(String c)
     {
@@ -52,7 +63,13 @@ public class ReconcileReport {
     } 
     public void selectFeeType(String ftype)
     {
-    	new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	try {
+    	  new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(feetype)).selectByIndex(1);
+ 	    }
     }
     public void selectInstallment(String inst)
     {
@@ -68,7 +85,13 @@ public class ReconcileReport {
     }
     public void selectUser(String usr)
     {
-    	new Select(dr.findElement(user)).selectByVisibleText(usr);
+    	try {
+    	  new Select(dr.findElement(user)).selectByVisibleText(usr);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(user)).selectByIndex(1);
+ 	    }
     }
     public void clickSummary()
     {
@@ -78,12 +101,12 @@ public class ReconcileReport {
     {
     	dr.findElement(consolidated).click();
     }
-    public void clickShow() throws InterruptedException
-    {
-    	String exp= "RECONCILIATION REPORT";
-		 Utility u= new Utility(); 
-	     dr.findElement(show).click();
-	     Thread.sleep(2000);
-		 u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+    {                                                                                                 
+       Utility u= new Utility();                                                                    
+       dr.findElement(show).click();                                                                
+       Thread.sleep(9000);                                                                          
+       u.captureScreenshot(dr,schl,r,sc);                                                           
+       u.downloadPDF(dr);                                                                           
+    } 
 }

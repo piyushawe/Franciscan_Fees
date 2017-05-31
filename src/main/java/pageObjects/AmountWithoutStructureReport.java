@@ -1,9 +1,12 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +14,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AmountWithoutStructureReport {
 WebDriver dr;
+String r= "AmountWithoutStructureReport";
+
   By datefrom= By.id("ContentPlaceHolder1_txtDateFrom_TextBox");
   By dateto= By.id("ContentPlaceHolder1_txtDateTo_TextBox");
   By cls= By.id("ContentPlaceHolder1_ddlStanard");
@@ -21,7 +26,6 @@ WebDriver dr;
   By year= By.id("ContentPlaceHolder1_ddlyear");
   By cancelfee= By.id("ContentPlaceHolder1_chkcancel");
   By show= By.xpath("//*[@id=\"ContentPlaceHolder1_btnShow\"]/input");
-  String exp= "AMOUNT WITHOUT STRUCTURE";
   
   public AmountWithoutStructureReport(WebDriver d)
   {
@@ -80,13 +84,25 @@ WebDriver dr;
   public void selectClass(String s)
   {
 	  Select c= new Select(dr.findElement(cls));
-	  c.selectByVisibleText(s);
+	  try {
+	     c.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  c.selectByIndex(1);
+	  }
   }
 //select section  
   public void selectSection(String s)
   {
 	  Select sec=new Select(dr.findElement(section));
-	  sec.selectByVisibleText(s);
+	  try {
+	     sec.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  sec.selectByIndex(1);
+	  }
   }
 //select head  
   public void selectHead(String h)
@@ -97,17 +113,34 @@ WebDriver dr;
   public void selectSchool(String s)
   {
 	  Select sch=new Select(dr.findElement(school));
-	  sch.selectByVisibleText(s);
+	  try {
+	     sch.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  sch.selectByIndex(1);
+	  }
   }
 //select user  
   public void selectUser(String u)
   {
-	  new Select(dr.findElement(user)).selectByVisibleText(u);
+	  try {
+	     new Select(dr.findElement(user)).selectByVisibleText(u);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  new Select(dr.findElement(user)).selectByIndex(0);
+	  }
   }
 //select year  
   public void selectYear(String yr)
   {
-	  new Select(dr.findElement(year)).selectByVisibleText(yr);
+	  try {
+	     new Select(dr.findElement(year)).selectByVisibleText(yr);
+	  }
+	  catch(NoSuchElementException e) {
+	     new Select(dr.findElement(year)).selectByIndex(4);
+	  }
   }
 //click cancel fee  
   public void clickCancelFee()
@@ -115,11 +148,12 @@ WebDriver dr;
 	  dr.findElement(cancelfee).click();
   }
 //click show  
-  public void clickShow() throws InterruptedException
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
   {
 	 Utility u= new Utility(); 
  	 dr.findElement(show).click();
- 	 Thread.sleep(4000);
- 	 u.verifyPage(dr,exp);
+ 	 Thread.sleep(5000);
+ 	 u.captureScreenshot(dr,schl,r,sc);
+ 	 u.downloadPDF(dr);
   }
 }

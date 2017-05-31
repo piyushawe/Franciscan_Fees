@@ -1,7 +1,10 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -9,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class EstimatedTransportDetails {
   WebDriver dr;
+  String r= "EstimatedTransportDetails";
+  
    By school= By.id("ContentPlaceHolder1_ddlSchool");
    By route= By.id("ContentPlaceHolder1_DdlRoute");
    By vehicle= By.id("ContentPlaceHolder1_ddlvehicle");
@@ -22,28 +27,46 @@ public class EstimatedTransportDetails {
    }
    public void openEstimatedTransportDetails() throws InterruptedException
 	 {   
-	     WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Reports.png']"));
-		 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		 Thread.sleep(6000);
+	     WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Reports.png']"));		
 		 Actions builder= new Actions(dr);
 		 builder.moveToElement(menu).build().perform();
 		 WebElement submenu= dr.findElement(By.linkText("Transport Report"));
+		
 		 builder.moveToElement(submenu).build().perform();
-		 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		 dr.findElement(By.linkText("Estimated Transport Details")).click();
+		 Actions builder1= new Actions(dr);
+		 builder1.moveToElement(dr.findElement(By.cssSelector("#form2 > div.menu-h > div > ul > li:nth-child(8) > ul > li:nth-child(18) > ul > li:nth-child(6) > a"))).click().perform();
+		 //dr.findElement(By.linkText("Estimated Transport Details")).click();
 		 dr.switchTo().frame(dr.findElement(By.id("Estimated Transport Details")));
 	 }
  public void selectSchool(String sch)
  {
-	 new Select(dr.findElement(school)).selectByVisibleText(sch);
+	 try {
+	   new Select(dr.findElement(school)).selectByVisibleText(sch);
+	 }
+	 catch(NoSuchElementException e)
+	  {
+		 new Select(dr.findElement(school)).selectByIndex(1);
+	  }
  }
  public void selectRoute(String r)
  {
-	 new Select(dr.findElement(route)).selectByVisibleText(r);
+	 try {
+	   new Select(dr.findElement(route)).selectByVisibleText(r);
+	 }
+	 catch(NoSuchElementException e)
+	  {
+		 new Select(dr.findElement(route)).selectByIndex(1);
+	  }
  }
  public void selectVehicle(String v)
  {
-	 new Select(dr.findElement(vehicle)).selectByVisibleText(v);
+	 try {
+	   new Select(dr.findElement(vehicle)).selectByVisibleText(v);
+	 }
+	 catch(NoSuchElementException e)
+	 {
+		 new Select(dr.findElement(vehicle)).selectByIndex(1);
+	 }
  }
  public void selectClass(String c)
  {
@@ -70,12 +93,12 @@ public class EstimatedTransportDetails {
 	  			option.click();
         dr.findElement(By.xpath("/html/body/div[4]/div/ul/li[3]")).click();
  }
- public void clickShow() throws InterruptedException
- {
-	 String exp= "ESTIMATED TRANSPORT DETAIL ";
-   	 Utility u= new Utility(); 
-    	 dr.findElement(show).click();
-    	 Thread.sleep(2000);
-    	 u.verifyPage(dr,exp);
- }
+ public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+ {                                                                                                 
+    Utility u= new Utility();                                                                    
+    dr.findElement(show).click();                                                                
+    Thread.sleep(5000);                                                                          
+    u.captureScreenshot(dr,schl,r,sc);                                                           
+    u.downloadPDF(dr);                                                                           
+ } 
 }

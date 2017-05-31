@@ -1,7 +1,11 @@
-Feature: Franciscan ERP
+Feature: To login
 
-  Scenario: To cancel fee receipt
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin@987"
+  Scenario Outline: To login the erp
+    Given user enters url"<url>"
+    When enter username"<uname>" and password"<password>"
     Then signin
     Then home page is opened
+
+    Examples: 
+      | url                              | uname | password  |
+      | http://qaerp.franciscanecare.net | admin | Admin@987 |

@@ -42,6 +42,7 @@ public class Certificates {
     public void searchStudent(String stu) throws InterruptedException
     {
     	dr.findElement(text).sendKeys(stu);
+    	Thread.sleep(1000);
     	dr.findElement(search).click();
     	Thread.sleep(2000);
     }

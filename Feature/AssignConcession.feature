@@ -1,7 +1,9 @@
-Feature: Franciscan ERP
-
+Feature: Assign concession amount to student
+    As a user I would like to assign concession to a student in different ways
+    So that I don't have to do it manually 
+    
   @scenario1
-  Scenario: Assign concession amount to student
+  Scenario: To test assign concession as amount to student
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin
@@ -15,7 +17,7 @@ Feature: Franciscan ERP
     Then user click save on assign concession page
 
   @scenario2
-  Scenario: Assign concession in percent to student
+  Scenario: To test assign concession as percent to student
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

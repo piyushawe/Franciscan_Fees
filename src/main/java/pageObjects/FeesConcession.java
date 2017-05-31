@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FeesConcession {
 	WebDriver dr;
+	String r= "FeesConcession";
+	
 	By school= By.id("ContentPlaceHolder1_ddlSchool");
 	By cls= By.id("ContentPlaceHolder1_ddlStandard");
 	By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -42,19 +47,43 @@ public class FeesConcession {
 	 }
    public void selectSchool(String s)
    {
-	   new Select(dr.findElement(school)).selectByVisibleText(s);
+	   try {
+	      new Select(dr.findElement(school)).selectByVisibleText(s);
+	   }
+	   catch(NoSuchElementException e)
+	   {
+		   new Select(dr.findElement(school)).selectByIndex(1);
+	   }
    }
    public void selectClass(String c)
    {
-	   new Select(dr.findElement(cls)).selectByVisibleText(c);
+	   try {
+	      new Select(dr.findElement(cls)).selectByVisibleText(c);
+	   }
+	   catch(NoSuchElementException e)
+	   {
+		   new Select(dr.findElement(cls)).selectByIndex(1);
+	   }
    }
    public void selectSection(String sec)
    {
-	   new Select(dr.findElement(section)).selectByVisibleText(sec);
+	   try {
+	      new Select(dr.findElement(section)).selectByVisibleText(sec);
+	   }
+	   catch(NoSuchElementException e)
+	   {
+		   new Select(dr.findElement(section)).selectByIndex(1);
+	   }
    }
    public void selectFeeType(String ftype)
    {
-	   new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+	   try {
+	     new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+	   }
+	   catch(NoSuchElementException e)
+	   {
+		   new Select(dr.findElement(feetype)).selectByIndex(1);
+	   }
    }
    public void clickConsolidated()
    {
@@ -93,16 +122,12 @@ public class FeesConcession {
 	      new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	  Thread.sleep(1000);
 	  	  WebElement myw=dr.findElement(By.className("datepick"));
-	      // List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  	  //for (WebElement row: rows){  
 	  		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		  for(WebElement cell: cells) {
-	  			if (cell.getText().equals(dd)){  
-	  			//System.out.println("cell value"+cell.getText());
+	  			if (cell.getText().equals(dd)){  	  			
 	  			cell.click();
 	  			break; 
-	  		 }  
-	  	  //  }
+	  		 }  	
 	    }Thread.sleep(1000);
    }
    public void clickPaidConcession()
@@ -114,9 +139,9 @@ public class FeesConcession {
    }
    public void clickAssigned()
    {
-       if(dr.findElement(assigned).isSelected()) {
+      // if(dr.findElement(assigned).isSelected()) {
 		   
-	   }else
+	  // }else
 	   dr.findElement(assigned).click();
    }
    public void clickEntryTime()
@@ -126,12 +151,12 @@ public class FeesConcession {
 	   }else
 	   dr.findElement(entrytime).click();
    }
-   public void clickShow() throws InterruptedException
-   {
-	   String exp= "FEES CONCESSION";
-  	    Utility u= new Utility(); 
-       dr.findElement(show).click();
-       Thread.sleep(2000);
-  	    u.verifyPage(dr,exp);
-   }
+   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+   {                                                                                                 
+      Utility u= new Utility();                                                                    
+      dr.findElement(show).click();                                                                
+      Thread.sleep(5000);                                                                          
+      u.captureScreenshot(dr,schl,r,sc);                                                           
+      u.downloadPDF(dr);                                                                           
+   } 
 }

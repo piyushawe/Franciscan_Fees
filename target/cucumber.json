@@ -3,41 +3,18 @@
     "line": 1,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 4089463001,
-              "status": "passed"
-            },
-            "match": {
-              "location": "MyTestSteps.launchBrowser()"
-            }
-          }
-        ],
-        "line": 18,
-        "name": "Active Inactive Students Detail Report",
+        "line": 5,
+        "name": "",
         "description": "",
-        "id": "franciscan-erp;active-inactive-students-detail-report",
-        "after": [
-          {
-            "result": {
-              "duration": 27565,
-              "status": "passed"
-            },
-            "match": {
-              "location": "MyTestSteps.closeBrowser()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 2835254664,
+              "duration": 1184185423,
               "status": "passed"
             },
-            "line": 19,
+            "line": 6,
             "name": "user enters url\"http://qaerp.franciscanecare.net\"",
             "match": {
               "arguments": [
@@ -52,11 +29,11 @@
           },
           {
             "result": {
-              "duration": 172825951,
+              "duration": 169627229,
               "status": "passed"
             },
-            "line": 20,
-            "name": "enter username\"admin\" and password\"Admin@987\"",
+            "line": 7,
+            "name": "enter username\"admin\" and password\"Admin#franciscan\"",
             "match": {
               "arguments": [
                 {
@@ -64,7 +41,7 @@
                   "offset": 15
                 },
                 {
-                  "val": "Admin@987",
+                  "val": "Admin#franciscan",
                   "offset": 35
                 }
               ],
@@ -74,10 +51,10 @@
           },
           {
             "result": {
-              "duration": 2951752658,
+              "duration": 485245770,
               "status": "passed"
             },
-            "line": 21,
+            "line": 8,
             "name": "signin",
             "match": {
               "location": "MyTestSteps.signin()"
@@ -86,160 +63,56 @@
           },
           {
             "result": {
-              "duration": 349514800,
+              "duration": 267441,
               "status": "passed"
             },
-            "line": 22,
+            "line": 9,
+            "name": "passes school name \"qaerp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qaerp",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.passes_school_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 290377106,
+              "status": "passed"
+            },
+            "line": 10,
             "name": "home page is opened",
             "match": {
               "location": "MyTestSteps.home_page_is_opened()"
             },
             "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4611063898,
-              "status": "passed"
-            },
-            "line": 23,
-            "name": "active inactive students detail report is opened",
-            "match": {
-              "location": "MyTestSteps.active_inactive_students_detail_report_is_opened()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 85454069,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "user select user \"eCare Admin\" on active inactive students detail report is opened",
-            "match": {
-              "arguments": [
-                {
-                  "val": "eCare Admin",
-                  "offset": 18
-                }
-              ],
-              "location": "MyTestSteps.user_select_user_on_active_inactive_students_detail_report_is_opened(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 4720808495,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "user select from date as month \"October\" year \"2016\" and day\"1\" on active inactive students detail report page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "October",
-                  "offset": 32
-                },
-                {
-                  "val": "2016",
-                  "offset": 47
-                },
-                {
-                  "val": "1",
-                  "offset": 61
-                }
-              ],
-              "location": "MyTestSteps.user_select_from_date_as_month_year_and_day_on_active_inactive_students_detail_report_page(String,String,String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5113962024,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "user select till date as month \"November\" year \"2016\" and day\"30\" on active inactive students detail report page",
-            "match": {
-              "arguments": [
-                {
-                  "val": "November",
-                  "offset": 32
-                },
-                {
-                  "val": "2016",
-                  "offset": 48
-                },
-                {
-                  "val": "30",
-                  "offset": 62
-                }
-              ],
-              "location": "MyTestSteps.user_select_till_date_as_month_year_and_day_on_active_inactive_students_detail_report_page(String,String,String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 135681978,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "user click inactive on active inactive students detail report page",
-            "match": {
-              "location": "MyTestSteps.user_click_inactive_on_active_inactive_students_detail_report_page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5157203701,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user click show on active inactive students detail report page",
-            "match": {
-              "location": "MyTestSteps.user_click_show_on_active_inactive_students_detail_report_page()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "line": 17,
-            "name": "@scenario2"
           }
         ]
-      }
-    ],
-    "name": "Franciscan ERP",
-    "description": "",
-    "id": "franciscan-erp",
-    "keyword": "Feature",
-    "uri": "Feature/ActiveInactiveStudentsDetailReport.feature"
-  },
-  {
-    "line": 1,
-    "elements": [
+      },
       {
         "before": [
           {
             "result": {
-              "duration": 4201588148,
+              "duration": 4201275209,
               "status": "passed"
             },
             "match": {
-              "location": "MyTestSteps.launchBrowser()"
+              "location": "MyTestSteps.launchBrowser(Scenario)"
             }
           }
         ],
-        "line": 19,
-        "name": "Advance Payment Report",
+        "line": 22,
+        "name": "To test yearly collection report with filters",
         "description": "",
-        "id": "franciscan-erp;advance-payment-report",
+        "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters;;2",
         "after": [
           {
             "result": {
-              "duration": 24632,
+              "duration": 2794031097,
               "status": "passed"
             },
             "match": {
@@ -248,14 +121,116 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 7956940133,
+              "duration": 505746007,
               "status": "passed"
             },
-            "line": 20,
+            "line": 14,
+            "name": "user opens yearly collection report page",
+            "match": {
+              "location": "MyTestSteps.user_opens_yearly_collection_report_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 84991761,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user select session\"2017-2018\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-2018",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.user_select_session_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 100825868,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "user select class\"1\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 18
+                }
+              ],
+              "location": "MyTestSteps.user_select_class_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90912104,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "user select section \"A\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "A",
+                  "offset": 21
+                }
+              ],
+              "location": "MyTestSteps.user_select_section_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9745520302,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "user click on show on yearly collection report",
+            "match": {
+              "location": "MyTestSteps.user_click_on_show_on_yearly_collection_report()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 12,
+            "name": "@scenario1"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 935922832,
+              "status": "passed"
+            },
+            "line": 6,
             "name": "user enters url\"http://qaerp.franciscanecare.net\"",
             "match": {
               "arguments": [
@@ -270,11 +245,11 @@
           },
           {
             "result": {
-              "duration": 135683152,
+              "duration": 206529004,
               "status": "passed"
             },
-            "line": 21,
-            "name": "enter username\"admin\" and password\"Admin@987\"",
+            "line": 7,
+            "name": "enter username\"admin\" and password\"Admin#franciscan\"",
             "match": {
               "arguments": [
                 {
@@ -282,7 +257,7 @@
                   "offset": 15
                 },
                 {
-                  "val": "Admin@987",
+                  "val": "Admin#franciscan",
                   "offset": 35
                 }
               ],
@@ -292,10 +267,10 @@
           },
           {
             "result": {
-              "duration": 2159983649,
+              "duration": 1097001648,
               "status": "passed"
             },
-            "line": 22,
+            "line": 8,
             "name": "signin",
             "match": {
               "location": "MyTestSteps.signin()"
@@ -304,53 +279,121 @@
           },
           {
             "result": {
-              "duration": 619307559,
+              "duration": 78883,
               "status": "passed"
             },
-            "line": 23,
+            "line": 9,
+            "name": "passes school name \"qaerp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qaerp",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.passes_school_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 105456515,
+              "error_message": "org.openqa.selenium.WebDriverException: unknown error: Element \u003cimg src\u003d\"images/big/Fee-Manager.png\"\u003e is not clickable at point (287, 347). Other element would receive the click: \u003cdiv class\u003d\"container-in\"\u003e...\u003c/div\u003e\n  (Session info: chrome\u003d58.0.3029.110)\n  (Driver info: chromedriver\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform\u003dWindows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 62 milliseconds\nBuild info: version: \u00273.1.0\u0027, revision: \u0027b94c902\u0027, time: \u00272017-02-16 12:21:31 -0800\u0027\nSystem info: host: \u0027DELL-PC\u0027, ip: \u0027192.168.10.111\u0027, os.name: \u0027Windows 7\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.1\u0027, java.version: \u00271.8.0_121\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities [{applicationCacheEnabled\u003dfalse, rotatable\u003dfalse, mobileEmulationEnabled\u003dfalse, networkConnectionEnabled\u003dfalse, chrome\u003d{chromedriverVersion\u003d2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir\u003dC:\\Users\\dell\\AppData\\Local\\Temp\\scoped_dir6608_12307}, takesHeapSnapshot\u003dtrue, pageLoadStrategy\u003dnormal, databaseEnabled\u003dfalse, handlesAlerts\u003dtrue, hasTouchScreen\u003dfalse, version\u003d58.0.3029.110, platform\u003dXP, browserConnectionEnabled\u003dfalse, nativeEvents\u003dtrue, acceptSslCerts\u003dtrue, locationContextEnabled\u003dtrue, webStorageEnabled\u003dtrue, browserName\u003dchrome, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue, unexpectedAlertBehaviour\u003d}]\nSession ID: 7a54c2d4fb2c3b23a0d71bce5dcd2b63\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)\r\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat step_Def.MyTestSteps.home_page_is_opened(MyTestSteps.java:184)\r\n\tat ✽.Then home page is opened(ReportsFeature/YearlyCollectionReport.feature:10)\r\n",
+              "status": "failed"
+            },
+            "line": 10,
             "name": "home page is opened",
             "match": {
               "location": "MyTestSteps.home_page_is_opened()"
             },
             "keyword": "Then "
-          },
+          }
+        ]
+      },
+      {
+        "before": [
           {
             "result": {
-              "duration": 5415632690,
+              "duration": 3703969699,
               "status": "passed"
             },
-            "line": 24,
-            "name": "advance payment report is opened",
             "match": {
-              "location": "MyTestSteps.advance_payment_report_is_opened()"
+              "location": "MyTestSteps.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "To test yearly collection report when filter with clearing date is selected",
+        "description": "",
+        "id": "yearly-collection-report;to-test-yearly-collection-report-when-filter-with-clearing-date-is-selected;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2844597251,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyTestSteps.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "user opens yearly collection report page",
+            "match": {
+              "location": "MyTestSteps.user_opens_yearly_collection_report_page()"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 88244868,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 25,
-            "name": "user select installment\"JANUARY - MARCH\" on advance payment report",
+            "line": 27,
+            "name": "user select entry mode \"School\" on yearly collection report",
             "match": {
               "arguments": [
                 {
-                  "val": "JANUARY - MARCH",
+                  "val": "School",
                   "offset": 24
                 }
               ],
-              "location": "MyTestSteps.user_select_installment_on_advance_payment_report(String)"
+              "location": "MyTestSteps.user_select_entry_mode_on_yearly_collection_report(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 236652145,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 26,
-            "name": "user select class\"1\" on advance payment report",
+            "line": 28,
+            "name": "user select session\"2017-2018\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-2018",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.user_select_session_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              5
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "user select class\"1\" on yearly collection report",
             "match": {
               "arguments": [
                 {
@@ -358,71 +401,495 @@
                   "offset": 18
                 }
               ],
-              "location": "MyTestSteps.user_select_class_on_advance_payment_report(String)"
+              "location": "MyTestSteps.user_select_class_on_yearly_collection_report(String)"
             },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 95119373,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 27,
-            "name": "user select section\"A\" on advance payment report",
+            "line": 30,
+            "name": "user select section \"A\" on yearly collection report",
             "match": {
               "arguments": [
                 {
                   "val": "A",
-                  "offset": 20
-                }
-              ],
-              "location": "MyTestSteps.user_select_section_on_advance_payment_report(String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 83639479,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "user select fee type\"SCHOOL FEE\" on advance payment report",
-            "match": {
-              "arguments": [
-                {
-                  "val": "SCHOOL FEE",
                   "offset": 21
                 }
               ],
-              "location": "MyTestSteps.user_select_fee_type_on_advance_payment_report(String)"
+              "location": "MyTestSteps.user_select_section_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 31,
+            "name": "user select fee type\"SCHOOL\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "SCHOOL",
+                  "offset": 21
+                }
+              ],
+              "location": "MyTestSteps.user_select_fee_type_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              3
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 32,
+            "name": "user select school\"Delhi Public School\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Delhi Public School",
+                  "offset": 19
+                }
+              ],
+              "location": "MyTestSteps.user_select_school_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              2
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 33,
+            "name": "user select pay mode as \"Cash\" and \"Cheque\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cash",
+                  "offset": 25
+                },
+                {
+                  "val": "Cheque",
+                  "offset": 36
+                }
+              ],
+              "location": "MyTestSteps.user_select_pay_mode_as_and_on_yearly_collection_report(String,String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2751203471,
-              "status": "passed"
+              "status": "skipped"
             },
-            "line": 29,
-            "name": "user click on show on advance payment report",
+            "comments": [
+              {
+                "line": 34,
+                "value": "#Then user select bank name \"\u003cbank name\u003e\" on yearly collection report"
+              }
+            ],
+            "line": 35,
+            "name": "user checks on filter with clearing date",
             "match": {
-              "location": "MyTestSteps.user_click_on_show_on_advance_payment_report()"
+              "location": "MyTestSteps.user_checks_on_filter_with_clearing_date()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 36,
+            "name": "user click on show on yearly collection report",
+            "match": {
+              "location": "MyTestSteps.user_click_on_show_on_yearly_collection_report()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "line": 18,
+            "line": 24,
             "name": "@scenario2"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1169877954,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters url\"http://qaerp.franciscanecare.net\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://qaerp.franciscanecare.net",
+                  "offset": 16
+                }
+              ],
+              "location": "MyTestSteps.user_enters_url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 225928101,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "enter username\"admin\" and password\"Admin#franciscan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 15
+                },
+                {
+                  "val": "Admin#franciscan",
+                  "offset": 35
+                }
+              ],
+              "location": "MyTestSteps.enter_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 541256624,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "signin",
+            "match": {
+              "location": "MyTestSteps.signin()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 73898,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "passes school name \"qaerp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qaerp",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.passes_school_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 478817820,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "home page is opened",
+            "match": {
+              "location": "MyTestSteps.home_page_is_opened()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3512716169,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyTestSteps.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "To test with no filters",
+        "description": "",
+        "id": "yearly-collection-report;to-test-with-no-filters;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2841341343,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyTestSteps.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 763128841,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "user opens yearly collection report page",
+            "match": {
+              "location": "MyTestSteps.user_opens_yearly_collection_report_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 120638150,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user select session\"2017-2018\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-2018",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.user_select_session_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8627104370,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user click on show on yearly collection report",
+            "match": {
+              "location": "MyTestSteps.user_click_on_show_on_yearly_collection_report()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 43,
+            "name": "@scenario3"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1681381259,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters url\"http://qaerp.franciscanecare.net\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://qaerp.franciscanecare.net",
+                  "offset": 16
+                }
+              ],
+              "location": "MyTestSteps.user_enters_url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 200378757,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "enter username\"admin\" and password\"Admin#franciscan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "admin",
+                  "offset": 15
+                },
+                {
+                  "val": "Admin#franciscan",
+                  "offset": 35
+                }
+              ],
+              "location": "MyTestSteps.enter_username_and_password(String,String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 396368207,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "signin",
+            "match": {
+              "location": "MyTestSteps.signin()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 86507,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "passes school name \"qaerp\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "qaerp",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.passes_school_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 323412432,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "home page is opened",
+            "match": {
+              "location": "MyTestSteps.home_page_is_opened()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4298632858,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyTestSteps.launchBrowser(Scenario)"
+            }
+          }
+        ],
+        "line": 62,
+        "name": "To test with cheque clearing date",
+        "description": "",
+        "id": "yearly-collection-report;to-test-with-cheque-clearing-date;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2672002081,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MyTestSteps.closeBrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 541941059,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user opens yearly collection report page",
+            "match": {
+              "location": "MyTestSteps.user_opens_yearly_collection_report_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 61777827,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user select session\"2017-2018\" on yearly collection report",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2017-2018",
+                  "offset": 20
+                }
+              ],
+              "location": "MyTestSteps.user_select_session_on_yearly_collection_report(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 113944518,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user checks on filter with clearing date",
+            "match": {
+              "location": "MyTestSteps.user_checks_on_filter_with_clearing_date()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 8232388310,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user click on show on yearly collection report",
+            "match": {
+              "location": "MyTestSteps.user_click_on_show_on_yearly_collection_report()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 53,
+            "name": "@scenario4"
           }
         ]
       }
     ],
-    "name": "Franciscan ERP",
-    "description": "",
-    "id": "franciscan-erp",
+    "name": "Yearly Collection Report",
+    "description": "    As a user I would like to open yearly collection report\n    So that I don\u0027t have to do it myself",
+    "id": "yearly-collection-report",
     "keyword": "Feature",
-    "uri": "Feature/AdvancePaymentReport.feature"
+    "uri": "ReportsFeature/YearlyCollectionReport.feature"
   }
 ]

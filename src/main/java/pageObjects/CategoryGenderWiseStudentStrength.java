@@ -1,6 +1,10 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -8,6 +12,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class CategoryGenderWiseStudentStrength {
 WebDriver dr;
+String r="CategoryGenderWiseStudentStrength";
+
 	By cls= By.id("ContentPlaceHolder1_ddlClass");
 	By sectionwise= By.id("ContentPlaceHolder1_chkForSection");
 	By section= By.id("ContentPlaceHolder1_ddlSection");
@@ -24,13 +30,10 @@ WebDriver dr;
     public void openCategoryGenderWiseStudentStrength() throws InterruptedException
     {   
 	   WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Reports.png']"));
-	   //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	   Thread.sleep(5000);
 	   Actions builder= new Actions(dr);
 	   builder.moveToElement(menu).build().perform();
 	   WebElement submenu= dr.findElement(By.linkText("Student Strength"));
 	   builder.moveToElement(submenu).build().perform();
-	   //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   dr.findElement(By.linkText("Category / Gender Wise Student Strength")).click();
 	   dr.switchTo().frame(dr.findElement(By.id("Category / Gender Wise Student Strength")));
      }
@@ -38,7 +41,13 @@ WebDriver dr;
    public void selectClass(String c)
    {
 	   Select cs= new Select(dr.findElement(cls));
-	   cs.selectByVisibleText(c);
+	   try {
+	     cs.selectByVisibleText(c);
+	   }
+	   catch(NoSuchElementException e)
+	   {
+		   cs.selectByIndex(1);
+	   }
    }
 //section wise   
    public void checkClickForSectionwise() throws InterruptedException
@@ -49,7 +58,13 @@ WebDriver dr;
 //section   
    public void selectSection(String s)
    {
-	  new Select(dr.findElement(section)).selectByVisibleText(s);
+	  try {
+	    new Select(dr.findElement(section)).selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	   {
+		  new Select(dr.findElement(section)).selectByIndex(1);
+	   }
    }
 //category wise   
    public void clickCategoryWise()
@@ -67,12 +82,12 @@ WebDriver dr;
 	   dr.findElement(categoryandgenderwise).click();
    }
 //show   
-   public void clickShow() throws InterruptedException
+   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
    {
-	   String exp="STUDENT STRENGTH REPORT";
-	   	Utility u= new Utility(); 
-	   	dr.findElement(show).click();
-	   	Thread.sleep(2000);
-	   	u.verifyPage(dr,exp);
+ 	 Utility u= new Utility(); 
+  	 dr.findElement(show).click();
+  	 Thread.sleep(5000);
+  	 u.captureScreenshot(dr,schl,r,sc);
+  	 u.downloadPDF(dr);
    }
 }

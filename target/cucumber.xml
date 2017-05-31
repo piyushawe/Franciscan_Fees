@@ -1,28 +1,78 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="53.967032">
-<testcase classname="Franciscan ERP" name="Active Inactive Students Detail Report" time="30.223013">
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="65.349758">
+<testcase classname="Yearly Collection Report" name="To test yearly collection report with filters" time="19.653005">
 <system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
-When enter username"admin" and password"Admin@987"..........................passed
+When enter username"admin" and password"Admin#franciscan"...................passed
 Then signin.................................................................passed
+And passes school name "qaerp"..............................................passed
 Then home page is opened....................................................passed
-Then active inactive students detail report is opened.......................passed
-Then user select user "eCare Admin" on active inactive students detail report is opened.passed
-Then user select from date as month "October" year "2016" and day"1" on active inactive students detail report page.passed
-Then user select till date as month "November" year "2016" and day"30" on active inactive students detail report page.passed
-Then user click inactive on active inactive students detail report page.....passed
-Then user click show on active inactive students detail report page.........passed
+Then user opens yearly collection report page...............................passed
+Then user select session"2017-2018" on yearly collection report.............passed
+Then user select class"1" on yearly collection report.......................passed
+Then user select section "A" on yearly collection report....................passed
+Then user click on show on yearly collection report.........................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Franciscan ERP" name="Advance Payment Report" time="23.744019">
-<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
-When enter username"admin" and password"Admin@987"..........................passed
+<testcase classname="Yearly Collection Report" name="To test yearly collection report when filter with clearing date is selected" time="8.893556">
+<failure message="org.openqa.selenium.WebDriverException: unknown error: Element &lt;img src=&quot;images/big/Fee-Manager.png&quot;&gt; is not clickable at point (287, 347). Other element would receive the click: &lt;div class=&quot;container-in&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=58.0.3029.110)&#10;  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 62 milliseconds&#10;Build info: version: '3.1.0', revision: 'b94c902', time: '2017-02-16 12:21:31 -0800'&#10;System info: host: 'DELL-PC', ip: '192.168.10.111', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir6608_12307}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]&#10;Session ID: 7a54c2d4fb2c3b23a0d71bce5dcd2b63&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)&#13;&#10;&#9;at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;&#10;&#9;at step_Def.MyTestSteps.home_page_is_opened(MyTestSteps.java:184)&#13;&#10;&#9;at ✽.Then home page is opened(ReportsFeature/YearlyCollectionReport.feature:10)&#13;&#10;"><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin#franciscan"...................passed
 Then signin.................................................................passed
+And passes school name "qaerp"..............................................passed
+Then home page is opened....................................................failed
+Then user opens yearly collection report page...............................skipped
+Then user select entry mode "School" on yearly collection report............skipped
+Then user select session"2017-2018" on yearly collection report.............skipped
+Then user select class"1" on yearly collection report.......................skipped
+Then user select section "A" on yearly collection report....................skipped
+Then user select fee type"SCHOOL" on yearly collection report...............skipped
+Then user select school"Delhi Public School" on yearly collection report....skipped
+Then user select pay mode as "Cash" and "Cheque" on yearly collection report.skipped
+Then user checks on filter with clearing date...............................skipped
+Then user click on show on yearly collection report.........................skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: unknown error: Element <img src="images/big/Fee-Manager.png"> is not clickable at point (287, 347). Other element would receive the click: <div class="container-in">...</div>
+  (Session info: chrome=58.0.3029.110)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 62 milliseconds
+Build info: version: '3.1.0', revision: 'b94c902', time: '2017-02-16 12:21:31 -0800'
+System info: host: 'DELL-PC', ip: '192.168.10.111', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_121'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\dell\AppData\Local\Temp\scoped_dir6608_12307}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7a54c2d4fb2c3b23a0d71bce5dcd2b63
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at step_Def.MyTestSteps.home_page_is_opened(MyTestSteps.java:184)
+	at ✽.Then home page is opened(ReportsFeature/YearlyCollectionReport.feature:10)
+]]></failure>
+</testcase>
+<testcase classname="Yearly Collection Report" name="To test with no filters" time="18.280883">
+<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin#franciscan"...................passed
+Then signin.................................................................passed
+And passes school name "qaerp"..............................................passed
 Then home page is opened....................................................passed
-Then advance payment report is opened.......................................passed
-Then user select installment"JANUARY - MARCH" on advance payment report.....passed
-Then user select class"1" on advance payment report.........................passed
-Then user select section"A" on advance payment report.......................passed
-Then user select fee type"SCHOOL FEE" on advance payment report.............passed
-Then user click on show on advance payment report...........................passed
+Then user opens yearly collection report page...............................passed
+Then user select session"2017-2018" on yearly collection report.............passed
+Then user click on show on yearly collection report.........................passed
+]]></system-out>
+</testcase>
+<testcase classname="Yearly Collection Report" name="To test with cheque clearing date" time="18.522314">
+<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin#franciscan"...................passed
+Then signin.................................................................passed
+And passes school name "qaerp"..............................................passed
+Then home page is opened....................................................passed
+Then user opens yearly collection report page...............................passed
+Then user select session"2017-2018" on yearly collection report.............passed
+Then user checks on filter with clearing date...............................passed
+Then user click on show on yearly collection report.........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ClassWiseStudentStrength {
 WebDriver dr;
+String r="ClassWiseStudentStrength";
+
   By datewise= By.id("ContentPlaceHolder1_chkDate");
   By date= By.id("ContentPlaceHolder1_txttoDate_TextBox");
   By rowwise= By.id("ContentPlaceHolder1_rdorowwise");
@@ -27,13 +32,11 @@ WebDriver dr;
    public void openClassWiseStudentStrength() throws InterruptedException
     {   
 	   WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Reports.png']"));
-	   //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   Thread.sleep(5000);
 	   Actions builder= new Actions(dr);
 	   builder.moveToElement(menu).build().perform();
 	   WebElement submenu= dr.findElement(By.linkText("Student Strength"));
 	   builder.moveToElement(submenu).build().perform();
-	   //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	   dr.findElement(By.linkText("Class Wise Student Strength")).click();
 	   dr.switchTo().frame(dr.findElement(By.id("Class Wise Student Strength")));
      }
@@ -50,8 +53,6 @@ WebDriver dr;
 	     new Select(dr.findElement(By.className("datepick-new-year"))).selectByVisibleText(yy);
 	  	 Thread.sleep(1000);
 	  	 WebElement myw=dr.findElement(By.className("datepick"));
-	     // List<WebElement> rows= myw.findElements(By.className("datepick-days-row"));
-	  	  //for (WebElement row: rows){  
 	  	   List<WebElement> cells=myw.findElements(By.tagName("td"));
 	  		for(WebElement cell: cells) {
 	  		if (cell.getText().equals(dd)){  
@@ -59,7 +60,6 @@ WebDriver dr;
 	  		cell.click();
 	  		break; 
 	  	 }  
-	   // }
 	   }Thread.sleep(2000);
    }
    public void clickRowWise()
@@ -73,7 +73,13 @@ WebDriver dr;
    public void selectClass(String c)
    {
 	   Select cs= new Select(dr.findElement(cls));
-	   cs.selectByVisibleText(c);
+	   try {
+	     cs.selectByVisibleText(c);
+	   }
+	   catch(NoSuchElementException e)
+ 	   {
+ 		  cs.selectByIndex(1);
+ 	   }
    }
    public void clickSectionWise()
    {
@@ -86,14 +92,20 @@ WebDriver dr;
    public void selectSection(String s)
    {
 	   Select sec= new Select(dr.findElement(section));
-	   sec.selectByVisibleText(s);
+	   try {
+	     sec.selectByVisibleText(s);
+	   }
+	   catch(NoSuchElementException e)
+ 	   {
+ 		  sec.selectByIndex(1);
+ 	   }
    }
-   public void clickShow() throws InterruptedException
-   {
-	   String exp="CLASS WISE STUDENT STRENGTH REPORT";
-	   	Utility u= new Utility(); 
-	   	dr.findElement(show).click();
-	   	Thread.sleep(2000);
-	   	u.verifyPage(dr,exp);
-   }
+   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+   {                                                                                                 
+      Utility u= new Utility();                                                                    
+      dr.findElement(show).click();                                                                
+      Thread.sleep(5000);                                                                          
+      u.captureScreenshot(dr,schl,r,sc);                                                           
+      u.downloadPDF(dr);                                                                           
+   } 
 }

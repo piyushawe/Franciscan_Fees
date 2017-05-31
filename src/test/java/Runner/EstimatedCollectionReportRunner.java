@@ -7,13 +7,13 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features= {"Feature/EstimatedCollectionReport.feature"}
+		features= {"ReportsFeature/EstimatedCollectionReport.feature"}
 		,glue= {"step_Def"}
 		,monochrome=true
 	    ,plugin= {"pretty","html:target/cucumber_html_report",
 	    		  "json:target/cucumber.json",
 	    	      "junit:target/cucumber.xml"}		
-		,tags={"@scenario1"}
+		//,tags={"@scenario1"}
 	)
 public class EstimatedCollectionReportRunner {
 

@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ReconcileInstallmentClassWise {
 	WebDriver dr;
+	String r= "ReconcileInstallmentClassWise";
+	
 	By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
 	//By cls= By.id("ContentPlaceHolder1_lstClass");
 	//By installment= By.id("ContentPlaceHolder1_ddlInstallment");
@@ -32,7 +37,13 @@ public class ReconcileInstallmentClassWise {
     }
     public void selectFeeType(String ftype)
     {
-    	new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	try {
+    	  new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	}
+    	catch(NoSuchElementException e)
+ 	    {
+ 		   new Select(dr.findElement(feetype)).selectByIndex(1);
+ 	    }
     }
     public void selectClass(String c)
     {
@@ -58,12 +69,12 @@ public class ReconcileInstallmentClassWise {
 	  			option.click();
     	dr.findElement(By.cssSelector("body > div:nth-child(7) > div > ul > li.ui-multiselect-close")).click();
     }
-    public void clickShow() throws InterruptedException
-    {
-    	String exp= "RECONCILE INSTALLMENT CLASSWISE";
-		 Utility u= new Utility(); 
-	     dr.findElement(show).click();
-	     Thread.sleep(2000);
-		 u.verifyPage(dr,exp);
-    }
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+    {                                                                                                 
+       Utility u= new Utility();                                                                    
+       dr.findElement(show).click();                                                                
+       Thread.sleep(5000);                                                                          
+       u.captureScreenshot(dr,schl,r,sc);                                                           
+       u.downloadPDF(dr);                                                                           
+    } 
 }

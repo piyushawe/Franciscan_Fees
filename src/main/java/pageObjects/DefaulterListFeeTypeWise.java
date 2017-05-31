@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DefaulterListFeeTypeWise {
 WebDriver dr;
+String r= "DefaulterListFeeTypeWise";
+
   By school= By.id("ContentPlaceHolder1_ddlSchool");
   //By cls= By.id("ContentPlaceHolder1_lstClass");
   By feetype=By.id("ContentPlaceHolder1_ddlFeeType");
@@ -37,7 +42,13 @@ WebDriver dr;
   public void selectSchool(String s)
   {
 	  Select sch= new Select(dr.findElement(school));
-	  sch.selectByVisibleText(s);
+	  try {
+	    sch.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+ 		 new Select(dr.findElement(school)).selectByIndex(1);
+	  }
   }
   public void selectClass(String c)
   {
@@ -54,7 +65,13 @@ WebDriver dr;
   public void selectFeeType(String s)
   {
 	  Select ftype= new Select(dr.findElement(feetype));
-	  ftype.selectByVisibleText(s);
+	  try {
+	     ftype.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+ 		 ftype.selectByIndex(1);
+	  }
   }
   public void selectInstallment(String inst)
   {
@@ -76,12 +93,12 @@ WebDriver dr;
   {
 	  dr.findElement(withlatefinebifurcated).click();
   }
-  public void clickShow() throws InterruptedException
-  {
-	 String exp= "DEFAULTER lIST";
-	 Utility u= new Utility(); 
- 	 dr.findElement(show).click();
- 	 Thread.sleep(5000);
- 	 u.verifyPage(dr,exp);
-  }
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+  {                                                                                                 
+     Utility u= new Utility();                                                                    
+     dr.findElement(show).click();                                                                
+     Thread.sleep(5000);                                                                          
+     u.captureScreenshot(dr,schl,r,sc);                                                           
+     u.downloadPDF(dr);                                                                           
+  } 
 }

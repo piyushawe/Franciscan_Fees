@@ -1,9 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class BadDebtsReport {
 	WebDriver dr;
+	String r="BadDebtsReport";
+	
 	By feetype= By.name("ctl00$ContentPlaceHolder1$ddlFeeType");
 	By cls= By.id("ContentPlaceHolder1_lstClass");
 	By installment= By.id("ContentPlaceHolder1_ddlInstallment");
@@ -35,7 +39,13 @@ public class BadDebtsReport {
 //fee type    
     public void selectFeeType(String ftype) 
     {  
-    	new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	try {
+    	  new Select(dr.findElement(feetype)).selectByVisibleText(ftype);
+    	}
+    	catch(NoSuchElementException e)
+        {
+          new Select(dr.findElement(feetype)).selectByIndex(1);
+        }
     }
 //class    
     public void selectClass(String c)
@@ -63,12 +73,12 @@ public class BadDebtsReport {
     	dr.findElement(By.cssSelector("body > div:nth-child(7) > div > ul > li.ui-multiselect-close")).click();
     }
 //show    
-    public void clickShow() throws InterruptedException
+    public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
     {
-    	String exp="BAD DEBTS REPORT";
-    	Utility u= new Utility(); 
-    	dr.findElement(show).click();
-    	Thread.sleep(5000);
-    	u.verifyPage(dr,exp);
+  	 Utility u= new Utility(); 
+   	 dr.findElement(show).click();
+   	 Thread.sleep(5000);
+   	 u.captureScreenshot(dr,schl,r,sc);
+   	 u.downloadPDF(dr);
     }
 }

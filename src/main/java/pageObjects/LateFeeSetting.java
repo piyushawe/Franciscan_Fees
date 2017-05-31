@@ -3,6 +3,7 @@ package pageObjects;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -62,6 +63,21 @@ public class LateFeeSetting {
 	    	 }  	  
 	    }Thread.sleep(200); 
     }
+	public void selectLateFeeType(String lateftype) throws InterruptedException
+	{
+		dr.findElement(By.id("ContentPlaceHolder1_txtctype")).click();
+		Thread.sleep(500);
+		while(true)
+		{
+			dr.findElement(By.id("ContentPlaceHolder1_txtctype")).sendKeys(Keys.ARROW_DOWN);
+			//System.out.println(dr.findElement(By.id("ContentPlaceHolder1_txtctype")).getText());
+			if(dr.findElement(By.id("ContentPlaceHolder1_txtctype")).getText().contains(lateftype)) {
+				dr.findElement(By.id("ContentPlaceHolder1_txtctype")).sendKeys(Keys.ENTER);
+				Thread.sleep(500);
+				break;
+			}
+		}
+	}
 	public void enterAmount(String amt)
 	{
 		dr.findElement(amount).sendKeys(amt);

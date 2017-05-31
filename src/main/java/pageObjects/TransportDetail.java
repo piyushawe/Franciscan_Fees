@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class TransportDetail {
 WebDriver dr;
+String r= "TransportDetail";
 By route= By.id("ContentPlaceHolder1_ddlRoute");
 By stop= By.id("ContentPlaceHolder1_ddlStop");
 By vehicle= By.id("ContentPlaceHolder1_ddlVehicle");
@@ -39,32 +43,68 @@ public void openTransportDetail() throws InterruptedException
 public void selectRoute(String r)
 {
 	Select rt= new Select(dr.findElement(route));
-	rt.selectByVisibleText(r);
+	try {
+	  rt.selectByVisibleText(r);
+	}
+	catch(NoSuchElementException e)
+	{
+	  rt.selectByIndex(1);
+    }
 }
 public void selectStop(String s)
 {
 	Select st= new Select(dr.findElement(stop));
-	st.selectByVisibleText(s);
+	try {
+	  st.selectByVisibleText(s);
+	}
+	catch(NoSuchElementException e)
+	{
+	  st.selectByIndex(1);
+    }
 }
 public void selectVehicle(String v)
 {
 	Select vh=new Select(dr.findElement(vehicle));
-	vh.selectByVisibleText(v);
+	try {
+	  vh.selectByVisibleText(v);
+	}
+	catch(NoSuchElementException e)
+	{
+	  vh.selectByIndex(1);
+    }
 }
 public void selectClass(String c)
 {
 	Select cs= new Select(dr.findElement(cls));
-	cs.selectByVisibleText(c);
+	try {
+	  cs.selectByVisibleText(c);
+	}
+	catch(NoSuchElementException e)
+	{
+	  cs.selectByIndex(1);
+    }
 }
 public void selectSection(String s)
 {
 	Select sec= new Select(dr.findElement(section));
-	sec.selectByVisibleText(s);
+    try {
+	  sec.selectByVisibleText(s);
+    }
+    catch(NoSuchElementException e)
+	{
+	  sec.selectByIndex(1);
+    }		
 }
 public void selectVendor(String v)
 {
 	Select vn= new Select(dr.findElement(vendor));
-	vn.selectByVisibleText(v);
+	try {
+	  vn.selectByVisibleText(v);
+	}
+	catch(NoSuchElementException e)
+	{
+	  vn.selectByIndex(1);
+    }
 }
 public void selectInstallment(String ins)
 {
@@ -78,12 +118,12 @@ public void selectInstallment(String ins)
   			option.click();
   	dr.findElement(By.xpath("//li[@class='ui-multiselect-close']")).click();
 }
-public void clickShow() throws InterruptedException
-{
-	String exp= "TRANSPORT DETAILS";
-  	Utility u= new Utility(); 
-    dr.findElement(show).click();
-    Thread.sleep(2000);
-    u.verifyPage(dr,exp);
-}
+public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+{                                                                                                 
+   Utility u= new Utility();                                                                    
+   dr.findElement(show).click();                                                                
+   Thread.sleep(7000);                                                                          
+   u.captureScreenshot(dr,schl,r,sc);                                                           
+   u.downloadPDF(dr);                                                                           
+} 
 }

@@ -1,7 +1,9 @@
-Feature: Franciscan ERP
+Feature: Modify Fee Receipt
+    As a user I would like to verify modify fee receipt
+    So that I don't have to do it myself
 
   @scenario1
-  Scenario: Modify Fee Receipt
+  Scenario: To test modify fee receipt
     Given user enters url"http://qaerp.franciscanecare.net"
     When enter username"admin" and password"Admin@987"
     Then signin

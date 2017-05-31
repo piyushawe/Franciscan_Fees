@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ClassWiseSiblingReport {
 WebDriver dr;
+String r="ClassWiseSiblingReport";
+
   By cls= By.id("ContentPlaceHolder1_ddlClass");
   By section= By.id("ContentPlaceHolder1_ddlSection");
   By show= By.xpath("//*[@id=\"ContentPlaceHolder1_SingleButton1\"]/input");
@@ -32,20 +37,32 @@ WebDriver dr;
   public void selectClass(String s) throws InterruptedException
   {
 	  Select c= new Select(dr.findElement(cls));
-	  c.selectByVisibleText(s);
+	  try {
+	    c.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  c.selectByIndex(1);
+	  }
 	  Thread.sleep(2000);
   }
   public void selectSection(String s)
   {
 	  Select sec= new Select(dr.findElement(section));
-	  sec.selectByVisibleText(s);
+	  try {
+	     sec.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		 sec.selectByIndex(1);
+	  }
   }
-  public void clickShow() throws InterruptedException
-  {
-	  String exp="SIBLING REPORT CLASSWISE";
-	   	Utility u= new Utility(); 
-	   	dr.findElement(show).click();
-	   	Thread.sleep(2000);
-	   	u.verifyPage(dr,exp);
-  }
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+  {                                                                                                 
+   	 Utility u= new Utility();                                                                    
+     dr.findElement(show).click();                                                                
+     Thread.sleep(5000);                                                                          
+     u.captureScreenshot(dr,schl,r,sc);                                                           
+     u.downloadPDF(dr);                                                                           
+  } 
 }

@@ -54,34 +54,37 @@ public class AssignTransportToStudents {
 		   {
 			   if(name.equals(cell.getText()))
 			   {
-				   System.out.println("r= "+r);
+				  System.out.println("r= "+r);
 				  System.out.println(cell.getText());
 				  String routeid="ContentPlaceHolder1_rptStudentList_ddlRoute_"+(r-3);
-				  new Select(row.findElement(By.id(routeid))).selectByVisibleText(route);
-				  Thread.sleep(1000);
+				  new Select(dr.findElement(By.id(routeid))).selectByVisibleText(route);
+				  Thread.sleep(3000);
 				  String stopid="ContentPlaceHolder1_rptStudentList_ddlStop_"+(r-3);
-				  new Select(row.findElement(By.id(stopid))).selectByVisibleText(stop);
-				  Thread.sleep(1000);
+				  new Select(dr.findElement(By.id(stopid))).selectByVisibleText(stop);
+				  Thread.sleep(3000);
 				  String vehicleid="ContentPlaceHolder1_rptStudentList_ddlVehicle_"+(r-3);
-				  new Select(row.findElement(By.id(vehicleid))).selectByVisibleText(vehicle);
-				  Thread.sleep(2000);
-				  System.out.println("1");
-				  
-				  row.findElement(By.cssSelector("td:nth-child(8)")).click();
-				  System.out.println("2");
+				  new Select(dr.findElement(By.id(vehicleid))).selectByVisibleText(vehicle);
+				  Thread.sleep(3000);
+				  //System.out.println("1");
+	              List<WebElement>btn=dr.findElements(By.cssSelector("td:nth-child(8)"));
+	              btn.get(r-3).click();
+				  //row.findElement(By.cssSelector("td:nth-child(8)")).click();
+				  //System.out.println("2");
 				  Thread.sleep(500);
-				  if(months.equals("All")) {
-					  System.out.println("3");
-				    //String path1="/html/body/div["+r+"]/div/ul/li[1]/a";
-				    //dr.findElement(By.xpath(path1)).click();
-					  row.findElement(By.linkText("All")).click();
-				  }
-				  String path2="/html/body/div["+r+"]/div/ul/li[3]";
-				  row.findElement(By.xpath(path2)).click();
-				  break;
+				  if(months.equalsIgnoreCase("All")) 
+				    dr.findElement(By.linkText("All")).click();
+				  else {
+					     int n= Integer.parseInt(months);
+					     dr.findElement(By.linkText("Clear")).click();
+					     String path= "/html/body/div["+r+"]/ul";
+					     WebElement select= dr.findElement(By.xpath(path));
+					     List<WebElement>options=select.findElements(By.tagName("span"));
+					     for(int i=0;i<=n-1;i++)
+					    	 options.get(i).click();
+				       }
+				  btn.get(r-3).click();	
 			   }
 		   }r++;
 	   }
-	   
    }
 }

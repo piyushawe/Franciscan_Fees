@@ -1,19 +1,20 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
-
 public class CancelledFeesReceiptReport {
 WebDriver dr;
+String r="CancelledFeesReceiptReport";
+
    By fromdate= By.id("ContentPlaceHolder1_txtDateFrom_TextBox");
    By todate= By.id("ContentPlaceHolder1_txtDateTo_TextBox");
    By show= By.xpath("//*[@id=\"ContentPlaceHolder1_btnShow\"]/input");
@@ -74,13 +75,13 @@ WebDriver dr;
 	    }Thread.sleep(500);
    }
 //show   
-   public void clickShow() throws InterruptedException
+   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
    {
-	String exp="CANCELLED FEES RECEIPT(S) REPORT ";
-   	Utility u= new Utility(); 
-   	dr.findElement(show).click();
-   	Thread.sleep(2000);
-   	u.verifyPage(dr,exp);
+ 	 Utility u= new Utility(); 
+  	 dr.findElement(show).click();
+  	 Thread.sleep(5000);
+  	 u.captureScreenshot(dr,schl,r,sc);
+  	 u.downloadPDF(dr);
    }
    public void findStudent(String name)
    {

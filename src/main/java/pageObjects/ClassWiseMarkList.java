@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,8 +13,11 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ClassWiseMarkList {
   WebDriver dr;
+  String r="ClassWiseMarkList";
+  
      By cls= By.id("ContentPlaceHolder1_ddlclass");
      By section= By.id("ContentPlaceHolder1_ddlsection");
+     By surnamewise=By.id("ContentPlaceHolder1_chkSurNameWise");
      By show= By.xpath("//*[@id=\"ContentPlaceHolder1_SingleButton1\"]/input");
      
      public ClassWiseMarkList(WebDriver d)
@@ -32,14 +38,34 @@ public class ClassWiseMarkList {
      }
      public void selectClass(String c)
      {
-    	 new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	 try {
+    	   new Select(dr.findElement(cls)).selectByVisibleText(c);
+    	 }
+    	 catch(NoSuchElementException e)
+   	     {
+   		  new Select(dr.findElement(cls)).selectByIndex(1);
+   	     }
      }
      public void selectSection(String sec)
      {
-    	 new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	 try {
+    	    new Select(dr.findElement(section)).selectByVisibleText(sec);
+    	 }
+    	 catch(NoSuchElementException e)
+   	     {
+   		  new Select(dr.findElement(section)).selectByIndex(1);
+   	     }
      }
-     public void clickShow()
+     public void clickSurnameWise()
      {
-    	 dr.findElement(show).click();
+    	 dr.findElement(surnamewise).click();
      }
+     public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
+     {                                                                                                 
+      	Utility u= new Utility();                                                                    
+        dr.findElement(show).click();                                                                
+        Thread.sleep(5000);                                                                          
+        u.captureScreenshot(dr,schl,r,sc);                                                           
+        u.downloadPDF(dr);                                                                           
+     }   
 }

@@ -49,7 +49,7 @@ public class FeeEntry {
      By reusereceipt= By.id("ContentPlaceHolder1_chkReuse");
      By midyear= By.linkText("Mid Year");
      
-    public FeeEntry(WebDriver d)
+    public FeeEntry (WebDriver d)
     {
     	this.dr=d;
     }
@@ -204,7 +204,6 @@ public class FeeEntry {
     {
     	double ad= Double.parseDouble(totalamt);
     	System.out.println("advance:"+ad);
-    	//System.out.println(dr.findElement(totalpaidamount).getText());
     	double amt= Double.parseDouble((dr.findElement(totalpaidamount).getAttribute("value")));
     	ad=ad+amt;
     	//System.out.println("advance:"+ad);
@@ -278,12 +277,14 @@ public class FeeEntry {
     public void verifyChequeBounceFine()
     {   
     	String cbounce="ChqBounce";
+    	String ftype= new Select(dr.findElement(feetype)).getFirstSelectedOption().getText();
+    	String cbounceftype= "ChqBounce("+ftype+")";
     	WebElement feedetails=dr.findElement(By.id("ContentPlaceHolder1_GVFeesHead"));
     	List<WebElement>fdetails= feedetails.findElements(By.tagName("span"));
     	boolean flag=false;
     	for(WebElement cell: fdetails)
     	{
-    		if(cbounce.equals(cell.getText()))
+    		if(cbounce.equals(cell.getText())||cbounceftype.equals(cell.getText()))
     			{
     			  System.out.println(cell.getText()+" Fine On Fee Entry");
     			  flag=true;
@@ -339,7 +340,7 @@ public class FeeEntry {
     	    System.out.println("Advance amount on fee entry:"+amount);
           }
     }
-    public void verifyAdvanceOnFeeEntry()
+    public void verifyAdvanceOn()
     {
     	String adv=dr.findElement(By.id("ContentPlaceHolder1_txtAdvCF_TextBox")).getAttribute("value"); 
     	System.out.println("Advance: "+adv);

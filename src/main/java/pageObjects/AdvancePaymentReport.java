@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.io.IOException;
+import java.util.Collection;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -10,6 +13,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class AdvancePaymentReport {
 WebDriver dr;
+String r= "AdvancePaymentReport";
+
   By installment=By.id("ContentPlaceHolder1_ddlinstallment");
   By cls=By.id("ContentPlaceHolder1_ddlStanard");
   By section=By.id("ContentPlaceHolder1_ddlSection");
@@ -39,31 +44,61 @@ WebDriver dr;
   public void selectInstallment(String s)
   {
 	  Select inst=new Select(dr.findElement(installment));
-	  inst.selectByVisibleText(s);
+	  try {
+	     inst.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  inst.selectByIndex(1);
+	  }
   }
 //select class  
   public void selectClass(String s)
   {
 	  Select c= new Select(dr.findElement(cls));
-	  c.selectByVisibleText(s);
+	  try {
+	     c.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  c.selectByIndex(1);
+	  }
   }
 //select section  
   public void selectSection(String s)
   {
 	  Select sec=new Select(dr.findElement(section));
-	  sec.selectByVisibleText(s);
+	  try {
+	    sec.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  sec.selectByIndex(1);
+	  }
   }
 //select fee type  
   public void selectFeeType(String s)
   {
 	  Select ftype=new Select(dr.findElement(feetype));
-	  ftype.selectByVisibleText(s);
+	  try {
+	      ftype.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  ftype.selectByIndex(1);
+	  }
   }
 //select school  
   public void selectSchool(String s)
   {
 	  Select sch=new Select(dr.findElement(school));
-	  sch.selectByVisibleText(s);
+	  try {
+	    sch.selectByVisibleText(s);
+	  }
+	  catch(NoSuchElementException e)
+	  {
+		  sch.selectByIndex(1);
+	  }
   }
 //payment till date  
   public void selectPaymentTillDate(String mm, String yy, String dd) throws InterruptedException
@@ -77,20 +112,19 @@ WebDriver dr;
 	  WebElement myw=dr.findElement(By.className("datepick"));
 		 List<WebElement> cells=myw.findElements(By.tagName("td"));
 		  for(WebElement cell: cells) {
-			if (cell.getText().equals(dd)){  
-			
+			if (cell.getText().equals(dd)){  	
 			cell.click();
 			break; 
 		 }  
   }Thread.sleep(500);
   }
 //click show  
-  public void clickShow() throws InterruptedException
+  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException
   {
-	 String exp= "ADVANCE REPAYMENT REPORT";	
 	 Utility u= new Utility(); 
  	 dr.findElement(show).click();
  	 Thread.sleep(2000);
- 	 u.verifyPage(dr,exp);
+ 	 u.captureScreenshot(dr,schl,r,sc);
+ 	 u.downloadPDF(dr);
   }
 }
