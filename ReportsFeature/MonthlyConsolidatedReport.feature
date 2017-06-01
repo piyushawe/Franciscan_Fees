@@ -3,10 +3,10 @@ Feature: Monthly Consolidated Report
       So that I don't have to do it myself
 
   Background: 
-    Given user enters url"http://qaerp.franciscanecare.net"
-    When enter username"admin" and password"Admin#franciscan"
+    Given user enters url" http://192.168.10.101:8069/Modules.aspx"
+    When enter username"admin" and password"admin@123"
     Then signin
-    And passes school name "qaerp"
+    And passes school name "rosary"
     Then home page is opened
 
   @scenario1
