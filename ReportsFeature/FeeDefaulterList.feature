@@ -3,10 +3,10 @@ Feature: Fee Defaulter List
      So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://192.168.10.101:8069/Modules.aspx"
-    When enter username"admin" and password"admin@123"
+    Given user enters url" http://erp.stkarenssecondaryschool.com"
+    When enter username"admin" and password"stkss#54321techpass"
     Then signin
-    And passes school name "rosary"
+    And passes school name "st karen"
     Then home page is opened
 
   @scenario1
