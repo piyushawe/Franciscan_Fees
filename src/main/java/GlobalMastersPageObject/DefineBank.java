@@ -2,11 +2,13 @@ package GlobalMastersPageObject;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import MasterSettingsPageObjects.Utility;
@@ -15,7 +17,14 @@ public class DefineBank {
 	WebDriver dr;
 	Utility u= new Utility();
 	String pg= "DefineBank";
-						
+
+	@FindBy(id="ContentPlaceHolder1_txtBankName_TextBox")WebElement bank;
+	@FindBy(id="ContentPlaceHolder1_txtAccNo_TextBox")WebElement accountno;
+	@FindBy(id="ContentPlaceHolder1_txtContactDtls_TextBox")WebElement contactdetails;
+	@FindBy(id="ContentPlaceHolder1_chkIsSchool")WebElement isschool;
+	@FindBy(id="ContentPlaceHolder1_BtnControls1_btnSave")WebElement save;
+	@FindBy(id="ContentPlaceHolder1_BtnControls1_btnView")WebElement view;
+
 	public DefineBank(WebDriver d)
 	{
 	   this.dr=d;
@@ -29,10 +38,47 @@ public class DefineBank {
 	   dr.findElement(By.linkText("Define Bank")).click();
 	   dr.switchTo().frame(dr.findElement(By.id("Define Bank")));
 	   dr.findElement(By.xpath("//div[@class='content']")).click();
-     }
-	 public void verifyPage(String schl,Collection<String>sc) throws IOException, InterruptedException
-	 {
+    }
+	public void verifyPage(String schl,Collection<String>sc) throws IOException, InterruptedException
+	{
 	    Thread.sleep(1000);
 	    u.captureScreenshot(dr, schl, pg, sc);
-	 }
+	}
+	public void enterBank(String b)
+	{
+		bank.sendKeys(b);
+	}
+	public void enterAccountNo(String accno)
+	{
+		accountno.sendKeys(accno);
+	}
+	public void enterContactDetails(String cdt)
+	{
+		contactdetails.sendKeys(cdt);
+	}
+	public void selectIsSchool()
+	{
+		isschool.click();
+	}
+	public void clickSave(String school, Collection<String> sc)throws IOException
+	{
+		save.click();
+		u.verifySave(dr, school, pg, sc);
+	}
+	public void clickView(String school, Collection<String> sc)throws IOException
+	{
+		view.click();
+		WebElement table= dr.findElement(By.id("example"));
+		List<WebElement> cells= table.findElements(By.tagName("td"));
+		if (cells.size()>1) {
+			for (WebElement cell : cells) {
+				cell.findElement(By.xpath("//input[starts-with(@id,'ContentPlaceHolder1_rptBank')]")).click();
+				break;
+			}
+		dr.findElement(By.id("ContentPlaceHolder1_BtnControls1_btnModify")).click();
+		dr.findElement(By.id("popup_ok")).click();
+		}else
+			System.out.println("No record Found");
+		u.verifyView(dr,school, pg, sc);
+	}
 }

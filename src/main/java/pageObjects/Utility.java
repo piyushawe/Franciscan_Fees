@@ -18,16 +18,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 
 public class Utility {
-	
-	@FindBy(id="ctl00_ContentPlaceHolder1_ReportViewer1_ctl09")WebElement rpt;
-	
-	/*public void captureScreenshot(WebDriver dr, String str) throws IOException
-	{
-		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
-		File f= ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
-	    FileUtils.copyFile(f,new File("D:/fee_screenshots/cjmdelhi/"+str+"/"+str+timeStamp+".png"));
-	}*/
-	
+
 	public void captureScreenshot(WebDriver dr, String str, String r, Collection<String> sc) throws IOException
 	 {
 		 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());

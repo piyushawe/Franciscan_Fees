@@ -8,13 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class FeeEntrySetting {
   WebDriver dr;
   Utility u= new Utility();
   String pg= "FeeEntrySetting";
-  
+
+  @FindBy(name="ctl00$ContentPlaceHolder1$SingleButton2$ctl00")WebElement update;
+
   public FeeEntrySetting(WebDriver d)
 	{
 	   this.dr=d;
@@ -84,5 +87,10 @@ public class FeeEntrySetting {
 			System.out.println("Fee Type Setting is there");
 		else
 			System.out.println("Fee Type Setting is not there");
+	}
+	public void clickUpdate(String school, Collection<String> sc)throws IOException
+	{
+		update.click();
+		u.verifySave(dr, school, pg, sc);
 	}
 }

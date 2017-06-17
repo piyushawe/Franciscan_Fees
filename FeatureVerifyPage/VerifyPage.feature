@@ -310,9 +310,9 @@ Feature: Franciscan Fee
 
   #student fee details
   @scenario50
-  Scenario: To verify assign student fee details page
-    When user open assign student fee details page
-    Then verify assign student fee details page
+  Scenario: To verify student fee details page
+    When user open student fee details page
+    Then verify student fee details page
 
   #create students fee structure
   @scenario51

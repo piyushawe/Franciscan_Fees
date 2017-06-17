@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="131.51582">
+<testcase classname="Franciscan Fee" name="To verify the view button on student fee details" time="131.51582">
+<system-out><![CDATA[Given user enter url "http://qaerp.franciscanecare.net".....................passed
+When user enter username "admin" and password "Admin#franciscan"............passed
+And passes school name "qaerp"..............................................passed
+And click signin............................................................passed
+Then fee manager home page is opened........................................passed
+When user open student fee details page.....................................passed
+Then click view on student fee details page.................................passed
+]]></system-out>
+</testcase>
+</testsuite>

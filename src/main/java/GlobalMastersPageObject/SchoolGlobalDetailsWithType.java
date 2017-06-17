@@ -2,20 +2,49 @@ package GlobalMastersPageObject;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import MasterSettingsPageObjects.Utility;
+import org.openqa.selenium.support.ui.Select;
 
 public class SchoolGlobalDetailsWithType {
   WebDriver dr;
   Utility u= new Utility();
   String pg= "SchoolGlobalDetailsWithType";
-		
+
+  @FindBy(id="ContentPlaceHolder1_ddltype")WebElement feetype;
+  @FindBy(id="ContentPlaceHolder1_txtschoolname_TextBox")WebElement schoolname;
+  @FindBy(id="ContentPlaceHolder1_txtschoolad_TextBox")WebElement schooladdress1;
+  @FindBy(id="ContentPlaceHolder1_txtschooladd2_TextBox")WebElement schooladdress2;
+  @FindBy(id="ContentPlaceHolder1_txtshortname_TextBox")WebElement schoolshortname;
+  @FindBy(id="ContentPlaceHolder1_txtContact_TextBox")WebElement contactno;
+  @FindBy(id="ContentPlaceHolder1_txtphone_TextBox")WebElement mobile;
+  @FindBy(id="ContentPlaceHolder1_txtmail_TextBox")WebElement email;
+  @FindBy(id="ContentPlaceHolder1_txtsupportmail_TextBox")WebElement supportemailid;
+  @FindBy(id="ContentPlaceHolder1_txtwebsite_TextBox")WebElement website;
+  @FindBy(id="ContentPlaceHolder1_txtprefix_TextBox")WebElement prefix;
+  @FindBy(id="ContentPlaceHolder1_ddlrecsetting")WebElement receiptsettings;
+  @FindBy(id="ContentPlaceHolder1_txtschoolno_TextBox")WebElement schoolno;
+  @FindBy(id="ContentPlaceHolder1_txtaffiliationto_TextBox")WebElement affiliationto;
+  @FindBy(id="ContentPlaceHolder1_txtaffiliationno_TextBox")WebElement affiliationno;
+  @FindBy(id="ContentPlaceHolder1_txtassociates_TextBox")WebElement associates;
+  @FindBy(id="ContentPlaceHolder1_txtrenewed_TextBox")WebElement renewupto;
+  @FindBy(id="ContentPlaceHolder1_txtschoolstatus_TextBox")WebElement schoolstatus;
+  @FindBy(id="ContentPlaceHolder1_txtcity_TextBox")WebElement city;
+  @FindBy(id="ContentPlaceHolder1_txtecare_TextBox")WebElement ecaremobileno;
+  @FindBy(id="ContentPlaceHolder1_txtworkingdays_TextBox")WebElement workingdays;
+  @FindBy(id="ContentPlaceHolder1_txtrecess_TextBox")WebElement recess;
+  @FindBy(id="ContentPlaceHolder1_txttotalperiod_TextBox")WebElement totalperiod;
+  @FindBy(id="ContentPlaceHolder1_BtnControls1_btnSave")WebElement save;
+  @FindBy(id="ContentPlaceHolder1_BtnControls1_btnView")WebElement view;
+
   public SchoolGlobalDetailsWithType(WebDriver d)
   {
 	  this.dr=d;
@@ -36,5 +65,119 @@ public class SchoolGlobalDetailsWithType {
   {
 	 Thread.sleep(1000);
 	 u.captureScreenshot(dr, schl, pg, sc);
+  }
+  public void selectFeeType()
+  {
+      new Select(feetype).selectByIndex(1);
+  }
+  public void enterSchoolName(String sname)
+  {
+      schoolname.sendKeys(sname);
+  }
+  public void enterSchoolAddress(String add)
+  {
+      schooladdress1.sendKeys(add);
+  }
+  public void enterSchoolAddress2(String add)
+  {
+      schooladdress2.sendKeys(add);
+  }
+  public void enterSchoolShortName(String ssname)
+  {
+      schoolshortname.sendKeys(ssname);
+  }
+  public void enterContactNo(String cno)
+  {
+      contactno.sendKeys(cno);
+  }
+  public void enterMobileNo(String mob)
+  {
+      mobile.sendKeys(mob);
+  }
+  public void enterEMail(String em)
+  {
+      email.sendKeys(em);
+  }
+  public void enterSupportEmailID(String seid)
+  {
+      supportemailid.sendKeys(seid);
+  }
+  public void enterWebsite(String wsite)
+  {
+      website.sendKeys(wsite);
+  }
+  public void enterPrefix(String pfix)
+  {
+      prefix.sendKeys(pfix);
+  }
+  public void selectReceiptSettings()
+  {
+      new Select(receiptsettings).selectByIndex(0);
+  }
+  public void enterSchoolNo(String sno)
+  {
+     schoolno.sendKeys(sno);
+  }
+  public void enterAffiliationTo(String ato)
+  {
+      affiliationto.sendKeys(ato);
+  }
+  public void enterAffiliationNo(String ano)
+  {
+      affiliationno.sendKeys(ano);
+  }
+  public void enterAssociates(String assc)
+  {
+      associates.sendKeys(assc);
+  }
+  public void enterRenewUpto(String rupto)
+  {
+      renewupto.sendKeys(rupto);
+  }
+  public void enterSchoolStatus(String sstatus)
+  {
+      schoolstatus.sendKeys(sstatus);
+  }
+  public void enterCity(String c)
+  {
+      city.sendKeys(c);
+  }
+  public void enterECareMobileNo(String ecaremob)
+  {
+      ecaremobileno.sendKeys(ecaremob);
+  }
+  public void enterWorkingDays(String wdays)
+  {
+      workingdays.sendKeys(wdays);
+  }
+  public void enterRecess(String rec)
+  {
+      recess.sendKeys(rec);
+  }
+  public void enterTotalPeriod(String tperiod)
+  {
+      totalperiod.sendKeys(tperiod);
+  }
+  public void clickSave(String school, Collection<String> sc)throws IOException
+  {
+      save.click();
+      u.verifySave(dr, school, pg, sc);
+  }
+  public void clickView(String school, Collection<String> sc)throws Exception
+  {
+      view.click();
+      WebElement table= dr.findElement(By.id("example"));
+      List<WebElement> cells= table.findElements(By.tagName("td"));
+      if (cells.size()>1) {
+          for (WebElement cell : cells) {
+              cell.findElement(By.xpath("//input[starts-with(@id,'ContentPlaceHolder1_rptSchoolDetails')]")).click();
+              break;
+          }
+      Thread.sleep(1000);
+      dr.findElement(By.id("ContentPlaceHolder1_BtnControls1_btnModify")).click();
+      dr.findElement(By.id("popup_ok")).click();
+      }else
+          System.out.println("No record Found");
+      u.verifyView(dr,school, pg, sc);
   }
 }

@@ -22,6 +22,9 @@ public class SetDueLimit {
 	@FindBy(id="ContentPlaceHolder1_ddlheadid")WebElement feehead;
 	@FindBy(id="ContentPlaceHolder1_rdoyes")WebElement yes;
 	@FindBy(id="ContentPlaceHolder1_rdono")WebElement no;
+	@FindBy(name="ctl00$ContentPlaceHolder1$rdowaveoff")List<WebElement>finewaiveoffsetting;
+	@FindBy(id="ContentPlaceHolder1_btnDueLimit_btnSave")WebElement save;
+	@FindBy(id="ContentPlaceHolder1_btnDueLimit_btnView")WebElement view;
 	
 	public SetDueLimit(WebDriver d)
 	{
@@ -77,7 +80,7 @@ public class SetDueLimit {
 		List<WebElement>settings= dr.findElements(By.name("ctl00$ContentPlaceHolder1$rdowaveoff"));
 		boolean flag= false;
 		int i=0;
-		for(@SuppressWarnings("unused") WebElement setting:settings)
+		for(WebElement setting:settings)
 		{
 			if(settings.get(i).isSelected())
 				flag=true;
@@ -87,5 +90,42 @@ public class SetDueLimit {
 			System.out.println("Fine Waive Off Setting is there");
 		else 
 			System.out.println("Fine Waive Off Setting is not there");
+	}
+	public void selectFineWaiveOffSetting(String fwoffset)
+	{
+         String val;
+         for (WebElement woff:finewaiveoffsetting)
+		 {
+			if(fwoffset.equals("Do not show waive off"))
+		      if(woff.getAttribute("value").equals("rdodefault"))
+		  		woff.click();
+			if(fwoffset.equals("waive off without reason"))
+			  if(woff.getAttribute("value").equals("rdowithoutreason"))
+			    woff.click();
+			if(fwoffset.equals("waive off with reason"))
+			  if(woff.getAttribute("value").equals("rdowithreason"))
+			    woff.click();
+		  }
+	}
+	public void clickSave(String school, Collection<String> sc)throws IOException
+	{
+		save.click();
+		u.verifySave(dr, school, pg, sc);
+	}
+	public void clickView(String school, Collection<String> sc)throws IOException
+	{
+		view.click();
+		WebElement table= dr.findElement(By.id("example"));
+		List<WebElement> cells= table.findElements(By.tagName("td"));
+		if (cells.size()>1) {
+			for (WebElement cell : cells) {
+				cell.findElement(By.xpath("//input[starts-with(@id,'ContentPlaceHolder1_rptDuesLimit')]")).click();
+				break;
+			}
+		}else
+			System.out.println("No record Found");
+		dr.findElement(By.id("ContentPlaceHolder1_btnDueLimit_btnModify")).click();
+		dr.findElement(By.id("popup_ok")).click();
+		u.verifyView(dr,school, pg, sc);
 	}
 }

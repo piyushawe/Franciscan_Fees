@@ -2,11 +2,13 @@ package Transport;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import MasterSettingsPageObjects.Utility;
@@ -15,7 +17,11 @@ public class DefineTransportMedium {
 	WebDriver dr;
 	Utility u= new Utility();
 	String pg= "DefineTransportMedium";
-				
+
+	@FindBy(id="ContentPlaceHolder1_txtTransportMediumName_TextBox")WebElement transportmedium;
+	@FindBy(id="ContentPlaceHolder1_BtnControls1_btnSave")WebElement save;
+	@FindBy(id="ContentPlaceHolder1_BtnControls1_btnView")WebElement view;
+
 	public DefineTransportMedium(WebDriver d)
 	{
 	   this.dr=d;
@@ -34,5 +40,30 @@ public class DefineTransportMedium {
 	{
 	   Thread.sleep(1000);
 	   u.captureScreenshot(dr, schl, pg, sc);
+	}
+	public void enterTransportMedium(String  tmedium)
+	{
+		transportmedium.sendKeys(tmedium);
+	}
+	public void clickSave(String school, Collection<String> sc)throws IOException
+	{
+		save.click();
+		u.verifySave(dr, school, pg, sc);
+	}
+	public void clickView(String school, Collection<String> sc)throws IOException
+	{
+		view.click();
+		WebElement table= dr.findElement(By.id("example"));
+		List<WebElement> cells= table.findElements(By.tagName("td"));
+		if (cells.size()>1) {
+			for (WebElement cell : cells) {
+				cell.findElement(By.xpath("//input[starts-with(@id,'ContentPlaceHolder1_rptView')]")).click();
+				break;
+			}
+		dr.findElement(By.id("ContentPlaceHolder1_BtnControls1_btnModify")).click();
+		dr.findElement(By.id("popup_ok")).click();
+		}else
+			System.out.println("No record Found");
+		u.verifyView(dr,school, pg, sc);
 	}
 }

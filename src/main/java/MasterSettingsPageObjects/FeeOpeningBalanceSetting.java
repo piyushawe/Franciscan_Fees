@@ -2,6 +2,7 @@ package MasterSettingsPageObjects;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -17,6 +18,9 @@ public class FeeOpeningBalanceSetting {
   String pg= "FeeOpeningBalanceSetting";
   
   @FindBy(id="ContentPlaceHolder1_ddlFeeType")WebElement feetype;
+  @FindBy(name="ctl00$ContentPlaceHolder1$abc")List<WebElement> advanceamount;
+  @FindBy(name="ctl00$ContentPlaceHolder1$XYZ")List<WebElement>openingbalance;
+  @FindBy(name="ctl00$ContentPlaceHolder1$btnSave$ctl00")WebElement save;
   
   public FeeOpeningBalanceSetting(WebDriver d)
   {
@@ -42,5 +46,48 @@ public class FeeOpeningBalanceSetting {
 		  System.out.println("Fee Type Not Selected");
 	  else
 		  System.out.println("Fee Type Is Selected");
+  }
+  public void selectAdvanceAmountSetting(String aset)
+  {
+  	for(WebElement adamtsetting:advanceamount)
+	{
+		String val;
+		if(aset.equals("Auto"))
+		{
+			if(adamtsetting.getAttribute("value").equals("rdoadvanceyes"))
+				adamtsetting.click();
+		}
+		if(aset.equals("Manual"))
+		{
+			if(adamtsetting.getAttribute("value").equals("rdoadvanceno"))
+				adamtsetting.click();
+		}
+	}
+  }
+  public void selectOpeningBalanceSetting(String obsetting)
+  {
+	  for(WebElement opbal:openingbalance)
+	  {
+		  String val;
+		  if(obsetting.equals("Auto"))
+		  {
+			  if(opbal.getAttribute("value").equals("rdoopenno"))
+				  opbal.click();
+		  }
+		  if(obsetting.equals("Manual"))
+		  {
+			  if(opbal.getAttribute("value").equals("rdoopenyes"))
+				  opbal.click();
+		  }
+	  }
+  }
+  public void selectAdvanceFeeType()
+  {
+  	new Select(feetype).selectByIndex(1);
+  }
+  public void clickSave(String school, Collection<String> sc)throws IOException
+  {
+  	 save.click();
+     u.verifySave(dr, school, pg, sc);
   }
 }
