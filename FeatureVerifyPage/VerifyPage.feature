@@ -3,7 +3,7 @@ Feature: Franciscan Fee
       The page is loaded successfully
 
   Background: 
-    Given user enter url "192.168.10.14:8099"
+    Given user enter url "http://192.168.10.47:8099"
     When user enter username "admin" and password "fspl@12345"
     And passes school name "build_17_aug_17"
     And click signin
