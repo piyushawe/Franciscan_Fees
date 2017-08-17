@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class GlobalSearchOptionSettings {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "GlobalSearchOptionSettings";
 
 	@FindBy(id="ContentPlaceHolder1_chkAdm")WebElement admissionno;

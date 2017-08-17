@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
-import cucumber.api.java.eo.Se;
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,12 +12,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import MasterSettingsPageObjects.Utility;
 import org.openqa.selenium.support.ui.Select;
 
 public class DefineFeeInstallment {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "DefineFeeInstallment";
 
 	@FindBy(id="ContentPlaceHolder1_txtInstallName_TextBox")WebElement installmentname;

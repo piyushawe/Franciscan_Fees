@@ -3,10 +3,10 @@ Feature: Fee Collection With Entry Time Concession
       So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://erp.stkarenssecondaryschool.com"
-    When enter username"admin" and password"stkss#54321techpass"
+    Given user enters url"http://qaerp.franciscanecare.net"
+    When enter username"admin" and password"Admin#franciscan"
     Then signin
-    And passes school name "st karen"
+    And passes school name "qaerp"
     Then home page is opened
 
   @scenario1

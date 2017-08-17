@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -28,11 +29,9 @@ public class BadDebtsReport {
     public void openBadDebtsReport() throws InterruptedException
     {
     	 WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Transaction-Report.png']"));
-         //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
          Thread.sleep(5000);
          Actions builder= new Actions(dr);
       	 builder.moveToElement(menu).build().perform();
-      	 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
          dr.findElement(By.linkText("Bad Debts Report")).click();
          dr.switchTo().frame(dr.findElement(By.id("Bad Debts Report")));
     }
@@ -62,7 +61,6 @@ public class BadDebtsReport {
 //installment    
     public void selectInstallment(String inst)
     {
-    	//new Select(dr.findElement(installment)).selectByVisibleText(inst);
     	dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(3) > div > button")).click();
     	dr.findElement(By.cssSelector("body > div:nth-child(7) > div > ul > li:nth-child(2) > a")).click();
     	WebElement select= dr.findElement(By.xpath("/html/body/div[4]/ul"));
@@ -77,8 +75,10 @@ public class BadDebtsReport {
     {
   	 Utility u= new Utility(); 
    	 dr.findElement(show).click();
+   	 Utilities ut= new Utilities();
+	 ut.verifyShow(dr,schl,r,sc);
    	 Thread.sleep(5000);
    	 u.captureScreenshot(dr,schl,r,sc);
-   	 u.downloadPDF(dr);
+   	 //u.downloadPDF(dr);
     }
 }

@@ -10,11 +10,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import MasterSettingsPageObjects.Utility;
+import MasterSettingsPageObjects.Utilities;
 
 public class ModifyFeeReceipt {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "ModifyFeeReceipt";
 				
 	public ModifyFeeReceipt(WebDriver d)

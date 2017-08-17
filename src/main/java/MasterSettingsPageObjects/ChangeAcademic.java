@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class ChangeAcademic {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "ChangeAcademic";
   
   @FindBy(id="ContentPlaceHolder1_ddlYear")WebElement academicyear;

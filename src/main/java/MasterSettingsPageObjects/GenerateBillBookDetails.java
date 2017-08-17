@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class GenerateBillBookDetails {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "GenerateBillBookDetails";
 	
 	@FindBy(id="ContentPlaceHolder1_ddlInstallment")WebElement installment;

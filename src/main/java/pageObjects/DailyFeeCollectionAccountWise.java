@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -52,7 +53,7 @@ String r="DailyFeeCollectionAccountWise";
 	}
 	public void selectEntryMode(String emode)
     {
-	  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(1) > div > div > button")).click();	
+	  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(5) > div > div > button")).click();
 	  dr.findElement(By.cssSelector("body > div:nth-child(7) > div > ul > li:nth-child(2) > a")).click();
 	  WebElement select= dr.findElement(By.xpath("/html/body/div[4]/ul"));
 		List<WebElement> options = select.findElements(By.tagName("span"));
@@ -98,7 +99,7 @@ String r="DailyFeeCollectionAccountWise";
     }
     public void selectClass(String c) throws InterruptedException
     {
-      dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[4]/div/div/button")).click();
+      dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[3]/div/div/button")).click();
       dr.findElement(By.xpath("/html/body/div[6]/div/ul/li[2]/a")).click();
       WebElement select= dr.findElement(By.xpath("/html/body/div[6]/ul"));
 		List<WebElement> options = select.findElements(By.tagName("span"));
@@ -140,7 +141,7 @@ String r="DailyFeeCollectionAccountWise";
     }
     public void selectBankName(String bname)
     {
-    	dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[8]/div/button")).click();
+    	dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[9]/div/button")).click();
         dr.findElement(By.xpath("/html/body/div[8]/div/ul/li[2]/a")).click();
         WebElement select= dr.findElement(By.xpath("/html/body/div[8]/ul"));
   		List<WebElement> options = select.findElements(By.tagName("span"));
@@ -193,9 +194,11 @@ String r="DailyFeeCollectionAccountWise";
     public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
     {                                                                                                 
        Utility u= new Utility();                                                                    
-       dr.findElement(show).click();                                                                
+       dr.findElement(show).click();
+       Utilities ut= new Utilities();
+       ut.verifyShow(dr,schl,r,sc);
        Thread.sleep(5000);                                                                          
        u.captureScreenshot(dr,schl,r,sc);                                                           
-       u.downloadPDF(dr);                                                                           
+       //u.downloadPDF(dr);
     } 
 }

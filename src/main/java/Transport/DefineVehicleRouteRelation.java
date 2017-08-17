@@ -1,7 +1,6 @@
 package Transport;
 
 import java.io.IOException;
-import java.io.InterruptedIOException;
 import java.util.Collection;
 import java.util.List;
 
@@ -12,12 +11,12 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import MasterSettingsPageObjects.Utility;
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.support.ui.Select;
 
 public class DefineVehicleRouteRelation {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "DefineVehicleRouteRelation";
 
 	@FindBy(id="ContentPlaceHolder1_ddlRouteNo")WebElement vehiclename;

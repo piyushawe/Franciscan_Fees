@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ReceiptCertificateSetting {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "ReceiptCertificateSetting";
 	
 	public ReceiptCertificateSetting(WebDriver d)

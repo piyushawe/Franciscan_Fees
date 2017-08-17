@@ -3,12 +3,15 @@ package pageObjects;
 import java.io.IOException;
 import java.util.Collection;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import static java.lang.Thread.sleep;
 
 public class TransportStudentStrengthReport {
 WebDriver dr;
@@ -68,12 +71,13 @@ String r= "TransportStudentStrengthReport";
    		 rt.selectByIndex(1);
   	   }
    }
-   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
-	{                                                                                                 
-	   Utility u= new Utility();                                                                    
-	   dr.findElement(show).click();                                                                
-	   Thread.sleep(5000);                                                                          
-	   u.captureScreenshot(dr,schl,r,sc);                                                           
-	   u.downloadPDF(dr);                                                                           
-	} 
+   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException {
+       Utility u = new Utility();
+       dr.findElement(show).click();
+       Utilities ut = new Utilities();
+       ut.verifyShow(dr, schl, r, sc);
+       sleep(5000);
+       u.captureScreenshot(dr, schl, r, sc);
+       //u.downloadPDF(dr);
+   }
 }

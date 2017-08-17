@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -83,9 +84,11 @@ String r="ClassSectionTransferReport";
   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
   {                                                                                                 
    	 Utility u= new Utility();                                                                    
-     dr.findElement(show).click();                                                                
+     dr.findElement(show).click();
+	 Utilities ut= new Utilities();
+	 ut.verifyShow(dr,schl,r,sc);
      Thread.sleep(5000);                                                                          
      u.captureScreenshot(dr,schl,r,sc);                                                           
-     u.downloadPDF(dr);                                                                           
+     //u.downloadPDF(dr);
   }   
 }

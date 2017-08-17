@@ -1,12 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="131.51582">
-<testcase classname="Franciscan Fee" name="To verify the view button on student fee details" time="131.51582">
-<system-out><![CDATA[Given user enter url "http://qaerp.franciscanecare.net".....................passed
-When user enter username "admin" and password "Admin#franciscan"............passed
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="18.304462">
+<testcase classname="Yearly Collection Report" name="To test yearly collection report with filters" time="18.304462">
+<system-out><![CDATA[Given user enters url"http://qaerp.franciscanecare.net".....................passed
+When enter username"admin" and password"Admin#franciscan"...................passed
+Then signin.................................................................passed
 And passes school name "qaerp"..............................................passed
-And click signin............................................................passed
-Then fee manager home page is opened........................................passed
-When user open student fee details page.....................................passed
-Then click view on student fee details page.................................passed
+Then home page is opened....................................................passed
+Then user opens yearly collection report page...............................passed
+Then user select session"2017-2018" on yearly collection report.............passed
+Then user select class"1" on yearly collection report.......................passed
+Then user click on show on yearly collection report.........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

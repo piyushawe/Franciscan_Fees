@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FeeEntrySetting {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "FeeEntrySetting";
 
   @FindBy(name="ctl00$ContentPlaceHolder1$SingleButton2$ctl00")WebElement update;

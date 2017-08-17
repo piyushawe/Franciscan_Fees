@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FeeEntrySettingOthers {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "FeeEntrySettingOthers";
 
   @FindBy(id="ContentPlaceHolder1_chkSelectBank")WebElement banksetting;

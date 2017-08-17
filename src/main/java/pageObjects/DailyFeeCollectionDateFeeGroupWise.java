@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -46,14 +47,14 @@ public class DailyFeeCollectionDateFeeGroupWise {
      }
      public void selectEntryMode(String emode)
      {
-    	 dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[1]/div/div/button")).click();
- 		 dr.findElement(By.xpath("/html/body/div[4]/div/ul/li[2]/a")).click();
- 	     WebElement select= dr.findElement(By.xpath("/html/body/div[4]/ul"));
+    	 dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[5]/div/div/button")).click();
+ 		 dr.findElement(By.xpath("/html/body/div[5]/div/ul/li[2]/a")).click();
+ 	     WebElement select= dr.findElement(By.xpath("/html/body/div[5]/ul"));
  		 List<WebElement> options = select.findElements(By.tagName("span"));
  	  	 for(WebElement option:options)
  	  		if(emode.equals(option.getText()))
  	  			option.click();
-         dr.findElement(By.xpath("/html/body/div[4]/div/ul/li[3]")).click();
+         dr.findElement(By.xpath("/html/body/div[5]/div/ul/li[3]")).click();
      }
      public void selectSchool(String sch)
      {
@@ -67,13 +68,14 @@ public class DailyFeeCollectionDateFeeGroupWise {
      }
      public void selectClass(String c)
      {
-    	 try {
-    	   new Select(dr.findElement(cls)).selectByVisibleText(c);
-    	 }
-    	 catch(NoSuchElementException e)
-   	     {
-    		 new Select(dr.findElement(cls)).selectByIndex(1);
-   	     }			   
+		 dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[3]/div/button")).click();
+		 dr.findElement(By.xpath("/html/body/div[3]/div/ul/li[2]/a")).click();
+		 WebElement select= dr.findElement(By.xpath("/html/body/div[3]/ul"));
+		 List<WebElement> options = select.findElements(By.tagName("span"));
+		 for(WebElement option:options)
+			 if(c.equals(option.getText()))
+				 option.click();
+		 dr.findElement(By.xpath("/html/body/div[3]/div/ul/li[3]")).click();
      }
      public void selectFeeType(String ftype)
      {
@@ -95,14 +97,14 @@ public class DailyFeeCollectionDateFeeGroupWise {
      }
      public void selectPayMode(String pmode1, String pmode2)
      {
-    	 dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[7]/div/button")).click();
- 		 dr.findElement(By.xpath("/html/body/div[6]/div/ul/li[2]/a")).click();
- 	     WebElement select= dr.findElement(By.xpath("/html/body/div[6]/ul"));
+    	 dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[6]/div/button")).click();
+ 		 dr.findElement(By.xpath("/html/body/div[7]/div/ul/li[2]/a")).click();
+ 	     WebElement select= dr.findElement(By.xpath("/html/body/div[7]/ul"));
  		 List<WebElement> options = select.findElements(By.tagName("span"));
  	  	 for(WebElement option:options)
  	  		if(pmode1.equals(option.getText())||pmode2.equals(option.getText()))
  	  			option.click();
-         dr.findElement(By.xpath("/html/body/div[6]/div/ul/li[3]")).click();
+         dr.findElement(By.xpath("/html/body/div[7]/div/ul/li[3]")).click();
      }
      public void selectFromDate(String mm, String yy, String dd) throws InterruptedException
      {
@@ -166,9 +168,11 @@ public class DailyFeeCollectionDateFeeGroupWise {
      public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
      {                                                                                                 
         Utility u= new Utility();                                                                    
-        dr.findElement(show).click();                                                                
+        dr.findElement(show).click();
+		Utilities ut= new Utilities();
+		ut.verifyShow(dr,schl,r,sc);
         Thread.sleep(5000);                                                                          
         u.captureScreenshot(dr,schl,r,sc);                                                           
-        u.downloadPDF(dr);                                                                           
+        //u.downloadPDF(dr);
      } 
 }

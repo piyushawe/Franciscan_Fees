@@ -14,7 +14,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class SetDueLimit {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "SetDueLimit";
 	
 	@FindBy(id="ContentPlaceHolder1_txtDueAmount_TextBox")WebElement duesamount;

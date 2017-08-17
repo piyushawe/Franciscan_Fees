@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 
-public class Utility {
+public class Utilities {
 
 	public void captureScreenshot(WebDriver dr, String str, String r, Collection<String> sc) throws IOException
 	{
@@ -63,6 +63,29 @@ public class Utility {
 		}
 	}
 
+	public void verifyShow(WebDriver dr,String school, String page,Collection<String> sc)throws IOException
+	{
+		ArrayList<String>list= new ArrayList<String>();
+		Date date= new Date();
+		int size= sc.toString().length();
+		String scenario= sc.toString().substring(2,size-1);
+		String msg;
+
+		dr.switchTo().defaultContent();
+		try {
+			if (dr.findElement(By.id("defaultSpeechbubbleHeader")).isDisplayed()){
+			msg = dr.findElement(By.id("defaultSpeechbubbleHeader")).getText();
+			list.add(date.toString());
+			list.add(scenario);
+			list.add(page);
+			list.add("Show:"+msg);
+			prepareErrorLog(list,school);}
+		}
+		catch(Exception e)
+		{
+			System.out.println("");
+		}
+	}
 	public void verifyView(WebDriver dr,String school, String page,Collection<String> sc )throws IOException
 	{
 	   ArrayList<String>list= new ArrayList<String>();

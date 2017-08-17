@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -48,7 +49,7 @@ String r= "DailyFeeCollectionDateWise";
       }
       public void selectEntryMode(String emode)
       {
-    	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[1]/div/div/button")).click();
+    	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[5]/div/div/button")).click();
     	  dr.findElement(By.xpath("/html/body/div[4]/div/ul/li[2]/a")).click();
             WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(7) > ul"));
     	  	List<WebElement> options = select.findElements(By.tagName("span"));
@@ -95,16 +96,15 @@ String r= "DailyFeeCollectionDateWise";
       }
       public void selectClass(String c)
       {  
-    	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[4]/div/div/button")).click();
+    	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[3]/div/div/button")).click();
      	  dr.findElement(By.xpath("/html/body/div[6]/div/ul/li[2]/a")).click();
-            WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(9) > ul"));	
+            WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(9) > ul"));
      	  	List<WebElement> options = select.findElements(By.tagName("span"));
      	  	for(WebElement option:options) {
-     	  		
      	  		if(c.equals(option.getText()))
      	  			option.click();
      	  	}
-     	  dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li.ui-multiselect-close")).click();	
+     	  dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li.ui-multiselect-close")).click();
       }
       public void selectSchool(String sch)
       {
@@ -141,7 +141,7 @@ String r= "DailyFeeCollectionDateWise";
       {
     	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[8]/div/button")).click();
     	  dr.findElement(By.xpath("/html/body/div[9]/div/ul/li[2]/a")).click();
-    	  WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(12) > ul"));	
+    	  WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(12) > ul"));
    	      List<WebElement> options = select.findElements(By.tagName("span"));
    	    	for(WebElement option:options)
    	  		if(bname.equals(option.getText()))
@@ -169,9 +169,11 @@ String r= "DailyFeeCollectionDateWise";
       public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
       {                                                                                                 
          Utility u= new Utility();                                                                    
-         dr.findElement(show).click();                                                                
+         dr.findElement(show).click();
+		 Utilities ut= new Utilities();
+		 ut.verifyShow(dr,schl,r,sc);
          Thread.sleep(5000);                                                                          
          u.captureScreenshot(dr,schl,r,sc);                                                           
-         u.downloadPDF(dr);                                                                           
+         //u.downloadPDF(dr);
       } 
 }

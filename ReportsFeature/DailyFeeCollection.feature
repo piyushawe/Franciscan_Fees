@@ -3,10 +3,10 @@ Feature: Daily Fee Collection Report
      So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://erp.stkarenssecondaryschool.com"
-    When enter username"admin" and password"stkss#54321techpass"
+    Given user enters url"http://qaerp.franciscanecare.net"
+    When enter username"admin" and password"Admin#franciscan"
     Then signin
-    And passes school name "st karen"
+    And passes school name "qaerp"
     Then home page is opened
 
   @scenario1
@@ -21,9 +21,9 @@ Feature: Daily Fee Collection Report
     Then user click head wise on daily fee collection
     Then clicks on show button of daily fee collection
 
-    Examples: 
-      | class-sec | fee type |
-      | 1-A       | SCHOOL   |
+  Examples:
+    | class-sec | fee type     |
+    | 1-A       | SCHOOL FEE   |
 
   @scenario2
   Scenario Outline: To test daily fee collection report when without head is clicked

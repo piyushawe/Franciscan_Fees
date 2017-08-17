@@ -68,8 +68,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                <forkCount>10</forkCount>
                 <reuseForks>true</reuseForks>
                 <includes>
-                <include>**/TransactionReportsRunner.class</include>
-                
+                <include>**/ReportsRunner.class</include>
+                <include>**/VerifyPageRunner.class</include>
                </includes>
              </configuration>
           </plugin>

@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BusIDSetting {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "BusIDSetting";
 
   @FindBy(id="ContentPlaceHolder1_txtprefix_TextBox")WebElement prefix;

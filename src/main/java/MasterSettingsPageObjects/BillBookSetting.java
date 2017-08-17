@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class BillBookSetting {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "BillBookSetting";
 
   @FindBy(id="ContentPlaceHolder1_txtprefix_TextBox")WebElement prefix;

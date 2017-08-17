@@ -9,11 +9,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
-import MasterSettingsPageObjects.Utility;
+import MasterSettingsPageObjects.Utilities;
 
 public class AssignRollNoToStudent {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "AssignRollNoToStudent";
 				
 	public AssignRollNoToStudent(WebDriver d)

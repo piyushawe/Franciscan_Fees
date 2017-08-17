@@ -1,13 +1,72 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("FeatureVerifyPage/VerifySaveView.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("ReportsFeature/YearlyCollectionReport.feature");
 formatter.feature({
   "line": 1,
-  "name": "Franciscan Fee",
-  "description": "As a user I would like to verify that\r\nThere are no errors on clicking save or view buttons",
-  "id": "franciscan-fee",
+  "name": "Yearly Collection Report",
+  "description": "    As a user I would like to open yearly collection report\n    So that I don\u0027t have to do it myself",
+  "id": "yearly-collection-report",
   "keyword": "Feature"
 });
+formatter.scenarioOutline({
+  "line": 13,
+  "name": "To test yearly collection report with filters",
+  "description": "",
+  "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline",
+  "tags": [
+    {
+      "line": 12,
+      "name": "@scenario1"
+    }
+  ]
+});
+formatter.step({
+  "line": 14,
+  "name": "user opens yearly collection report page",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 15,
+  "name": "user select session\"\u003csession\u003e\" on yearly collection report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "user select class\"\u003cclass\u003e\" on yearly collection report",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "user click on show on yearly collection report",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 19,
+  "name": "",
+  "description": "",
+  "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters;",
+  "rows": [
+    {
+      "cells": [
+        "class",
+        "session"
+      ],
+      "line": 20,
+      "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters;;1"
+    },
+    {
+      "cells": [
+        "1",
+        "2017-2018"
+      ],
+      "line": 21,
+      "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
 formatter.before({
-  "duration": 5417025011,
+  "duration": 4151813030,
   "status": "passed"
 });
 formatter.background({
@@ -19,27 +78,27 @@ formatter.background({
 });
 formatter.step({
   "line": 6,
-  "name": "user enter url \"http://qaerp.franciscanecare.net\"",
+  "name": "user enters url\"http://qaerp.franciscanecare.net\"",
   "keyword": "Given "
 });
 formatter.step({
   "line": 7,
-  "name": "user enter username \"admin\" and password \"Admin#franciscan\"",
+  "name": "enter username\"admin\" and password\"Admin#franciscan\"",
   "keyword": "When "
 });
 formatter.step({
   "line": 8,
+  "name": "signin",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 9,
   "name": "passes school name \"qaerp\"",
   "keyword": "And "
 });
 formatter.step({
-  "line": 9,
-  "name": "click signin",
-  "keyword": "And "
-});
-formatter.step({
   "line": 10,
-  "name": "fee manager home page is opened",
+  "name": "home page is opened",
   "keyword": "Then "
 });
 formatter.match({
@@ -49,27 +108,34 @@ formatter.match({
       "offset": 16
     }
   ],
-  "location": "MyStepDefs.user_enter_url(String)"
+  "location": "MyTestSteps.user_enters_url(String)"
 });
 formatter.result({
-  "duration": 6785325863,
+  "duration": 1076625979,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "admin",
-      "offset": 21
+      "offset": 15
     },
     {
       "val": "Admin#franciscan",
-      "offset": 42
+      "offset": 35
     }
   ],
-  "location": "MyStepDefs.user_enter_username_and_password(String,String)"
+  "location": "MyTestSteps.enter_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 141019303,
+  "duration": 167466185,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.signin()"
+});
+formatter.result({
+  "duration": 721378522,
   "status": "passed"
 });
 formatter.match({
@@ -79,72 +145,101 @@ formatter.match({
       "offset": 20
     }
   ],
-  "location": "MyStepDefs.passes_school_name(String)"
+  "location": "MyTestSteps.passes_school_name(String)"
 });
 formatter.result({
-  "duration": 55423,
+  "duration": 113778,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepDefs.click_signin()"
+  "location": "MyTestSteps.home_page_is_opened()"
 });
 formatter.result({
-  "duration": 4193235108,
-  "status": "passed"
-});
-formatter.match({
-  "location": "MyStepDefs.fee_manager_home_page_is_opened()"
-});
-formatter.result({
-  "duration": 385288739,
+  "duration": 312319748,
   "status": "passed"
 });
 formatter.scenario({
-  "comments": [
-    {
-      "line": 735,
-      "value": "#student fee details"
-    }
-  ],
-  "line": 737,
-  "name": "To verify the view button on student fee details",
+  "line": 21,
+  "name": "To test yearly collection report with filters",
   "description": "",
-  "id": "franciscan-fee;to-verify-the-view-button-on-student-fee-details",
+  "id": "yearly-collection-report;to-test-yearly-collection-report-with-filters;;2",
   "type": "scenario",
-  "keyword": "Scenario",
+  "keyword": "Scenario Outline",
   "tags": [
     {
-      "line": 736,
-      "name": "@scenario97"
+      "line": 12,
+      "name": "@scenario1"
     }
   ]
 });
 formatter.step({
-  "line": 738,
-  "name": "user open student fee details page",
-  "keyword": "When "
+  "line": 14,
+  "name": "user opens yearly collection report page",
+  "keyword": "Then "
 });
 formatter.step({
-  "line": 739,
-  "name": "click view on student fee details page",
+  "line": 15,
+  "name": "user select session\"2017-2018\" on yearly collection report",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "user select class\"1\" on yearly collection report",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 17,
+  "name": "user click on show on yearly collection report",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "MyStepDefs.user_open_student_fee_details_page()"
+  "location": "MyTestSteps.user_opens_yearly_collection_report_page()"
 });
 formatter.result({
-  "duration": 1640375633,
+  "duration": 1148915524,
   "status": "passed"
 });
 formatter.match({
-  "location": "MyStepDefs.click_view_on_student_fee_details_page()"
+  "arguments": [
+    {
+      "val": "2017-2018",
+      "offset": 20
+    }
+  ],
+  "location": "MyTestSteps.user_select_session_on_yearly_collection_report(String)"
 });
 formatter.result({
-  "duration": 109624637258,
+  "duration": 58342168,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 18
+    }
+  ],
+  "location": "MyTestSteps.user_select_class_on_yearly_collection_report(String)"
+});
+formatter.result({
+  "duration": 1764052871,
+  "status": "passed"
+});
+formatter.match({
+  "location": "MyTestSteps.user_click_on_show_on_yearly_collection_report()"
+});
+formatter.result({
+  "duration": 5803871649,
   "status": "passed"
 });
 formatter.after({
-  "duration": 3328857559,
+  "duration": 3099562633,
   "status": "passed"
 });
 });

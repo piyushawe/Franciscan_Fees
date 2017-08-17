@@ -3,10 +3,10 @@ Feature: Daily Fee Collection Date Fee Group Wise Report
      So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://erp.stkarenssecondaryschool.com"
-    When enter username"admin" and password"stkss#54321techpass"
+    Given user enters url"http://qaerp.franciscanecare.net"
+    When enter username"admin" and password"Admin#franciscan"
     Then signin
-    And passes school name "st karen"
+    And passes school name "qaerp"
     Then home page is opened
 
   @scenario1
@@ -23,8 +23,8 @@ Feature: Daily Fee Collection Date Fee Group Wise Report
     Then user click show on daily fee collection date fee group wise report
 
     Examples: 
-      | class | school                         | fee type |
-      |     1 | Convent of Jesus & Mary School | SCHOOL   |
+      | class | school                         | fee type     |
+      |     1 | Convent of Jesus & Mary School | SCHOOL FEE   |
 
   @scenario2
   Scenario Outline: To test daily fee collection date fee group wise report when summary is clicked

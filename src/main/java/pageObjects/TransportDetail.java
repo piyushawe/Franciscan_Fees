@@ -4,12 +4,15 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
+import static java.lang.Thread.sleep;
 
 public class TransportDetail {
 WebDriver dr;
@@ -118,12 +121,13 @@ public void selectInstallment(String ins)
   			option.click();
   	dr.findElement(By.xpath("//li[@class='ui-multiselect-close']")).click();
 }
-public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
-{                                                                                                 
-   Utility u= new Utility();                                                                    
-   dr.findElement(show).click();                                                                
-   Thread.sleep(7000);                                                                          
-   u.captureScreenshot(dr,schl,r,sc);                                                           
-   u.downloadPDF(dr);                                                                           
+public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException {
+    Utility u = new Utility();
+    dr.findElement(show).click();
+    Utilities ut = new Utilities();
+    ut.verifyShow(dr, schl, r, sc);
+    sleep(7000);
+    u.captureScreenshot(dr, schl, r, sc);
+    //u.downloadPDF(dr);
 } 
 }

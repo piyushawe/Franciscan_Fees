@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class FeeOpeningBalanceSetting {
   WebDriver dr;
-  Utility u= new Utility();
+  Utilities u= new Utilities();
   String pg= "FeeOpeningBalanceSetting";
   
   @FindBy(id="ContentPlaceHolder1_ddlFeeType")WebElement feetype;

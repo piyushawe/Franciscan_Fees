@@ -11,11 +11,11 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import MasterSettingsPageObjects.Utility;
+import MasterSettingsPageObjects.Utilities;
 
 public class DefineTcCaste {
 	WebDriver dr;
-	Utility u= new Utility();
+	Utilities u= new Utilities();
 	String pg= "DefineTcCaste";
 
 	@FindBy(id="ContentPlaceHolder1_txtTCaste_TextBox")WebElement caste;

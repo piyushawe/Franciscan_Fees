@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -19,7 +20,7 @@ public class MonthWiseCollectionReport {
 	   By school= By.id("ContentPlaceHolder1_ddlSchool");
 	   By feetype= By.id("ContentPlaceHolder1_ddlFeeType");
 	   //By month= By.id("ContentPlaceHolder1_lstmonth");
-	   By cls= By.id("ContentPlaceHolder1_ddlClass");
+	   //By cls= By.id("ContentPlaceHolder1_ddlClass");
 	   By installment= By.id("ContentPlaceHolder1_ddlInstallment");
 	   By feehead= By.id("ContentPlaceHolder1_ddlFeeHeadToshown");
 	   By bankname= By.id("ContentPlaceHolder1_DDlDepBank");
@@ -33,20 +34,17 @@ public class MonthWiseCollectionReport {
 	   public void openMonthWiseCollectionReport() throws InterruptedException
 	   {
 		   WebElement menu= dr.findElement(By.xpath("//img[@src='/Images/layout/Transaction-Report.png']"));
-			 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			 Thread.sleep(6000);
 			 Actions builder= new Actions(dr);
 			 builder.moveToElement(menu).build().perform();
 			 WebElement submenu= dr.findElement(By.linkText("Collection"));
 			 builder.moveToElement(submenu).build().perform();
-			 //dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);		
 			 dr.findElement(By.linkText("Month Wise Collection Report")).click();
 			 dr.switchTo().frame(dr.findElement(By.id("Month Wise Collection Report")));
 	   }
 	   public void selectEntryMode(String emode)
 	   {
-		  //new Select(dr.findElement(entrymode)).selectByVisibleText(emode);
-		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(1) > div > div > button")).click();
+		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(5) > div > div > button")).click();
 		  dr.findElement(By.cssSelector("body > div:nth-child(3) > div > ul > li:nth-child(2) > a")).click();
 		  WebElement select= dr.findElement(By.xpath("/html/body/div[2]/ul"));
 			List<WebElement> options = select.findElements(By.tagName("span"));
@@ -77,25 +75,25 @@ public class MonthWiseCollectionReport {
 	   }
 	   public void selectMonth(String mth)
 	   {
-		  //new Select(dr.findElement(month)).selectByVisibleText(mth);
-		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(4) > div > button")).click();
-		  dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li:nth-child(2) > a")).click();
-		  WebElement select= dr.findElement(By.xpath("/html/body/div[6]/ul"));
+		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(9) > div > button")).click();
+		  dr.findElement(By.cssSelector("body > div:nth-child(10) > div > ul > li:nth-child(2) > a")).click();
+		  WebElement select= dr.findElement(By.xpath("/html/body/div[7]/ul"));
 			List<WebElement> options = select.findElements(By.tagName("span"));
 		  	for(WebElement option:options)
 		  		if(mth.equals(option.getText()))
 		  			option.click();
-		  dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li.ui-multiselect-close")).click();
+		  dr.findElement(By.cssSelector("body > div:nth-child(10) > div > ul > li.ui-multiselect-close")).click();
 	   }
 	   public void selectClass(String c)
 	   {
-		   try {
-		     new Select(dr.findElement(cls)).selectByVisibleText(c);
-		   }
-		   catch(NoSuchElementException e)
-		   {
-			   new Select(dr.findElement(cls)).selectByIndex(1);
-		   }
+		   dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(3) > div > button")).click();
+		   dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li:nth-child(2) > a")).click();
+		   WebElement select= dr.findElement(By.xpath("/html/body/div[6]/ul"));
+		   List<WebElement> options = select.findElements(By.tagName("span"));
+		   for(WebElement option:options)
+			   if(c.equals(option.getText()))
+				   option.click();
+		   dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li.ui-multiselect-close")).click();
 	   }
 	   public void selectInstallment(String inst)
 	   {
@@ -113,8 +111,7 @@ public class MonthWiseCollectionReport {
 	   }
 	   public void selectBankName(String b)
 	   {
-		  //new Select(dr.findElement(bankname)).selectByVisibleText(b);
-		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(8) > div > button")).click();
+		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(10) > div > button")).click();
 		  dr.findElement(By.cssSelector("body > div:nth-child(5) > div > ul > li:nth-child(2) > a")).click();
 		  WebElement select= dr.findElement(By.xpath("/html/body/div[4]/ul"));
 			List<WebElement> options = select.findElements(By.tagName("span"));
@@ -136,9 +133,11 @@ public class MonthWiseCollectionReport {
 	   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
 	   {                                                                                                 
 	      Utility u= new Utility();                                                                    
-	      dr.findElement(show).click();                                                                
+	      dr.findElement(show).click();
+		   Utilities ut= new Utilities();
+		   ut.verifyShow(dr,schl,r,sc);
 	      Thread.sleep(9000);                                                                          
 	      u.captureScreenshot(dr,schl,r,sc);                                                           
-	      u.downloadPDF(dr);                                                                           
+	      //u.downloadPDF(dr);
 	   } 
 }

@@ -143,7 +143,7 @@ public WebDriver dr;
 	{  
 		dr.manage().timeouts().implicitlyWait(1000, TimeUnit.SECONDS);
 		Thread.sleep(2000);
-		//Utility u= new Utility();
+		//Utilities u= new Utilities();
 		//u.captureScreenshot(dr, scenariotag);
 		//u.downloadPDF(dr);
 		dr.quit();
@@ -176,7 +176,7 @@ public WebDriver dr;
 	public void signin() throws Throwable {
 		dr.findElement(By.id("btnLogin")).click();  
 		dr.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-			}
+	}
 	
 //fee home page is opened
 	@Then("^home page is opened$")
@@ -206,7 +206,7 @@ public WebDriver dr;
 	public void cancel_fee_receipt_page_is_opened() throws Throwable {
 		CancelFeeReceipt f1= new CancelFeeReceipt(dr);
 		f1.openCancelFeeReceipt();
-		}
+	}
 
 	@Then("^user searches a student on cancel fee receipt form by receipt no\"([^\"]*)\"$")
 	public void user_searches_a_student_on_cancel_fee_receipt_form_by_receipt_no(String arg1) throws Throwable {
@@ -1020,12 +1020,6 @@ public WebDriver dr;
 		r.selectClass(arg1);
 	}
 
-	@Then("^user select section\"([^\"]*)\" on total collection report$")
-	public void user_select_section_on_total_collection_report(String arg1) throws Throwable {
-		TotalCollectionReport r=new TotalCollectionReport(dr);
-		r.selectSection(arg1);
-	}
-
 	@Then("^user select fee type\"([^\"]*)\" on total collection report$")
 	public void user_select_fee_type_on_total_collection_report(String arg1) throws Throwable {
 		TotalCollectionReport r=new TotalCollectionReport(dr);
@@ -1437,12 +1431,6 @@ public WebDriver dr;
 		yr.selectClass(arg1);
 	}
 
-	@Then("^user select section \"([^\"]*)\" on yearly collection report$")
-	public void user_select_section_on_yearly_collection_report(String arg1) throws Throwable {
-		YearlyCollectionReport yr= new YearlyCollectionReport(dr);
-		yr.selectSection(arg1);
-	}
-	
 	@Then("^user select fee type\"([^\"]*)\" on yearly collection report$")
 	public void user_select_fee_type_on_yearly_collection_report(String arg1) throws Throwable {
 		YearlyCollectionReport yr= new YearlyCollectionReport(dr);
@@ -1521,12 +1509,6 @@ public WebDriver dr;
 	public void user_select_class_on_student_wise_collection_report(String arg1) throws Throwable {
 		StudentWiseCollectionReport s= new StudentWiseCollectionReport(dr);
 		s.selectClass(arg1);
-	}
-
-	@Then("^user select section\"([^\"]*)\" on student wise collection report$")
-	public void user_select_section_on_student_wise_collection_report(String arg1) throws Throwable {
-		StudentWiseCollectionReport s= new StudentWiseCollectionReport(dr);
-		s.selectSection(arg1);
 	}
 
 	@Then("^user fee type\"([^\"]*)\" on student wise collection report$")
@@ -4079,7 +4061,7 @@ public WebDriver dr;
 	@Then("^user select section \"([^\"]*)\" on day wise total collection report$")
 	public void user_select_section_on_day_wise_total_collection_report(String arg1) throws Throwable {
 		DayWiseTotalCollection c= new DayWiseTotalCollection(dr);
-		c.selectSection(arg1);
+		//c.selectSection(arg1);
 	}
 
 	@Then("^user select till date as month \"([^\"]*)\" year \"([^\"]*)\" and day \"([^\"]*)\" on day wise total collection report$")

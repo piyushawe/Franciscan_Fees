@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -16,13 +17,10 @@ public class ChequeClearingStatusReport {
 WebDriver dr;
 String r="ChequeClearingStatusReport";
 
- // By entrymode= By.id("ContentPlaceHolder1_lstentrymode");
   By fromdate= By.id("ContentPlaceHolder1_txtDateFrom_TextBox");
   By todate= By.id("ContentPlaceHolder1_txtdateTo_TextBox");
- //By cls=By.id("ContentPlaceHolder1_ddlStanard");
   By school=By.id("ContentPlaceHolder1_ddlSchoolSubHead");
   By feetype=By.id("ContentPlaceHolder1_ddlFeeType");
-  By bankname= By.id("ContentPlaceHolder1_DDlDepBank");
   By head= By.id("ContentPlaceHolder1_ddlFeeHeadToshown");
   By receiptnorange= By.id("ContentPlaceHolder1_chkReceiptNoRange");
   By from= By.id("ContentPlaceHolder1_txtFrom_TextBox");
@@ -53,7 +51,6 @@ String r="ChequeClearingStatusReport";
   }
   public void selectEntryMode(String emode)
   {
-	 // new Select(dr.findElement(entrymode)).selectByVisibleText(emode);
 	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[1]/div/div/button")).click();
 	  dr.findElement(By.xpath("/html/body/div[4]/div/ul/li[2]/a")).click();
 	  WebElement select= dr.findElement(By.xpath("/html/body/div[4]/ul"));
@@ -131,7 +128,6 @@ String r="ChequeClearingStatusReport";
   }
   public void selectBankName(String bname)
   {
-	//  new Select(dr.findElement(bankname)).selectByVisibleText(bname);
 	  dr.findElement(By.xpath("//*[@id=\"MainLeftPanel\"]/div/div/div[7]/div/button")).click();
 	  dr.findElement(By.xpath("/html/body/div[7]/div/ul/li[2]/a")).click();
 	  WebElement select = dr.findElement(By.cssSelector("body > div:nth-child(10) > ul"));
@@ -180,9 +176,11 @@ String r="ChequeClearingStatusReport";
   public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
   {                                                                                                 
    	 Utility u= new Utility();                                                                    
-     dr.findElement(show).click();                                                                
+     dr.findElement(show).click();
+     Utilities ut= new Utilities();
+     ut.verifyShow(dr,schl,r,sc);
      Thread.sleep(5000);                                                                          
      u.captureScreenshot(dr,schl,r,sc);                                                           
-     u.downloadPDF(dr);                                                                           
+     //u.downloadPDF(dr);
   }                                                                                                 
 }

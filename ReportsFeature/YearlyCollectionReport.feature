@@ -3,10 +3,10 @@ Feature: Yearly Collection Report
       So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://erp.stkarenssecondaryschool.com"
-    When enter username"admin" and password"stkss#54321techpass"
+    Given user enters url"http://qaerp.franciscanecare.net"
+    When enter username"admin" and password"Admin#franciscan"
     Then signin
-    And passes school name "st karen"
+    And passes school name "qaerp"
     Then home page is opened
 
   @scenario1
@@ -14,12 +14,11 @@ Feature: Yearly Collection Report
     Then user opens yearly collection report page
     Then user select session"<session>" on yearly collection report
     Then user select class"<class>" on yearly collection report
-    Then user select section "<section>" on yearly collection report
     Then user click on show on yearly collection report
 
     Examples: 
-      | class | section | session   |
-      | 1     | A       | 2017-2018 |
+      | class |  session   |
+      | 1     |  2017-2018 |
 
   @scenario2
   Scenario Outline: To test yearly collection report when filter with clearing date is selected
@@ -27,7 +26,6 @@ Feature: Yearly Collection Report
     Then user select entry mode "School" on yearly collection report
     Then user select session"<session>" on yearly collection report
     Then user select class"<class>" on yearly collection report
-    Then user select section "<section>" on yearly collection report
     Then user select fee type"<fee type>" on yearly collection report
     Then user select school"<school>" on yearly collection report
     Then user select pay mode as "Cash" and "Cheque" on yearly collection report
@@ -36,8 +34,8 @@ Feature: Yearly Collection Report
     Then user click on show on yearly collection report
 
     Examples: 
-      | class | section | school              | fee type | installment | session   | bank name              |
-      | 1     | A       | Delhi Public School | SCHOOL   | APRIL-JUNE  | 2017-2018 | Axsis Bank For Juniors |
+      | class |  school              | fee type |  session   | bank name              |
+      | 1     |  Delhi Public School | SCHOOL   |  2017-2018 | Axsis Bank For Juniors |
 
   #yearly collection report
   @scenario3

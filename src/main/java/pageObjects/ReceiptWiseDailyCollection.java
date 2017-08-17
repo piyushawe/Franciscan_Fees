@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Collection;
 import java.util.List;
 
+import MasterSettingsPageObjects.Utilities;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -56,8 +57,7 @@ public class ReceiptWiseDailyCollection {
 	  }
 	  public void selectClass(String c)
 	  {
-	  	//new Select(dr.findElement(cls)).selectByVisibleText(c);
-		dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(2) > div > button")).click();
+		dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(3) > div > button")).click();
 		dr.findElement(By.cssSelector("body > div:nth-child(8) > div > ul > li:nth-child(2) > a")).click();
 		WebElement select= dr.findElement(By.xpath("/html/body/div[5]/ul"));
 		List<WebElement> options = select.findElements(By.tagName("span"));
@@ -79,7 +79,7 @@ public class ReceiptWiseDailyCollection {
 	  public void selectPayMode(String pmode)
 	  {
 	 	 //new Select(dr.findElement(paymode)).selectByVisibleText(pmode);
-		 dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(4) > div > button")).click();
+		 dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(6) > div > button")).click();
 		 dr.findElement(By.cssSelector("body > div:nth-child(6) > div > ul > li:nth-child(2) > a")).click();
 		 WebElement select= dr.findElement(By.xpath("/html/body/div[3]/ul"));
 			List<WebElement> options = select.findElements(By.tagName("span"));
@@ -90,7 +90,7 @@ public class ReceiptWiseDailyCollection {
 	  }
 	  public void selectPayMode(String pmode1, String pmode2)
 	  {
-		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(4) > div > button")).click();
+		  dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(6) > div > button")).click();
 			 dr.findElement(By.cssSelector("body > div:nth-child(6) > div > ul > li:nth-child(2) > a")).click();
 			 WebElement select= dr.findElement(By.xpath("/html/body/div[3]/ul"));
 				List<WebElement> options = select.findElements(By.tagName("span"));
@@ -149,8 +149,7 @@ public class ReceiptWiseDailyCollection {
 	  }
 	  public void selectBankName(String bname)
 	  {
-	 	//new Select(dr.findElement(bankname)).selectByVisibleText(bname);
-		dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(9) > div > button")).click();
+		dr.findElement(By.cssSelector("#MainLeftPanel > div > div > div:nth-child(8) > div > button")).click();
 		dr.findElement(By.cssSelector("body > div:nth-child(9) > div > ul > li:nth-child(2) > a")).click();
 		WebElement select= dr.findElement(By.xpath("/html/body/div[6]/ul"));
 		List<WebElement> options = select.findElements(By.tagName("span"));
@@ -174,9 +173,11 @@ public class ReceiptWiseDailyCollection {
 	  public void clickShow(String schl,Collection<String>sc) throws InterruptedException, IOException  
 	  {                                                                                                 
 	      Utility u= new Utility();                                                                    
-	      dr.findElement(show).click();                                                                
+	      dr.findElement(show).click();
+		  Utilities ut= new Utilities();
+		  ut.verifyShow(dr,schl,r,sc);
 	      Thread.sleep(5000);                                                                          
 	      u.captureScreenshot(dr,schl,r,sc);                                                           
-	      u.downloadPDF(dr);                                                                           
+	      //u.downloadPDF(dr);
 	  } 
 }
