@@ -6,87 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fba3ae3c-2f95-4b94-be16-c8b3372bdde3" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FeatureVerifyPage/VerifyPage.feature" afterPath="$PROJECT_DIR$/FeatureVerifyPage/VerifyPage.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ActiveInactiveStudentsDetailReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AdvancePaymentReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AdvancePaymentReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AmountWithoutStructureReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AmountWithoutStructureReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger1.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger1.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger2.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger2.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger3.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedger3.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedgerReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AnnualStudentLedgerReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/AssignedTransportReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/AssignedTransportReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/BadDebtsReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/BadDebtsReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/CancelledFeesReceiptReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/CancelledFeesReceiptReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/CategoryGenderWiseStudentStrength.feature" afterPath="$PROJECT_DIR$/ReportsFeature/CategoryGenderWiseStudentStrength.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/CategoryWiseStudentReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/CategoryWiseStudentReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ChequeClearingStatusReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ChequeClearingStatusReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ClassSectionTransferReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ClassSectionTransferReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ClassWiseMarkList.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseMarkList.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ClassWiseSiblingReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseSiblingReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentDetails.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentDetails.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentStrength.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ClassWiseStudentStrength.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollection.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionAccountWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionAccountWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateClassWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateClassWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateFeeGroupWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateFeeGroupWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DailyFeeCollectionDateWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DateWiseAdmissionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DateWiseAdmissionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DayWiseTotalCollection.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DayWiseTotalCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/DefaulterListFeeTypeWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/DefaulterListFeeTypeWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/EstimatedCollectionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/EstimatedCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/EstimatedTransportDetails.feature" afterPath="$PROJECT_DIR$/ReportsFeature/EstimatedTransportDetails.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeChequeBounceReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeChequeBounceReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeCollectionWithEntryTimeConcession.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeCollectionWithEntryTimeConcession.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterInstallmentWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterInstallmentWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterList.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterList.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportConsolidated.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportConsolidated.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportWithReceiving.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeDefaulterReportWithReceiving.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeeHeadWiseCollectionClassRange.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeeHeadWiseCollectionClassRange.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeesConcession.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeesConcession.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeesConcessionInstallHeadWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeesConcessionInstallHeadWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeesDefaulterSlip.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeesDefaulterSlip.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/FeesStudentLedger.feature" afterPath="$PROJECT_DIR$/ReportsFeature/FeesStudentLedger.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/GenderReligionWiseStudentReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/GenderReligionWiseStudentReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/GroupWiseStudentDetails.feature" afterPath="$PROJECT_DIR$/ReportsFeature/GroupWiseStudentDetails.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/MonthWiseCollectionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/MonthWiseCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/MonthlyConsolidatedReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/MonthlyConsolidatedReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/OnlinePaymentStatusReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/OnlinePaymentStatusReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/OpeningDuesReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/OpeningDuesReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/PaidTransport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/PaidTransport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/PrintTransportIDCard.feature" afterPath="$PROJECT_DIR$/ReportsFeature/PrintTransportIDCard.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseDailyCollection.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseDailyCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseFeeTypeCollection.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ReceiptWiseFeeTypeCollection.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ReconcileInstallmentClassWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ReconcileInstallmentClassWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ReconcileReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ReconcileReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/RefundAmount.feature" afterPath="$PROJECT_DIR$/ReportsFeature/RefundAmount.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/ReligionGenderWiseStudentStrength.feature" afterPath="$PROJECT_DIR$/ReportsFeature/ReligionGenderWiseStudentStrength.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/RouteWiseStudentStrength.feature" afterPath="$PROJECT_DIR$/ReportsFeature/RouteWiseStudentStrength.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/SMSReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/SMSReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/SelfTransportReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/SelfTransportReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StaffWardListReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StaffWardListReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentDetails.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentDetails.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentHealthEntryReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentHealthEntryReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentHouseWiseReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentHouseWiseReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentLedgerClassWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentLedgerClassWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentRegisterDateWiseReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentRegisterDateWiseReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentStrengthRatioWiseReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentStrengthRatioWiseReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentWiseCollectionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentWiseCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/StudentWiseReceiptReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/StudentWiseReceiptReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/SurnameWiseStudentDetails.feature" afterPath="$PROJECT_DIR$/ReportsFeature/SurnameWiseStudentDetails.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/TCReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/TCReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/TotalCollectionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/TotalCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/TransportDetail.feature" afterPath="$PROJECT_DIR$/ReportsFeature/TransportDetail.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/TransportReportClassWise.feature" afterPath="$PROJECT_DIR$/ReportsFeature/TransportReportClassWise.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/TransportStudentStrengthReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/TransportStudentStrengthReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ReportsFeature/YearlyCollectionReport.feature" afterPath="$PROJECT_DIR$/ReportsFeature/YearlyCollectionReport.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/MasterSettingsPageObjects/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/MasterSettingsPageObjects/Utility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pageObjects/Utility.java" afterPath="$PROJECT_DIR$/src/main/java/pageObjects/Utility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/stepDefs/MyStepDefs.java" afterPath="$PROJECT_DIR$/src/test/java/stepDefs/MyStepDefs.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/step_Def/MyTestSteps.java" afterPath="$PROJECT_DIR$/src/test/java/step_Def/MyTestSteps.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber.json" afterPath="$PROJECT_DIR$/target/cucumber.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber.xml" afterPath="$PROJECT_DIR$/target/cucumber.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/cucumber_html_report/report.js" afterPath="$PROJECT_DIR$/target/cucumber_html_report/report.js" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -158,8 +77,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+            <state relative-caret-position="167">
+              <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -868,6 +787,14 @@
       <option name="presentableId" value="Default" />
       <updated>1496400100700</updated>
     </task>
+    <task id="LOCAL-00001" summary="committed on sep 25, 17">
+      <created>1506322385703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1506322385703</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -920,7 +847,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25718608" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -941,6 +868,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="committed on sep 25, 17" />
+    <option name="LAST_COMMIT_MESSAGE" value="committed on sep 25, 17" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1346,8 +1277,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="58" column="37" lean-forward="true" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        <state relative-caret-position="167">
+          <caret line="50" column="63" lean-forward="true" selection-start-line="50" selection-start-column="63" selection-end-line="50" selection-end-column="63" />
           <folding />
         </state>
       </provider>
