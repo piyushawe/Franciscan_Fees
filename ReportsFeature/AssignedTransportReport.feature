@@ -3,10 +3,10 @@ Feature: Assigned Transport Report
     So that I don't have to do it myself
 
   Background: 
-    Given user enters url" http://erp.stkarenssecondaryschool.com"
-    When enter username"admin" and password"stkss#54321techpass"
+    Given user enters url" http://erptraining.franciscanecare.net/Secure/"
+    When enter username"admin" and password"fspl@12345"
     Then signin
-    And passes school name "st karen"
+    And passes school name "erptraining"
     Then home page is opened
 
   @scenario1

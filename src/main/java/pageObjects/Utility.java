@@ -23,7 +23,8 @@ public class Utility {
 	 {
 		 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		 File f= ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
-		 FileUtils.copyFile(f,new File("D:/fee_screenshots/"+str+"/Reports/"+r+"/"+r+sc+timeStamp+".png"));
+		 //FileUtils.copyFile(f,new File("D:/fee_screenshots/"+str+"/Reports/"+r+"/"+r+sc+timeStamp+".png"));
+		 FileUtils.copyFile(f,new File("E:/fee_screenshots/"+str+"/Reports/"+r+"/"+r+sc+timeStamp+".png"));
 	 }
 	
 	public void findStudentOnReport(WebDriver dr,String name)

@@ -18,10 +18,11 @@ public class Utility {
 	{
 		String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
 		File f= ((TakesScreenshot)dr).getScreenshotAs(OutputType.FILE);
-	    FileUtils.copyFile(f,new File("D:/fee_screenshots/"+str+"/"+r+"/"+r+sc+timeStamp+".png"));
+	    //FileUtils.copyFile(f,new File("D:/fee_screenshots/"+str+"/"+r+"/"+r+sc+timeStamp+".png"));
+		FileUtils.copyFile(f,new File("E:/fee_screenshots/"+str+"/"+r+"/"+r+sc+timeStamp+".png"));
 	}
 
-	public void verifySave(WebDriver dr,String school, String page,Collection<String> sc)throws IOException
+	public void verifySave(WebDriver dr, String school, String page, Collection<String> sc)throws IOException
 	{
 		ArrayList<String>list= new ArrayList<String>();
 		Date date= new Date();
@@ -112,7 +113,8 @@ public class Utility {
 		FileInputStream fis;
 		HSSFWorkbook wb;
 		Sheet sheet;
-			file = new File("D:/TestReports/" + school + "/Fees/ErrorLog.xls");
+			//file = new File("D:/TestReports/" + school + "/Fees/ErrorLog.xls");
+		file = new File("E:/TestReports/" + school + "/Fees/ErrorLog.xls");
 			File pdir= file.getParentFile();
 			if(!file.exists()) {
 				System.out.println("File Does Not Exist");

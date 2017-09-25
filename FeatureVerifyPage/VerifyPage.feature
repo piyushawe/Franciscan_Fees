@@ -3,9 +3,9 @@ Feature: Franciscan Fee
       The page is loaded successfully
 
   Background: 
-    Given user enter url "http://erp.stkarenssecondaryschool.com"
-    When user enter username "admin" and password "stkss#54321techpass"
-    And passes school name "st karen"
+    Given user enter url "http://erptraining.franciscanecare.net/Secure/"
+    When user enter username "admin" and password "fspl@12345"
+    And passes school name "erptraining"
     And click signin
     Then fee manager home page is opened
 

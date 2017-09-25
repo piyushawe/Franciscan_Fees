@@ -110,7 +110,8 @@ public class MyStepDefs {
 	@Before
 	public void launchBrowser(Scenario sc)
 	{
-		System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chrome\\chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chrome\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver_win32\\chromedriver.exe");
 		dr= new ChromeDriver();
 		dr.manage().window().maximize();
 		scenario= sc.getSourceTagNames();

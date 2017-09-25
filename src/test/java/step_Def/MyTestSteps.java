@@ -4,8 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.concurrent.TimeUnit;
-//import org.junit.After;
-//import org.junit.Before;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -113,7 +112,7 @@ import pageObjects.TotalCollectionReport;
 import pageObjects.TransportDetail;
 import pageObjects.TransportReportClassWise;
 import pageObjects.TransportStudentStrengthReport;
-import pageObjects.Utility;
+
 import pageObjects.YearlyCollectionReport;
 
 public class MyTestSteps {
@@ -131,7 +130,8 @@ public WebDriver dr;
     @Before
     public void launchBrowser(Scenario s)
     {
-        System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "E:\\chromedriver\\chromedriver_win32\\chromedriver.exe");
 	   //System.setProperty("webdriver.chrome.driver", "D:\\selenium\\chromedriver.exe");
 		dr= new ChromeDriver();
 		dr.manage().window().maximize();
