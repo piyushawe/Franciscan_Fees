@@ -3,9 +3,9 @@ Feature: Franciscan Fee
       The page is loaded successfully
 
   Background: 
-    Given user enter url "http://erptraining.franciscanecare.net/Secure/"
-    When user enter username "admin" and password "fspl@12345"
-    And passes school name "erptraining"
+    Given user enter url "http://qaerp.franciscanecare.net"
+    When user enter username "admin" and password "Admin#franciscan"
+    And passes school name "qaerp1"
     And click signin
     Then fee manager home page is opened
 
